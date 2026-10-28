@@ -1,0 +1,1 @@
+print("Retail sales predictor")
