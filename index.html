@@ -1,0 +1,3143 @@
+799<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StyleSense | Retail Fashion AI Sales Prediction Dashboard</title>
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- TensorFlow.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.18.0/dist/tf.min.js"></script>
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-light: #eef2ff;
+      --primary-dark: #3730a3;
+      --accent: #8b5cf6;
+      --accent-light: #f5f3ff;
+      --success: #10b981;
+      --success-light: #ecfdf5;
+      --warning: #f59e0b;
+      --warning-light: #fffbeb;
+      --danger: #ef4444;
+      --danger-light: #fef2f2;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --card-border: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --text-subtle: #94a3b8;
+      --sidebar-bg: #0f172a;
+      --sidebar-hover: #1e293b;
+      --sidebar-active: #312e81;
+      --sidebar-text: #94a3b8;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      display: flex;
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+
+    /* --- SIDEBAR STYLING --- */
+    aside.sidebar {
+      width: 270px;
+      background-color: var(--sidebar-bg);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      border-right: 1px solid #1e293b;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      z-index: 50;
+    }
+
+    .brand-container {
+      padding: 24px 20px;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #6366f1, #a855f7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      box-shadow: 0 0 16px rgba(99, 102, 241, 0.4);
+    }
+
+    .brand-text h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #818cf8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .nav-menu {
+      flex: 1;
+      padding: 20px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      overflow-y: auto;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 16px;
+      border-radius: var(--radius-md);
+      color: var(--sidebar-text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item:hover {
+      background-color: var(--sidebar-hover);
+      color: #ffffff;
+    }
+
+    .nav-item.active {
+      background: linear-gradient(90deg, #4f46e5, #6366f1);
+      color: #ffffff;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+    }
+
+    .nav-item svg {
+      width: 19px;
+      height: 19px;
+      stroke-width: 2;
+    }
+
+    .sidebar-footer {
+      padding: 16px;
+      border-top: 1px solid #1e293b;
+      background-color: rgba(15, 23, 42, 0.6);
+    }
+
+    .viva-badge {
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+    }
+
+    .viva-badge h4 {
+      font-size: 0.76rem;
+      color: #a5b4fc;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .viva-badge p {
+      font-size: 0.73rem;
+      color: #94a3b8;
+      line-height: 1.35;
+    }
+
+    /* --- MAIN CONTENT LAYOUT --- */
+    main.main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    header.top-header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .header-title h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .header-title p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .header-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+
+    .badge-synthetic {
+      background-color: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    .badge-status-neutral {
+      background-color: #f1f5f9;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+    }
+
+    .badge-status-success {
+      background-color: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    .badge-status-training {
+      background-color: #e0e7ff;
+      color: #3730a3;
+      border: 1px solid #c7d2fe;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .content-body {
+      padding: 24px 28px 40px 28px;
+      flex: 1;
+    }
+
+    /* --- TAB CONTAINERS --- */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.25s ease-out;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- CARDS & GRIDS --- */
+    .grid-kpi {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .kpi-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .kpi-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .kpi-label {
+      font-size: 0.76rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .kpi-value {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.2;
+    }
+
+    .kpi-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1080px) {
+      .grid-2col, .grid-3col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- CHARTS --- */
+    .chart-container {
+      position: relative;
+      height: 280px;
+      width: 100%;
+    }
+
+    .chart-container-lg {
+      height: 340px;
+    }
+
+    /* --- BUTTONS & CONTROLS --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: linear-gradient(135deg, #4338ca, #4f46e5);
+      box-shadow: 0 4px 10px rgba(79, 70, 229, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+    }
+
+    .btn-secondary:hover:not(:disabled) {
+      background-color: #f1f5f9;
+      border-color: #cbd5e1;
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    .btn-sm {
+      padding: 6px 12px;
+      font-size: 0.78rem;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .form-label span.hint {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    .form-control, select.form-control {
+      width: 100%;
+      padding: 9px 12px;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      background-color: #ffffff;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      font-family: inherit;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    }
+
+    input[type="range"].form-range {
+      width: 100%;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* --- TABLES --- */
+    .table-responsive {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--card-border);
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      text-align: left;
+    }
+
+    table.data-table th {
+      background-color: #f8fafc;
+      padding: 10px 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--card-border);
+      white-space: nowrap;
+    }
+
+    table.data-table td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      color: var(--text-main);
+      white-space: nowrap;
+    }
+
+    table.data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.data-table tr:hover td {
+      background-color: #f8fafc;
+    }
+
+    .tag-category {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .tag-T-Shirts { background: #fee2e2; color: #991b1b; }
+    .tag-Jeans { background: #dbeafe; color: #1e40af; }
+    .tag-Dresses { background: #fce7f3; color: #9d174d; }
+    .tag-Ethnic-Wear { background: #fef3c7; color: #92400e; }
+    .tag-Footwear { background: #e0e7ff; color: #3730a3; }
+    .tag-Accessories { background: #dcfce7; color: #166534; }
+
+    /* --- TRAINING UI & CONSOLE --- */
+    .model-card-spec {
+      background-color: #f8fafc;
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      position: relative;
+    }
+
+    .model-card-spec.active {
+      border-color: var(--primary);
+      background-color: var(--primary-light);
+    }
+
+    .model-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .model-arch {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .model-desc {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 10px;
+      background-color: #e2e8f0;
+      border-radius: 9999px;
+      overflow: hidden;
+      margin: 12px 0 6px 0;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+      transition: width 0.15s ease-out;
+    }
+
+    .train-status-text {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* --- RESULTS & CALLOUTS --- */
+    .best-model-banner {
+      background: linear-gradient(135deg, #1e1b4b, #312e81);
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .banner-content h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #e0e7ff;
+      margin-bottom: 6px;
+    }
+
+    .banner-content p {
+      font-size: 0.85rem;
+      color: #c7d2fe;
+      line-height: 1.45;
+    }
+
+    .banner-stat {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .banner-stat .value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #38bdf8;
+    }
+
+    .banner-stat .lbl {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94a3b8;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-muted);
+    }
+
+    .empty-state svg {
+      width: 56px;
+      height: 56px;
+      stroke: #cbd5e1;
+      margin-bottom: 16px;
+    }
+
+    .empty-state h3 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .empty-state p {
+      font-size: 0.85rem;
+      max-width: 420px;
+      margin: 0 auto 20px auto;
+    }
+
+    /* --- HOW IT WORKS / VIVA CARDS --- */
+    .viva-card {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      background: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .viva-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .viva-card p, .viva-card li {
+      font-size: 0.83rem;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .viva-card ul {
+      margin-left: 20px;
+      margin-top: 6px;
+    }
+
+    .math-chip {
+      display: inline-block;
+      font-family: var(--font-mono);
+      background-color: #f1f5f9;
+      color: #0f172a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* --- TOAST NOTIFICATION --- */
+    #toast-box {
+      position: fixed;
+      bottom: 24px;
+      right: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 100;
+    }
+
+    .toast {
+      background-color: #1e293b;
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      animation: slideIn 0.25s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== SIDEBAR ==================== -->
+  <aside class="sidebar">
+    <div class="brand-container">
+      <div class="brand-icon">S</div>
+      <div class="brand-text">
+        <h1>StyleSense</h1>
+        <span>D2C Fashion AI</span>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <a class="nav-item active" data-tab="tab-overview">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Overview
+      </a>
+      <a class="nav-item" data-tab="tab-data">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+        Data
+      </a>
+      <a class="nav-item" data-tab="tab-train">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        Train Models
+      </a>
+      <a class="nav-item" data-tab="tab-results">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        Results
+      </a>
+      <a class="nav-item" data-tab="tab-whatif">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+        What-If Predictor
+      </a>
+      <a class="nav-item" data-tab="tab-howitworks">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        How It Works
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="viva-badge">
+        <h4>MBA Project</h4>
+        <p>Neural Networks &amp; Deep Learning<br>Subject: Data Science &amp; AI</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT AREA ==================== -->
+  <main class="main-content">
+    
+    <!-- TOP HEADER -->
+    <header class="top-header">
+      <div class="header-title">
+        <h2 id="page-title">Executive Sales Overview</h2>
+        <p id="page-subtitle">StyleSense D2C Retail Demand Intelligence &amp; ANN Regression</p>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-synthetic">SYNTHETIC DATA</span>
+        <span id="model-status-badge" class="badge badge-status-neutral">Models: Uninitialized</span>
+      </div>
+    </header>
+
+    <div class="content-body">
+
+      <!-- ==================== TAB 1: OVERVIEW ==================== -->
+      <section id="tab-overview" class="tab-content active">
+        <!-- Dataset KPIs -->
+        <div class="grid-kpi">
+          <div class="kpi-card">
+            <span class="kpi-label">Total Records</span>
+            <span class="kpi-value" id="kpi-records">0</span>
+            <span class="kpi-sub">Weekly SKU transactions</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Total Units Sold</span>
+            <span class="kpi-value" id="kpi-units">0</span>
+            <span class="kpi-sub">Apparel volume demand</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Total Gross Revenue</span>
+            <span class="kpi-value" id="kpi-revenue">₹0</span>
+            <span class="kpi-sub">Post-discount net price</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Average Discount</span>
+            <span class="kpi-value" id="kpi-discount">0%</span>
+            <span class="kpi-sub">Promotional markdown</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Avg Ad Spend / Wk</span>
+            <span class="kpi-value" id="kpi-adspend">₹0k</span>
+            <span class="kpi-sub">Paid social &amp; search</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Top Category</span>
+            <span class="kpi-value" id="kpi-topcat">-</span>
+            <span class="kpi-sub">Highest demand driver</span>
+          </div>
+        </div>
+
+        <!-- Post-Training Model Quick KPI Banner (hidden until trained) -->
+        <div id="overview-model-banner" class="best-model-banner" style="display: none;">
+          <div class="banner-content">
+            <span class="badge badge-status-success" style="margin-bottom: 8px;">ANN EVALUATION COMPLETE</span>
+            <h3 id="overview-best-model-name">Best Model: ANN-2</h3>
+            <p id="overview-best-model-summary">Trained on TensorFlow.js with Adam optimizer and Early Stopping. Outperformed baseline linear regression on held-out test data.</p>
+          </div>
+          <div class="banner-stat">
+            <div class="value" id="overview-test-r2">0.00</div>
+            <div class="lbl">Test R² Score</div>
+            <div style="font-size: 0.8rem; color: #a5b4fc; margin-top: 4px;" id="overview-test-mae">MAE: 0.0 units</div>
+          </div>
+        </div>
+
+        <!-- Charts Grid Row 1 -->
+        <div class="grid-2col">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Monthly Demand Seasonality</h3>
+                <p class="card-subtitle">Aggregated weekly sales units by calendar month (Jan - Dec)</p>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-monthly-trend"></canvas>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Sales by Apparel Category</h3>
+                <p class="card-subtitle">Volume distribution across six core fashion collections</p>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-category-bar"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Grid Row 2 -->
+        <div class="grid-3col">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Channel Share</h3>
+                <p class="card-subtitle">Website, App &amp; Marketplaces</p>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-channel-donut"></canvas>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Sales vs. Discount Buckets</h3>
+                <p class="card-subtitle">Average units sold per discount tier</p>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-discount-buckets"></canvas>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Ad Spend vs. Units Sold</h3>
+                <p class="card-subtitle">Diminishing returns scatter plot</p>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="chart-adspend-scatter"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 2: DATA ==================== -->
+      <section id="tab-data" class="tab-content">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Dataset Generator &amp; Controls</h3>
+              <p class="card-subtitle">Configure sample size and synthesize weekly retail fashion sales data with economic logic</p>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <select id="dataset-size-select" class="form-control" style="width: 140px;">
+                <option value="1000">1,000 Rows</option>
+                <option value="2000" selected>2,000 Rows (Default)</option>
+                <option value="3000">3,000 Rows</option>
+              </select>
+              <button id="btn-generate-data" class="btn btn-primary">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                Generate Dataset
+              </button>
+              <button id="btn-download-csv" class="btn btn-secondary">
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Download CSV
+              </button>
+            </div>
+          </div>
+
+          <div style="background-color: #fffbeb; border: 1px solid #fef3c7; border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 20px;">
+            <p style="font-size: 0.82rem; color: #92400e;">
+              <strong>Heuristic Model Formulation:</strong> Target <code>Units_Sold</code> incorporates category baseline demand, price elasticity, non-linear promotional markdown lifts (\(1.2 \cdot D + 0.5 \cdot D^2\)), logarithmic marketing return on ad spend (\(24 \cdot \ln(1 + \text{Ad}/7)\)), Indian festival season boosts (Diwali/Weddings in Q4/Q1), influencer/email campaigns, and physical inventory stock level caps.
+            </p>
+          </div>
+
+          <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 10px; color: var(--text-main);">Dataset Preview (First 10 Rows)</h4>
+          <div class="table-responsive" style="margin-bottom: 24px;">
+            <table class="data-table" id="table-dataset-preview">
+              <thead>
+                <tr>
+                  <th>Week ID</th>
+                  <th>Month</th>
+                  <th>Category</th>
+                  <th>Channel</th>
+                  <th>Price (₹)</th>
+                  <th>Discount %</th>
+                  <th>Ad Spend (₹k)</th>
+                  <th>Festival</th>
+                  <th>Influencer</th>
+                  <th>Email</th>
+                  <th>Stock Level</th>
+                  <th style="background-color: #ede9fe; color: #4338ca;">Units Sold (Target)</th>
+                </tr>
+              </thead>
+              <tbody id="preview-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+
+          <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 10px; color: var(--text-main);">Dataset Statistical Summary</h4>
+          <div class="table-responsive">
+            <table class="data-table" id="table-statistics">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Count</th>
+                  <th>Mean</th>
+                  <th>Std Deviation</th>
+                  <th>Min</th>
+                  <th>Max</th>
+                </tr>
+              </thead>
+              <tbody id="stats-table-body">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 3: TRAIN MODELS ==================== -->
+      <section id="tab-train" class="tab-content">
+        <!-- Hyperparameters & Settings Grid -->
+        <div class="grid-2col">
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Training Configuration</h3>
+                <p class="card-subtitle">Hyperparameters for TensorFlow.js in-browser optimization</p>
+              </div>
+            </div>
+
+            <div class="grid-2col" style="gap: 12px;">
+              <div class="form-group">
+                <label class="form-label">Epochs <span class="hint">(Max training passes)</span></label>
+                <input type="number" id="train-epochs" class="form-control" value="100" min="20" max="250" step="10">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Batch Size <span class="hint">(Samples per step)</span></label>
+                <select id="train-batch-size" class="form-control">
+                  <option value="16">16</option>
+                  <option value="32" selected>32 (Recommended)</option>
+                  <option value="64">64</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Learning Rate <span class="hint">(Adam Optimizer)</span></label>
+                <select id="train-lr" class="form-control">
+                  <option value="0.0005">0.0005</option>
+                  <option value="0.001" selected>0.001 (Default)</option>
+                  <option value="0.005">0.005</option>
+                  <option value="0.01">0.01</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Test Split Ratio <span class="hint">(Held-out evaluation)</span></label>
+                <select id="train-test-split" class="form-control">
+                  <option value="0.15">15%</option>
+                  <option value="0.20" selected>20% (Default)</option>
+                  <option value="0.25">25%</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="grid-column: span 2;">
+                <label class="form-label">Validation Split <span class="hint">(15% of training split for Early Stopping)</span></label>
+                <input type="text" class="form-control" value="15% of Training Data (Early stopping patience = 10 epochs)" readonly style="background-color: #f1f5f9; color: var(--text-muted);">
+              </div>
+            </div>
+
+            <div style="margin-top: 10px;">
+              <button id="btn-start-training" class="btn btn-primary" style="width: 100%; padding: 12px;">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Train All 3 Models Sequentially
+              </button>
+            </div>
+          </div>
+
+          <!-- Model Architectures Spec -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Candidate Neural Architectures</h3>
+                <p class="card-subtitle">Benchmarking linear vs shallow vs deep regularized ANNs</p>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+              <div class="model-card-spec" id="spec-card-baseline">
+                <div class="model-title">
+                  <span>1. Linear Regression Baseline</span>
+                  <span class="badge badge-status-neutral" id="status-baseline">Idle</span>
+                </div>
+                <div class="model-arch">Input(17) &rarr; Dense(1, Linear)</div>
+                <div class="model-desc">Single dense layer without non-linear activations. Represents traditional statistical benchmark.</div>
+              </div>
+
+              <div class="model-card-spec" id="spec-card-ann1">
+                <div class="model-title">
+                  <span>2. ANN-1 (Shallow Neural Network)</span>
+                  <span class="badge badge-status-neutral" id="status-ann1">Idle</span>
+                </div>
+                <div class="model-arch">Input(17) &rarr; Dense(32, ReLU) &rarr; Dense(1, Linear)</div>
+                <div class="model-desc">Single hidden layer capturing non-linear pricing elasticity and category interaction curves.</div>
+              </div>
+
+              <div class="model-card-spec" id="spec-card-ann2">
+                <div class="model-title">
+                  <span>3. ANN-2 (Deeper Regularized Network)</span>
+                  <span class="badge badge-status-neutral" id="status-ann2">Idle</span>
+                </div>
+                <div class="model-arch">Input(17) &rarr; Dense(64, ReLU) &rarr; Dropout(0.2) &rarr; Dense(32, ReLU) &rarr; Dense(1, Linear)</div>
+                <div class="model-desc">Multi-layer architecture with 20% Dropout regularization to prevent overfitting on seasonal noise.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Progress & Loss Curves -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Live Training Console &amp; Loss Curves</h3>
+              <p class="card-subtitle">Real-time Mean Squared Error (MSE) loss monitoring via TensorFlow.js fit callbacks</p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button class="btn btn-secondary btn-sm" id="btn-view-loss-baseline">Baseline Loss</button>
+              <button class="btn btn-secondary btn-sm" id="btn-view-loss-ann1">ANN-1 Loss</button>
+              <button class="btn btn-primary btn-sm" id="btn-view-loss-ann2">ANN-2 Loss</button>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <div class="train-status-text">
+              <span id="train-current-step">Status: Ready to train</span>
+              <span id="train-loss-metrics">Train Loss: -- | Val Loss: --</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar-fill" id="train-progress-fill"></div>
+            </div>
+          </div>
+
+          <div class="chart-container chart-container-lg">
+            <canvas id="chart-loss-history"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 4: RESULTS ==================== -->
+      <section id="tab-results" class="tab-content">
+        
+        <!-- Empty State (Shown before training) -->
+        <div id="results-empty-state" class="card empty-state">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          <h3>Models Have Not Been Trained Yet</h3>
+          <p>Navigate to the <strong>Train Models</strong> tab and launch model training to generate real held-out test predictions and comparative metrics.</p>
+          <button class="btn btn-primary" onclick="switchTab('tab-train')">Go to Train Models Tab</button>
+        </div>
+
+        <!-- Populated Results Container (Hidden until trained) -->
+        <div id="results-content-box" style="display: none;">
+          
+          <!-- Best Model Executive Banner -->
+          <div class="best-model-banner">
+            <div class="banner-content">
+              <span class="badge badge-status-success" style="margin-bottom: 8px;">TOP PERFORMING MODEL</span>
+              <h3 id="best-model-headline">ANN-2 Outperformed Linear Baseline</h3>
+              <p id="best-model-insight-text">Computing comparative performance metrics...</p>
+            </div>
+            <div class="banner-stat">
+              <div class="value" id="best-model-score">0.00</div>
+              <div class="lbl">Test R² Score</div>
+            </div>
+          </div>
+
+          <!-- Dataset Partition Breakdown Chips -->
+          <div style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+            <div class="badge badge-status-neutral" style="padding: 6px 12px; font-size: 0.8rem;">
+              Total: <strong id="res-count-total" style="margin-left: 4px;">0</strong>
+            </div>
+            <div class="badge badge-status-neutral" style="padding: 6px 12px; font-size: 0.8rem;">
+              Training Split: <strong id="res-count-train" style="margin-left: 4px;">0</strong> (Standardizer Fit)
+            </div>
+            <div class="badge badge-status-neutral" style="padding: 6px 12px; font-size: 0.8rem;">
+              Validation Split: <strong id="res-count-val" style="margin-left: 4px;">0</strong> (Early Stopping)
+            </div>
+            <div class="badge badge-status-success" style="padding: 6px 12px; font-size: 0.8rem;">
+              Held-Out Test Set: <strong id="res-count-test" style="margin-left: 4px;">0</strong> (Evaluated Below)
+            </div>
+          </div>
+
+          <!-- Comparison Table & Comparison Bar Chart -->
+          <div class="grid-2col">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Model Comparison (Held-Out Test Set)</h3>
+                  <p class="card-subtitle">Zero data leakage: metrics computed strictly on unseen 20% test partition</p>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="data-table" id="table-results-comparison">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Architecture</th>
+                      <th>Test MAE</th>
+                      <th>Test RMSE</th>
+                      <th>Test R²</th>
+                      <th>Verdict</th>
+                    </tr>
+                  </thead>
+                  <tbody id="results-table-body">
+                    <!-- Populated via JS -->
+                  </tbody>
+                </table>
+              </div>
+
+              <div style="margin-top: 20px;">
+                <button id="btn-download-predictions" class="btn btn-secondary btn-sm" style="width: 100%;">
+                  <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                  Download Test Predictions (CSV)
+                </button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Metrics Comparison Chart</h3>
+                  <p class="card-subtitle">Visual benchmark of MAE, RMSE and R²</p>
+                </div>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-metrics-comparison"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scatter & Residuals for Best Model -->
+          <div class="grid-2col">
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Actual vs. Predicted Sales</h3>
+                  <p class="card-subtitle">Best Model test samples with ideal 45° reference line (y = x)</p>
+                </div>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-actual-vs-pred"></canvas>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Residuals Distribution</h3>
+                  <p class="card-subtitle">Prediction error distribution (Actual - Predicted units)</p>
+                </div>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-residuals"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== TAB 5: WHAT-IF PREDICTOR ==================== -->
+      <section id="tab-whatif" class="tab-content">
+        <!-- Not Trained Warning -->
+        <div id="whatif-warning-banner" style="background-color: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-md); padding: 14px 18px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="20" height="20" fill="none" stroke="#d97706" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            <span style="font-size: 0.85rem; color: #92400e; font-weight: 500;">Please train the neural network models first to enable live scenario forecasting.</span>
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="switchTab('tab-train')">Go to Train Tab</button>
+        </div>
+
+        <div class="grid-2col">
+          <!-- Scenario Controls -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">Scenario Simulation Parameters</h3>
+                <p class="card-subtitle">Test manager what-if hypotheses (pricing, campaigns, seasonal inventory)</p>
+              </div>
+            </div>
+
+            <form id="form-whatif" onsubmit="event.preventDefault(); runWhatIfPrediction();">
+              <div class="grid-2col" style="gap: 12px;">
+                <div class="form-group">
+                  <label class="form-label">Category</label>
+                  <select id="whatif-category" class="form-control" onchange="updateDefaultPriceForCategory()">
+                    <option value="T-Shirts">T-Shirts</option>
+                    <option value="Jeans" selected>Jeans</option>
+                    <option value="Dresses">Dresses</option>
+                    <option value="Ethnic Wear">Ethnic Wear</option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Accessories">Accessories</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Sales Channel</label>
+                  <select id="whatif-channel" class="form-control">
+                    <option value="Website">Website</option>
+                    <option value="Mobile App" selected>Mobile App</option>
+                    <option value="Marketplace">Marketplace (Myntra/Amazon)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Month <span class="hint" id="whatif-month-name">October</span></label>
+                  <input type="range" id="whatif-month" class="form-range" min="1" max="12" value="10" oninput="document.getElementById('whatif-month-name').textContent = getMonthName(this.value)">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Price (INR ₹) <span class="hint" id="whatif-price-hint">Typical: ₹1599 - ₹3499</span></label>
+                  <input type="number" id="whatif-price" class="form-control" value="2499" min="200" max="10000" step="50">
+                </div>
+
+                <div class="form-group" style="grid-column: span 2;">
+                  <label class="form-label">Discount Percentage: <strong id="whatif-discount-val">25%</strong></label>
+                  <input type="range" id="whatif-discount" class="form-range" min="0" max="60" value="25" oninput="document.getElementById('whatif-discount-val').textContent = this.value + '%'">
+                </div>
+
+                <div class="form-group" style="grid-column: span 2;">
+                  <label class="form-label">Paid Ad Spend (INR Thousands): <strong id="whatif-adspend-val">₹60k</strong></label>
+                  <input type="range" id="whatif-adspend" class="form-range" min="0" max="200" value="60" oninput="document.getElementById('whatif-adspend-val').textContent = '₹' + this.value + 'k'">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Festival Season?</label>
+                  <select id="whatif-festival" class="form-control">
+                    <option value="1" selected>Yes (Diwali / Wedding Season)</option>
+                    <option value="0">No (Regular Week)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Influencer Campaign?</label>
+                  <select id="whatif-influencer" class="form-control">
+                    <option value="1" selected>Active Collaboration</option>
+                    <option value="0">None</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Email Blast Campaign?</label>
+                  <select id="whatif-email" class="form-control">
+                    <option value="1">Triggered to VIP Users</option>
+                    <option value="0" selected>None</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Stock Level (Units)</label>
+                  <input type="number" id="whatif-stock" class="form-control" value="500" min="50" max="2500" step="25">
+                </div>
+              </div>
+
+              <div style="margin-top: 14px;">
+                <button type="submit" id="btn-predict-whatif" class="btn btn-primary" style="width: 100%; padding: 12px;">
+                  <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                  Predict Demand &amp; Revenue
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Scenario Prediction Output KPIs -->
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="card" style="margin-bottom: 0;">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Model Scenario Forecast</h3>
+                  <p class="card-subtitle" id="whatif-model-badge">Using Best Model: ANN-2</p>
+                </div>
+              </div>
+
+              <div class="grid-2col" style="gap: 16px; margin-bottom: 16px;">
+                <div class="kpi-card" style="background-color: #f5f3ff; border-color: #ddd6fe;">
+                  <span class="kpi-label" style="color: #6d28d9;">Predicted Demand</span>
+                  <span class="kpi-value" id="whatif-pred-units" style="color: #5b21b6;">--</span>
+                  <span class="kpi-sub" id="whatif-pred-units-sub">Units sold</span>
+                </div>
+
+                <div class="kpi-card" style="background-color: #ecfdf5; border-color: #a7f3d0;">
+                  <span class="kpi-label" style="color: #065f46;">Gross Revenue</span>
+                  <span class="kpi-value" id="whatif-pred-revenue" style="color: #047857;">--</span>
+                  <span class="kpi-sub">Units &times; Post-Discount Price</span>
+                </div>
+
+                <div class="kpi-card">
+                  <span class="kpi-label">Net Margin After Ads</span>
+                  <span class="kpi-value" id="whatif-pred-net">--</span>
+                  <span class="kpi-sub">Revenue minus Ad Spend</span>
+                </div>
+
+                <div class="kpi-card">
+                  <span class="kpi-label">Stock Utilization</span>
+                  <span class="kpi-value" id="whatif-pred-stock-util">--</span>
+                  <span class="kpi-sub" id="whatif-stock-warning">Stockout safety check</span>
+                </div>
+              </div>
+
+              <div style="background-color: #f8fafc; border: 1px solid var(--card-border); border-radius: var(--radius-sm); padding: 10px 14px;">
+                <p style="font-size: 0.76rem; color: var(--text-muted); font-style: italic;">
+                  <strong>Note:</strong> Predictions are educational estimates from synthetic data, not real business forecasts.
+                </p>
+              </div>
+            </div>
+
+            <!-- Discount Sensitivity Curve -->
+            <div class="card" style="margin-bottom: 0;">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">Discount Sensitivity Curve</h3>
+                  <p class="card-subtitle">Predicted demand vs. gross revenue across 0% to 60% markdowns (all other factors constant)</p>
+                </div>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-discount-sensitivity"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 6: HOW IT WORKS (VIVA GUIDE) ==================== -->
+      <section id="tab-howitworks" class="tab-content">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">Neural Networks &amp; Deep Learning Project Viva Reference</h3>
+              <p class="card-subtitle">Academic and managerial concepts explaining the StyleSense architecture, training dynamics, and business trade-offs</p>
+            </div>
+          </div>
+
+          <div class="viva-card">
+            <h3>1. Problem Statement &amp; Business Objectives</h3>
+            <p>
+              Modern Direct-to-Consumer (D2C) fashion brands operate with compressed product lifecycles, volatile seasonal demand spikes (e.g. Diwali festive seasons, wedding calendars), and heavy reliance on paid performance marketing. 
+              The business objective of <strong>StyleSense</strong> is to accurately predict weekly sales units at the SKU-category level. Accurate forecasts minimize two costly retail errors:
+            </p>
+            <ul>
+              <li><strong>Stockouts (Under-forecasting):</strong> Lost revenue, customer churn to competitors, and damaged brand equity.</li>
+              <li><strong>Excess Inventory (Over-forecasting):</strong> High working-capital lockup, warehousing costs, and forced margin-diluting clearance markdowns.</li>
+            </ul>
+          </div>
+
+          <div class="viva-card">
+            <h3>2. Artificial Neural Network (ANN) Architecture</h3>
+            <p>
+              An Artificial Neural Network is composed of interconnected layers of artificial neurons:
+            </p>
+            <ul>
+              <li><strong>Input Layer:</strong> In our model, 17 numerical and one-hot encoded features feed into the network: Month, 6 Category indicators, 3 Channel indicators, Price, Discount %, Ad Spend, Festival Season, Influencer Flag, Email Blast Flag, and Stock Level.</li>
+              <li><strong>Weights &amp; Biases:</strong> Each connection possesses a tunable weight \(W_{ij}\) representing signal strength, plus an adjustable bias scalar \(b\). The affine transformation is computed as \(z = \sum_{j} W_{ij} x_j + b\).</li>
+              <li><strong>Hidden Layers:</strong> In ANN-1 we deploy one hidden layer of 32 neurons. In ANN-2 we deploy a deeper 2-layer hierarchy (64 &rarr; 32 neurons) that constructs higher-order feature representations (e.g., the synergistic non-linear interaction between Ethnic Wear, high discount, and festival season).</li>
+              <li><strong>Output Layer:</strong> A single continuous scalar node representing predicted demand.</li>
+            </ul>
+          </div>
+
+          <div class="viva-card">
+            <h3>3. Forward Propagation &amp; Activation Functions</h3>
+            <p>
+              During forward propagation, input feature tensors pass sequentially through affine transformations and activation functions:
+            </p>
+            <ul>
+              <li><strong>Hidden Activation &mdash; ReLU (Rectified Linear Unit):</strong> Defined as \(f(z) = \max(0, z)\). ReLU introduces essential non-linearity into the network, allows sparse activations, and completely avoids the vanishing gradient problem inherent in sigmoid and tanh activations.</li>
+              <li><strong>Output Activation &mdash; Linear Activation:</strong> The output layer uses a linear identity function \(f(z) = z\). Unlike classification networks which bound outputs to \([0, 1]\) via Softmax or Sigmoid, regression demand modeling requires an unbounded continuous real-valued range to predict sales volumes accurately.</li>
+            </ul>
+          </div>
+
+          <div class="viva-card">
+            <h3>4. Loss Function: Mean Squared Error (MSE)</h3>
+            <p>
+              The objective function optimized during training is the Mean Squared Error:
+              <br><br>
+              <span class="math-chip">MSE = (1 / N) * &sum; (y_actual - y_predicted)&sup2;</span>
+              <br><br>
+              In retail demand prediction, MSE is especially suitable because squaring the residual errors heavily penalizes large forecasting mistakes, forcing the neural network to avoid catastrophic stockout-level prediction errors.
+            </p>
+          </div>
+
+          <div class="viva-card">
+            <h3>5. Backpropagation, Gradient Descent &amp; Adam Optimizer</h3>
+            <p>
+              Learning occurs via gradient-based optimization:
+            </p>
+            <ul>
+              <li><strong>Backpropagation:</strong> Evaluates the partial derivative of the loss function with respect to every weight and bias using the mathematical <em>chain rule of calculus</em> (\(\frac{\partial L}{\partial W} = \frac{\partial L}{\partial a} \cdot \frac{\partial a}{\partial z} \cdot \frac{\partial z}{\partial W}\)).</li>
+              <li><strong>Adam (Adaptive Moment Estimation):</strong> Instead of naive Stochastic Gradient Descent (SGD), Adam maintains exponentially decaying averages of past gradients (first moment / momentum) and past squared gradients (second moment / RMSProp). This provides adaptive learning rates per parameter, enabling rapid and stable convergence through steep ravines and plateaus.</li>
+            </ul>
+          </div>
+
+          <div class="viva-card">
+            <h3>6. Regularization, Overfitting &amp; Data Splits</h3>
+            <p>
+              Deep networks with many parameters risk <em>memorizing</em> training noise rather than learning underlying macroeconomic patterns:
+            </p>
+            <ul>
+              <li><strong>Dropout (Rate = 0.2 in ANN-2):</strong> During each training mini-batch pass, 20% of neurons in the first hidden layer are randomly deactivated. This prevents co-adaptation of features, forcing the network to develop redundant, robust internal representations.</li>
+              <li><strong>Early Stopping (Patience = 10):</strong> Monitors validation loss after every epoch. If validation loss does not achieve a new minimum for 10 consecutive epochs, training terminates automatically to prevent overfitting.</li>
+              <li><strong>Three-Way Split &amp; Zero Data Leakage:</strong> We partition into 68% Training (weight updates), 12% Validation (early stopping checkpointing), and 20% Held-out Test (final honest benchmark). Crucially, the Z-score normalizer (\(\mu, \sigma\)) is fitted strictly on training data and reused for validation, testing, and what-if predictions without look-ahead bias.</li>
+            </ul>
+          </div>
+
+          <div class="viva-card">
+            <h3>7. Why Compare Against a Linear Baseline?</h3>
+            <p>
+              In MBA analytics and executive AI governance, the principle of <strong>parsimony (Occam's Razor)</strong> is foundational. A complex neural network should never be deployed unless it demonstrably outperforms a simple, explainable linear model. 
+              Our baseline model implements Linear Regression (\(\text{Dense}(1, \text{linear})\)). The neural network justifies its added complexity because retail sales exhibit non-linearities: logarithmic diminishing returns of ad spend and non-linear discount elasticity that linear models cannot natively fit without manual polynomial feature engineering.
+            </p>
+          </div>
+
+          <div class="viva-card">
+            <h3>8. Evaluation Metrics Explained</h3>
+            <ul>
+              <li><strong>MAE (Mean Absolute Error):</strong> \(\frac{1}{N}\sum |y - \hat{y}|\). Measures average magnitude of error in natural units (e.g., "our model is off by an average of 14 shirts per week"). Highly interpretable for merchandising managers.</li>
+              <li><strong>RMSE (Root Mean Squared Error):</strong> \(\sqrt{\frac{1}{N}\sum (y - \hat{y})^2}\). Penalizes large outlier forecast errors more severely than MAE.</li>
+              <li><strong>R² (Coefficient of Determination):</strong> \(1 - \frac{SS_{\text{res}}}{SS_{\text{tot}}}\). Measures the proportion of total sales variance explained by the model compared to a naive mean predictor. An \(R^2 > 0.85\) indicates strong predictive power.</li>
+            </ul>
+          </div>
+
+          <div class="viva-card">
+            <h3>9. Future Scope &amp; Advanced Deep Learning Roadmap</h3>
+            <p>
+              In future enterprise iterations, StyleSense can be augmented with specialized architectures:
+            </p>
+            <ul>
+              <li><strong>Convolutional Neural Networks (CNNs / Vision Transformers):</strong> Extract latent fashion embeddings directly from apparel catalog photos (sleeve length, silhouette, neckline, floral prints) to predict aesthetic trend popularity before launch.</li>
+              <li><strong>Large Language Models (LLMs):</strong> Scrape and synthesize thousands of customer reviews and social media comments to capture real-time customer sentiment and emerging aesthetic micro-trends.</li>
+              <li><strong>Recurrent Architectures (LSTM / Temporal Fusion Transformers):</strong> Model sequential time-series autocorrelation, multi-week marketing lag effects, and product cannibalization across weeks.</li>
+            </ul>
+          </div>
+
+          <div class="viva-card">
+            <h3>10. Limitations &amp; Ethical Considerations</h3>
+            <ul>
+              <li><strong>Synthetic Heuristics:</strong> While generated with retail econometric formulas, synthetic data cannot replicate real-world black-swan events (supply chain disruptions, viral social media crises, macroeconomic recessions).</li>
+              <li><strong>In-Browser Footprint:</strong> TensorFlow.js runs in WebGL/CPU inside the browser, optimized for lightweight demonstrations rather than multi-billion parameter enterprise pipelines.</li>
+              <li><strong>Interpretability Trade-off:</strong> Unlike linear regression where weights directly provide marginal dollar elasticity per rupee of ad spend, neural networks act as non-linear black boxes, necessitating post-hoc explainability tools (like SHAP values) in corporate settings.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-box"></div>
+
+  <!-- ==================== JAVASCRIPT APPLICATION LOGIC ==================== -->
+  <script>
+    /**
+     * StyleSense - Single-File Neural Network Retail Dashboard
+     * MBA Data Science & AI Project
+     */
+
+    // --- GLOBAL CONSTANTS & CONFIGURATION ---
+    const CATEGORIES = ['T-Shirts', 'Jeans', 'Dresses', 'Ethnic Wear', 'Footwear', 'Accessories'];
+    const CHANNELS = ['Website', 'Mobile App', 'Marketplace'];
+    
+    const BASE_CATEGORY_DEMAND = {
+      'T-Shirts': 160,
+      'Jeans': 110,
+      'Dresses': 105,
+      'Ethnic Wear': 75,
+      'Footwear': 85,
+      'Accessories': 140
+    };
+
+    const PRICE_RANGES = {
+      'T-Shirts': { min: 599, max: 1299, default: 899 },
+      'Jeans': { min: 1599, max: 3499, default: 2499 },
+      'Dresses': { min: 1299, max: 2999, default: 1999 },
+      'Ethnic Wear': { min: 1999, max: 5499, default: 3499 },
+      'Footwear': { min: 1499, max: 3999, default: 2699 },
+      'Accessories': { min: 399, max: 1199, default: 699 }
+    };
+
+    // --- APPLICATION STATE ---
+    const appState = {
+      dataset: [],
+      dataStats: {},
+      splits: null, // { trainX, trainY, valX, valY, testX, testY, testRecords }
+      scalers: null, // { meanX, stdX, meanY, stdY }
+      models: {
+        baseline: null,
+        ann1: null,
+        ann2: null
+      },
+      histories: {
+        baseline: { trainLoss: [], valLoss: [] },
+        ann1: { trainLoss: [], valLoss: [] },
+        ann2: { trainLoss: [], valLoss: [] }
+      },
+      results: null, // { baseline: {...}, ann1: {...}, ann2: {...}, bestKey: 'ann2' }
+      isTraining: false,
+      charts: {}
+    };
+
+    // --- UTILITY: Toast Notification ---
+    function showToast(message, type = 'info') {
+      const box = document.getElementById('toast-box');
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML = `<span>${message}</span>`;
+      box.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // --- UTILITY: Format Currency & Numbers ---
+    function formatINR(amount) {
+      if (isNaN(amount)) return '₹0';
+      if (amount >= 10000000) return '₹' + (amount / 10000000).toFixed(2) + ' Cr';
+      if (amount >= 100000) return '₹' + (amount / 100000).toFixed(2) + ' L';
+      return '₹' + Math.round(amount).toLocaleString('en-IN');
+    }
+
+    function getMonthName(m) {
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return months[parseInt(m) - 1] || 'Month ' + m;
+    }
+
+    // --- TAB NAVIGATION ---
+    function switchTab(targetTabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+
+      const targetSection = document.getElementById(targetTabId);
+      if (targetSection) targetSection.classList.add('active');
+
+      const navLink = document.querySelector(`.nav-item[data-tab="${targetTabId}"]`);
+      if (navLink) navLink.classList.add('active');
+
+      // Update header titles
+      const titles = {
+        'tab-overview': ['Executive Sales Overview', 'StyleSense D2C Retail Demand Intelligence & ANN Regression'],
+        'tab-data': ['Dataset Generation & Statistics', 'Synthesizing fashion retail transactions with non-linear economic effects'],
+        'tab-train': ['Model Training Laboratory', 'Train baseline regression, shallow ANN, and deep regularized networks in TensorFlow.js'],
+        'tab-results': ['Performance Evaluation & Benchmarks', 'Honest out-of-sample metrics, actual vs. predicted curves, and residuals'],
+        'tab-whatif': ['Managerial What-If Scenario Predictor', 'Simulate pricing, seasonal markdowns, and paid marketing campaigns'],
+        'tab-howitworks': ['How It Works & Viva Reference', 'Academic theory, mathematical formulations, and viva exam answers']
+      };
+
+      if (titles[targetTabId]) {
+        document.getElementById('page-title').textContent = titles[targetTabId][0];
+        document.getElementById('page-subtitle').textContent = titles[targetTabId][1];
+      }
+
+      // Re-render any visible charts that might need resize
+      window.dispatchEvent(new Event('resize'));
+    }
+
+    document.querySelectorAll('.nav-item').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tabId = link.getAttribute('data-tab');
+        switchTab(tabId);
+      });
+    });
+
+    // =========================================================================
+    // 1. DATASET GENERATION LOGIC
+    // =========================================================================
+    function generateDataset(numRecords = 2000) {
+      const records = [];
+
+      for (let i = 0; i < numRecords; i++) {
+        const weekId = 'W' + String(i + 1).padStart(4, '0');
+        const month = Math.floor(Math.random() * 12) + 1;
+        
+        // Random Category & Channel
+        const category = CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)];
+        const channel = CHANNELS[Math.floor(Math.random() * CHANNELS.length)];
+
+        // Price range based on category
+        const pRange = PRICE_RANGES[category];
+        const step = 50;
+        const minSteps = Math.floor(pRange.min / step);
+        const maxSteps = Math.floor(pRange.max / step);
+        const price = (Math.floor(Math.random() * (maxSteps - minSteps + 1)) + minSteps) * step - 1;
+
+        // Discount % (0 to 60) with realistic marketing weights
+        const discounts = [0, 5, 10, 15, 20, 25, 30, 35, 40, 50, 60];
+        const discWeights = [0.10, 0.10, 0.12, 0.12, 0.12, 0.10, 0.10, 0.08, 0.08, 0.05, 0.03];
+        let r = Math.random();
+        let discountPct = 0;
+        let cumulative = 0;
+        for (let j = 0; j < discounts.length; j++) {
+          cumulative += discWeights[j];
+          if (r <= cumulative) {
+            discountPct = discounts[j];
+            break;
+          }
+        }
+
+        // Ad spend in thousands (0 to 180k)
+        const adSpend = parseFloat((Math.random() * 180).toFixed(1));
+
+        // Festival season: Oct-Nov (Diwali) and Dec-Feb (Weddings/Winter) higher probability
+        const isFestivalMonth = [10, 11, 12, 1, 2].includes(month);
+        const festivalProb = isFestivalMonth ? 0.75 : 0.15;
+        const festivalSeason = Math.random() < festivalProb ? 1 : 0;
+
+        // Campaigns
+        const influencerCampaign = Math.random() < 0.30 ? 1 : 0;
+        const emailCampaign = Math.random() < 0.40 ? 1 : 0;
+
+        // Available stock level (inventory constraint)
+        const stockLevel = Math.floor(Math.random() * (850 - 200 + 1)) + 200;
+
+        // -------------------------------------------------------------
+        // Meaningful demand formula (economic logic):
+        // -------------------------------------------------------------
+        const baseDemand = BASE_CATEGORY_DEMAND[category];
+        
+        // Price elasticity within category range
+        const pNorm = (price - pRange.min) / (pRange.max - pRange.min + 1e-5);
+        const priceElasticity = 1.05 - 0.25 * pNorm; // Higher price slightly dampens demand
+
+        // Festival multiplier: Ethnic wear and dresses get largest surge
+        let mFestival = 1.0;
+        if (festivalSeason === 1) {
+          if (category === 'Ethnic Wear') mFestival = 1.65;
+          else if (category === 'Dresses') mFestival = 1.45;
+          else if (category === 'Footwear') mFestival = 1.30;
+          else mFestival = 1.20;
+        }
+
+        // Discount effect: non-linear upward elasticity
+        const dRatio = discountPct / 100.0;
+        const mDiscount = 1.0 + 1.2 * dRatio + 0.5 * (dRatio * dRatio);
+
+        // Ad spend: diminishing returns via logarithmic saturation
+        const boostAd = 24.0 * Math.log(1.0 + adSpend / 7.0);
+
+        // Channel conversion multiplier
+        const mChannel = { 'Website': 1.0, 'Mobile App': 1.15, 'Marketplace': 1.25 }[channel];
+
+        // Campaign boosts
+        const mInfluencer = influencerCampaign === 1 ? 1.18 : 1.0;
+        const mEmail = emailCampaign === 1 ? 1.10 : 1.0;
+
+        // Combined deterministic demand
+        const rawDemand = (baseDemand * priceElasticity * mFestival * mDiscount * mChannel * mInfluencer * mEmail) + boostAd;
+
+        // Realistic Gaussian-like noise (standard normal approximation via Box-Muller)
+        const u1 = Math.max(1e-6, Math.random());
+        const u2 = Math.random();
+        const randStdNormal = Math.sqrt(-2.0 * Math.log(u1)) * Math.cos(2.0 * Math.PI * u2);
+        const noiseFactor = 1.0 + 0.07 * randStdNormal;
+
+        const demandWithNoise = Math.round(rawDemand * noiseFactor);
+
+        // Physical business reality: Units sold cannot exceed Stock_Level
+        const unitsSold = Math.max(5, Math.min(demandWithNoise, stockLevel));
+
+        records.push({
+          Week_ID: weekId,
+          Month: month,
+          Category: category,
+          Channel: channel,
+          Price: price,
+          Discount_Pct: discountPct,
+          Ad_Spend: adSpend,
+          Festival_Season: festivalSeason,
+          Influencer_Campaign: influencerCampaign,
+          Email_Campaign: emailCampaign,
+          Stock_Level: stockLevel,
+          Units_Sold: unitsSold
+        });
+      }
+
+      appState.dataset = records;
+      computeDatasetStatistics();
+      renderDatasetPreview();
+      renderDatasetStatsTable();
+      updateOverviewDashboard();
+
+      // Reset training state since dataset changed
+      resetTrainingState();
+
+      showToast(`Generated ${numRecords} synthetic retail records successfully!`);
+    }
+
+    // --- COMPUTE STATISTICS ---
+    function computeDatasetStatistics() {
+      const data = appState.dataset;
+      const n = data.length;
+      if (n === 0) return;
+
+      const numCols = ['Price', 'Discount_Pct', 'Ad_Spend', 'Stock_Level', 'Units_Sold'];
+      const stats = {};
+
+      numCols.forEach(col => {
+        let sum = 0;
+        let min = Infinity;
+        let max = -Infinity;
+
+        for (let i = 0; i < n; i++) {
+          const val = data[i][col];
+          sum += val;
+          if (val < min) min = val;
+          if (val > max) max = val;
+        }
+
+        const mean = sum / n;
+
+        let sqDiffSum = 0;
+        for (let i = 0; i < n; i++) {
+          sqDiffSum += Math.pow(data[i][col] - mean, 2);
+        }
+        const std = Math.sqrt(sqDiffSum / (n - 1 || 1));
+
+        stats[col] = { count: n, mean, std, min, max };
+      });
+
+      appState.dataStats = stats;
+    }
+
+    // --- RENDER DATA PREVIEW TABLE ---
+    function renderDatasetPreview() {
+      const tbody = document.getElementById('preview-table-body');
+      tbody.innerHTML = '';
+      const previewRows = appState.dataset.slice(0, 10);
+
+      previewRows.forEach(row => {
+        const tr = document.createElement('tr');
+        const catClass = 'tag-' + row.Category.replace(/\s+/g, '-');
+        tr.innerHTML = `
+          <td><strong>${row.Week_ID}</strong></td>
+          <td>${getMonthName(row.Month)} (${row.Month})</td>
+          <td><span class="tag-category ${catClass}">${row.Category}</span></td>
+          <td>${row.Channel}</td>
+          <td>₹${row.Price.toLocaleString()}</td>
+          <td>${row.Discount_Pct}%</td>
+          <td>₹${row.Ad_Spend.toFixed(1)}k</td>
+          <td>${row.Festival_Season === 1 ? '🎉 Yes' : 'No'}</td>
+          <td>${row.Influencer_Campaign === 1 ? '🌟 Active' : 'No'}</td>
+          <td>${row.Email_Campaign === 1 ? '📧 Sent' : 'No'}</td>
+          <td>${row.Stock_Level}</td>
+          <td style="font-weight: 700; color: var(--primary);">${row.Units_Sold}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // --- RENDER DATA STATS TABLE ---
+    function renderDatasetStatsTable() {
+      const tbody = document.getElementById('stats-table-body');
+      tbody.innerHTML = '';
+      const stats = appState.dataStats;
+
+      const labels = {
+        'Price': 'Price (INR ₹)',
+        'Discount_Pct': 'Discount Percentage (%)',
+        'Ad_Spend': 'Paid Ad Spend (INR ₹k)',
+        'Stock_Level': 'Inventory Stock Level (Units)',
+        'Units_Sold': 'Units Sold (Target Variable)'
+      };
+
+      for (const [col, s] of Object.entries(stats)) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${labels[col] || col}</strong></td>
+          <td>${s.count.toLocaleString()}</td>
+          <td>${s.mean.toFixed(2)}</td>
+          <td>${s.std.toFixed(2)}</td>
+          <td>${s.min.toFixed(1)}</td>
+          <td>${s.max.toFixed(1)}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+
+    // --- CSV EXPORT HELPER ---
+    function exportToCSV(filename, rows) {
+      if (!rows || !rows.length) {
+        showToast('No data to export!', 'error');
+        return;
+      }
+      const separator = ',';
+      const keys = Object.keys(rows[0]);
+      const csvContent =
+        keys.join(separator) +
+        '\n' +
+        rows.map(row => {
+          return keys.map(k => {
+            let cell = row[k] === null || row[k] === undefined ? '' : row[k];
+            cell = cell instanceof Date ? cell.toLocaleString() : String(cell).split('"').join('""');
+            if (cell.includes('"') || cell.includes(',') || cell.includes('\n')) {
+              cell = `"${cell}"`;
+            }
+            return cell;
+          }).join(separator);
+        }).join('\n');
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const link = document.createElement('a');
+      const url = URL.createObjectURL(blob);
+      link.setAttribute('href', url);
+      link.setAttribute('download', filename);
+      link.style.visibility = 'hidden';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast(`Exported ${filename} successfully!`);
+    }
+
+    // Event listener for dataset download
+    document.getElementById('btn-download-csv').addEventListener('click', () => {
+      exportToCSV('stylesense_synthetic_sales_dataset.csv', appState.dataset);
+    });
+
+    // =========================================================================
+    // 2. OVERVIEW DASHBOARD & CHARTS
+    // =========================================================================
+    function updateOverviewDashboard() {
+      const data = appState.dataset;
+      const n = data.length;
+      if (n === 0) return;
+
+      let totalUnits = 0;
+      let totalRevenue = 0;
+      let totalDiscount = 0;
+      let totalAdSpend = 0;
+      const catVolume = {};
+      CATEGORIES.forEach(c => catVolume[c] = 0);
+      const chanVolume = {};
+      CHANNELS.forEach(c => chanVolume[c] = 0);
+      const monthlyUnits = Array(12).fill(0);
+      const monthlyCounts = Array(12).fill(0);
+
+      // Discount buckets: 0-10, 11-20, 21-30, 31-40, 41-50, 51-60
+      const discountBuckets = [
+        { label: '0-10%', units: 0, count: 0 },
+        { label: '11-20%', units: 0, count: 0 },
+        { label: '21-30%', units: 0, count: 0 },
+        { label: '31-40%', units: 0, count: 0 },
+        { label: '41-50%', units: 0, count: 0 },
+        { label: '51-60%', units: 0, count: 0 }
+      ];
+
+      data.forEach(row => {
+        totalUnits += row.Units_Sold;
+        const postDiscPrice = row.Price * (1.0 - row.Discount_Pct / 100.0);
+        totalRevenue += postDiscPrice * row.Units_Sold;
+        totalDiscount += row.Discount_Pct;
+        totalAdSpend += row.Ad_Spend;
+
+        catVolume[row.Category] = (catVolume[row.Category] || 0) + row.Units_Sold;
+        chanVolume[row.Channel] = (chanVolume[row.Channel] || 0) + row.Units_Sold;
+
+        monthlyUnits[row.Month - 1] += row.Units_Sold;
+        monthlyCounts[row.Month - 1] += 1;
+
+        const d = row.Discount_Pct;
+        if (d <= 10) { discountBuckets[0].units += row.Units_Sold; discountBuckets[0].count++; }
+        else if (d <= 20) { discountBuckets[1].units += row.Units_Sold; discountBuckets[1].count++; }
+        else if (d <= 30) { discountBuckets[2].units += row.Units_Sold; discountBuckets[2].count++; }
+        else if (d <= 40) { discountBuckets[3].units += row.Units_Sold; discountBuckets[3].count++; }
+        else if (d <= 50) { discountBuckets[4].units += row.Units_Sold; discountBuckets[4].count++; }
+        else { discountBuckets[5].units += row.Units_Sold; discountBuckets[5].count++; }
+      });
+
+      // Best category
+      let topCat = '-';
+      let topCatUnits = -1;
+      for (const [cat, units] of Object.entries(catVolume)) {
+        if (units > topCatUnits) {
+          topCatUnits = units;
+          topCat = cat;
+        }
+      }
+
+      // Populate KPIs
+      document.getElementById('kpi-records').textContent = n.toLocaleString();
+      document.getElementById('kpi-units').textContent = totalUnits.toLocaleString();
+      document.getElementById('kpi-revenue').textContent = formatINR(totalRevenue);
+      document.getElementById('kpi-discount').textContent = (totalDiscount / n).toFixed(1) + '%';
+      document.getElementById('kpi-adspend').textContent = '₹' + (totalAdSpend / n).toFixed(1) + 'k';
+      document.getElementById('kpi-topcat').textContent = topCat;
+
+      // Render Charts
+      renderOverviewCharts({
+        monthlyUnits,
+        catVolume,
+        chanVolume,
+        discountBuckets,
+        scatterData: data.slice(0, 300).map(r => ({ x: r.Ad_Spend, y: r.Units_Sold }))
+      });
+    }
+
+    function renderOverviewCharts({ monthlyUnits, catVolume, chanVolume, discountBuckets, scatterData }) {
+      // 1. Monthly Line Chart
+      if (appState.charts.monthly) appState.charts.monthly.destroy();
+      const ctxMonthly = document.getElementById('chart-monthly-trend').getContext('2d');
+      appState.charts.monthly = new Chart(ctxMonthly, {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+          datasets: [{
+            label: 'Total Units Sold',
+            data: monthlyUnits,
+            borderColor: '#4f46e5',
+            backgroundColor: 'rgba(79, 70, 229, 0.08)',
+            borderWidth: 2.5,
+            fill: true,
+            tension: 0.35,
+            pointBackgroundColor: '#4f46e5',
+            pointRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { grid: { color: '#f1f5f9' }, beginAtZero: false },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+
+      // 2. Category Bar Chart
+      if (appState.charts.category) appState.charts.category.destroy();
+      const ctxCat = document.getElementById('chart-category-bar').getContext('2d');
+      appState.charts.category = new Chart(ctxCat, {
+        type: 'bar',
+        data: {
+          labels: CATEGORIES,
+          datasets: [{
+            label: 'Units Sold',
+            data: CATEGORIES.map(c => catVolume[c] || 0),
+            backgroundColor: ['#ef4444', '#3b82f6', '#ec4899', '#f59e0b', '#6366f1', '#10b981'],
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { grid: { color: '#f1f5f9' }, beginAtZero: true },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+
+      // 3. Channel Donut Chart
+      if (appState.charts.channel) appState.charts.channel.destroy();
+      const ctxChan = document.getElementById('chart-channel-donut').getContext('2d');
+      appState.charts.channel = new Chart(ctxChan, {
+        type: 'doughnut',
+        data: {
+          labels: CHANNELS,
+          datasets: [{
+            data: CHANNELS.map(ch => chanVolume[ch] || 0),
+            backgroundColor: ['#6366f1', '#a855f7', '#06b6d4'],
+            hoverOffset: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } }
+          },
+          cutout: '68%'
+        }
+      });
+
+      // 4. Discount Buckets Bar Chart
+      if (appState.charts.discount) appState.charts.discount.destroy();
+      const ctxDisc = document.getElementById('chart-discount-buckets').getContext('2d');
+      const avgUnitsPerBucket = discountBuckets.map(b => b.count > 0 ? Math.round(b.units / b.count) : 0);
+      appState.charts.discount = new Chart(ctxDisc, {
+        type: 'bar',
+        data: {
+          labels: discountBuckets.map(b => b.label),
+          datasets: [{
+            label: 'Avg Units Sold',
+            data: avgUnitsPerBucket,
+            backgroundColor: '#8b5cf6',
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { grid: { color: '#f1f5f9' }, beginAtZero: true },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+
+      // 5. Ad Spend vs Units Scatter Plot
+      if (appState.charts.adspend) appState.charts.adspend.destroy();
+      const ctxAd = document.getElementById('chart-adspend-scatter').getContext('2d');
+      appState.charts.adspend = new Chart(ctxAd, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: 'Transactions (Sampled)',
+            data: scatterData,
+            backgroundColor: 'rgba(79, 70, 229, 0.45)',
+            borderColor: '#4f46e5',
+            pointRadius: 3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: {
+              title: { display: true, text: 'Ad Spend (₹k)', font: { size: 10 } },
+              grid: { color: '#f1f5f9' }
+            },
+            y: {
+              title: { display: true, text: 'Units Sold', font: { size: 10 } },
+              grid: { color: '#f1f5f9' },
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    // =========================================================================
+    // 3. DATA PREPROCESSING & STANDARDIZATION (NO DATA LEAKAGE)
+    // =========================================================================
+    /**
+     * Converts raw record object into a 17-dimensional numerical feature vector:
+     * - Month (1)
+     * - Category One-Hot (6): [T-Shirts, Jeans, Dresses, Ethnic Wear, Footwear, Accessories]
+     * - Channel One-Hot (3): [Website, Mobile App, Marketplace]
+     * - Price (1)
+     * - Discount_Pct (1)
+     * - Ad_Spend (1)
+     * - Festival_Season (1)
+     * - Influencer_Campaign (1)
+     * - Email_Campaign (1)
+     * - Stock_Level (1)
+     */
+    function recordToFeatureVector(row) {
+      const vec = [];
+      // 1. Month
+      vec.push(row.Month);
+
+      // 2. Category One-Hot (6)
+      CATEGORIES.forEach(c => vec.push(row.Category === c ? 1.0 : 0.0));
+
+      // 3. Channel One-Hot (3)
+      CHANNELS.forEach(ch => vec.push(row.Channel === ch ? 1.0 : 0.0));
+
+      // 4. Numerical and binary features
+      vec.push(row.Price);
+      vec.push(row.Discount_Pct);
+      vec.push(row.Ad_Spend);
+      vec.push(row.Festival_Season);
+      vec.push(row.Influencer_Campaign);
+      vec.push(row.Email_Campaign);
+      vec.push(row.Stock_Level);
+
+      return vec; // Length = 17
+    }
+
+    function prepareDataPartitions(testSplitRatio = 0.20, valSplitRatio = 0.15) {
+      const data = appState.dataset;
+      const n = data.length;
+
+      // Deterministic or clean shuffle of row indices
+      const indices = Array.from({ length: n }, (_, i) => i);
+      for (let i = n - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+      }
+
+      const testCount = Math.floor(n * testSplitRatio);
+      const trainCount = n - testCount;
+
+      const trainIndices = indices.slice(0, trainCount);
+      const testIndices = indices.slice(trainCount);
+
+      // Extract raw feature arrays and target values
+      const rawTrainX = trainIndices.map(i => recordToFeatureVector(data[i]));
+      const rawTrainY = trainIndices.map(i => data[i].Units_Sold);
+
+      const rawTestX = testIndices.map(i => recordToFeatureVector(data[i]));
+      const rawTestY = testIndices.map(i => data[i].Units_Sold);
+      const testRecords = testIndices.map(i => data[i]);
+
+      const numFeatures = rawTrainX[0].length; // 17
+
+      // Fit Scaler STRICTLY on Training Set
+      const meanX = Array(numFeatures).fill(0);
+      const stdX = Array(numFeatures).fill(0);
+
+      for (let f = 0; f < numFeatures; f++) {
+        let sum = 0;
+        for (let i = 0; i < trainCount; i++) sum += rawTrainX[i][f];
+        meanX[f] = sum / trainCount;
+
+        let sqDiff = 0;
+        for (let i = 0; i < trainCount; i++) sqDiff += Math.pow(rawTrainX[i][f] - meanX[f], 2);
+        stdX[f] = Math.sqrt(sqDiff / (trainCount - 1 || 1)) + 1e-7;
+      }
+
+      // Target Scaler (Standardizing Target)
+      let sumY = 0;
+      for (let i = 0; i < trainCount; i++) sumY += rawTrainY[i];
+      const meanY = sumY / trainCount;
+
+      let sqDiffY = 0;
+      for (let i = 0; i < trainCount; i++) sqDiffY += Math.pow(rawTrainY[i] - meanY, 2);
+      const stdY = Math.sqrt(sqDiffY / (trainCount - 1 || 1)) + 1e-7;
+
+      appState.scalers = { meanX, stdX, meanY, stdY };
+
+      // Apply standardization using training parameters
+      const normTrainX = rawTrainX.map(row => row.map((val, f) => (val - meanX[f]) / stdX[f]));
+      const normTrainY = rawTrainY.map(val => (val - meanY) / stdY);
+
+      const normTestX = rawTestX.map(row => row.map((val, f) => (val - meanX[f]) / stdX[f]));
+      const normTestY = rawTestY.map(val => (val - meanY) / stdY);
+
+      // Further split Training into Net Train & Validation for Early Stopping
+      const valCount = Math.floor(trainCount * valSplitRatio);
+      const netTrainCount = trainCount - valCount;
+
+      const netTrainX = normTrainX.slice(0, netTrainCount);
+      const netTrainY = normTrainY.slice(0, netTrainCount);
+
+      const valX = normTrainX.slice(netTrainCount);
+      const valY = normTrainY.slice(netTrainCount);
+
+      appState.splits = {
+        totalRecords: n,
+        trainCount: netTrainCount,
+        valCount: valCount,
+        testCount: testCount,
+        // Raw arrays for TF tensor conversion
+        netTrainX, netTrainY,
+        valX, valY,
+        normTestX, rawTestY, testRecords
+      };
+
+      return appState.splits;
+    }
+
+    // =========================================================================
+    // 4. MODEL ARCHITECTURES & TRAINING PIPELINE
+    // =========================================================================
+    function buildBaselineModel(inputDim = 17, learningRate = 0.001) {
+      const model = tf.sequential();
+      model.add(tf.layers.dense({
+        units: 1,
+        inputShape: [inputDim],
+        activation: 'linear',
+        useBias: true,
+        kernelInitializer: 'glorotNormal'
+      }));
+      model.compile({
+        optimizer: tf.train.adam(learningRate),
+        loss: 'meanSquaredError'
+      });
+      return model;
+    }
+
+    function buildANN1Model(inputDim = 17, learningRate = 0.001) {
+      const model = tf.sequential();
+      model.add(tf.layers.dense({
+        units: 32,
+        inputShape: [inputDim],
+        activation: 'relu',
+        kernelInitializer: 'heNormal'
+      }));
+      model.add(tf.layers.dense({
+        units: 1,
+        activation: 'linear'
+      }));
+      model.compile({
+        optimizer: tf.train.adam(learningRate),
+        loss: 'meanSquaredError'
+      });
+      return model;
+    }
+
+    function buildANN2Model(inputDim = 17, learningRate = 0.001) {
+      const model = tf.sequential();
+      model.add(tf.layers.dense({
+        units: 64,
+        inputShape: [inputDim],
+        activation: 'relu',
+        kernelInitializer: 'heNormal'
+      }));
+      model.add(tf.layers.dropout({ rate: 0.2 }));
+      model.add(tf.layers.dense({
+        units: 32,
+        activation: 'relu',
+        kernelInitializer: 'heNormal'
+      }));
+      model.add(tf.layers.dense({
+        units: 1,
+        activation: 'linear'
+      }));
+      model.compile({
+        optimizer: tf.train.adam(learningRate),
+        loss: 'meanSquaredError'
+      });
+      return model;
+    }
+
+    // Reset UI and state prior to training
+    function resetTrainingState() {
+      // Dispose old TF models to avoid WebGL / CPU memory leaks
+      if (appState.models.baseline) { appState.models.baseline.dispose(); appState.models.baseline = null; }
+      if (appState.models.ann1) { appState.models.ann1.dispose(); appState.models.ann1 = null; }
+      if (appState.models.ann2) { appState.models.ann2.dispose(); appState.models.ann2 = null; }
+
+      appState.histories = {
+        baseline: { trainLoss: [], valLoss: [] },
+        ann1: { trainLoss: [], valLoss: [] },
+        ann2: { trainLoss: [], valLoss: [] }
+      };
+      appState.results = null;
+
+      document.getElementById('model-status-badge').className = 'badge badge-status-neutral';
+      document.getElementById('model-status-badge').textContent = 'Models: Uninitialized';
+
+      document.getElementById('overview-model-banner').style.display = 'none';
+      document.getElementById('results-empty-state').style.display = 'block';
+      document.getElementById('results-content-box').style.display = 'none';
+      document.getElementById('whatif-warning-banner').style.display = 'flex';
+
+      ['baseline', 'ann1', 'ann2'].forEach(key => {
+        const statusEl = document.getElementById(`status-${key}`);
+        if (statusEl) {
+          statusEl.className = 'badge badge-status-neutral';
+          statusEl.textContent = 'Idle';
+        }
+        const cardEl = document.getElementById(`spec-card-${key}`);
+        if (cardEl) cardEl.classList.remove('active');
+      });
+
+      document.getElementById('train-current-step').textContent = 'Status: Ready to train';
+      document.getElementById('train-loss-metrics').textContent = 'Train Loss: -- | Val Loss: --';
+      document.getElementById('train-progress-fill').style.width = '0%';
+    }
+
+    // --- MAIN TRAINING WORKFLOW ---
+    async function trainAllModels() {
+      if (appState.isTraining) return;
+      if (!appState.dataset || appState.dataset.length < 100) {
+        showToast('Please generate a dataset first!', 'error');
+        return;
+      }
+
+      appState.isTraining = true;
+      const trainBtn = document.getElementById('btn-start-training');
+      trainBtn.disabled = true;
+      document.getElementById('model-status-badge').className = 'badge badge-status-training';
+      document.getElementById('model-status-badge').textContent = 'Training in progress...';
+
+      // Read user configuration
+      const epochs = parseInt(document.getElementById('train-epochs').value) || 100;
+      const batchSize = parseInt(document.getElementById('train-batch-size').value) || 32;
+      const learningRate = parseFloat(document.getElementById('train-lr').value) || 0.001;
+      const testSplitRatio = parseFloat(document.getElementById('train-test-split').value) || 0.20;
+
+      // Prepare clean data partitions
+      const splits = prepareDataPartitions(testSplitRatio, 0.15);
+
+      // Convert arrays to TF Tensors
+      const tTrainX = tf.tensor2d(splits.netTrainX);
+      const tTrainY = tf.tensor2d(splits.netTrainY, [splits.netTrainY.length, 1]);
+      const tValX = tf.tensor2d(splits.valX);
+      const tValY = tf.tensor2d(splits.valY, [splits.valY.length, 1]);
+
+      const modelDefinitions = [
+        {
+          key: 'baseline',
+          name: 'Baseline Linear Regression',
+          builder: () => buildBaselineModel(17, learningRate)
+        },
+        {
+          key: 'ann1',
+          name: 'ANN-1 (32 ReLU)',
+          builder: () => buildANN1Model(17, learningRate)
+        },
+        {
+          key: 'ann2',
+          name: 'ANN-2 (64-Drop-32 ReLU)',
+          builder: () => buildANN2Model(17, learningRate)
+        }
+      ];
+
+      // Prepare loss curve chart
+      initLossChart();
+
+      for (let mIdx = 0; mIdx < modelDefinitions.length; mIdx++) {
+        const mDef = modelDefinitions[mIdx];
+        const key = mDef.key;
+
+        // UI status updates
+        document.getElementById(`status-${key}`).className = 'badge badge-status-training';
+        document.getElementById(`status-${key}`).textContent = 'Training...';
+        document.getElementById(`spec-card-${key}`).classList.add('active');
+
+        const model = mDef.builder();
+        appState.models[key] = model;
+
+        let bestValLoss = Infinity;
+        let patienceCount = 0;
+        const patience = 10; // Early stopping patience
+
+        appState.histories[key] = { trainLoss: [], valLoss: [] };
+
+        await model.fit(tTrainX, tTrainY, {
+          epochs: epochs,
+          batchSize: batchSize,
+          validationData: [tValX, tValY],
+          shuffle: true,
+          callbacks: {
+            onEpochEnd: async (epoch, logs) => {
+              const trainL = logs.loss;
+              const valL = logs.val_loss;
+
+              appState.histories[key].trainLoss.push(trainL);
+              appState.histories[key].valLoss.push(valL);
+
+              // Overall progress percentage across all 3 models
+              const modelProg = (epoch + 1) / epochs;
+              const overallPercent = Math.round(((mIdx + modelProg) / modelDefinitions.length) * 100);
+
+              document.getElementById('train-progress-fill').style.width = overallPercent + '%';
+              document.getElementById('train-current-step').textContent = `[${mIdx + 1}/3] Training ${mDef.name} (Epoch ${epoch + 1}/${epochs})`;
+              document.getElementById('train-loss-metrics').textContent = `Train MSE: ${trainL.toFixed(4)} | Val MSE: ${valL.toFixed(4)}`;
+
+              // Early stopping check
+              if (valL < bestValLoss - 1e-5) {
+                bestValLoss = valL;
+                patienceCount = 0;
+              } else {
+                patienceCount++;
+                if (patienceCount >= patience) {
+                  model.stopTraining = true;
+                  document.getElementById('train-current-step').textContent += ` [Early Stopped: Patience reached]`;
+                }
+              }
+
+              // Update chart every 2 epochs
+              if (epoch % 2 === 0 || epoch === epochs - 1) {
+                updateLossChart(key);
+                await tf.nextFrame();
+              }
+            }
+          }
+        });
+
+        // Mark model complete
+        document.getElementById(`status-${key}`).className = 'badge badge-status-success';
+        document.getElementById(`status-${key}`).textContent = `Done (${appState.histories[key].trainLoss.length} eps)`;
+        document.getElementById(`spec-card-${key}`).classList.remove('active');
+        updateLossChart(key);
+      }
+
+      // Cleanup training tensors
+      tTrainX.dispose();
+      tTrainY.dispose();
+      tValX.dispose();
+      tValY.dispose();
+
+      // Run honest evaluation on held-out test data
+      evaluateAllModels();
+
+      appState.isTraining = false;
+      trainBtn.disabled = false;
+      document.getElementById('model-status-badge').className = 'badge badge-status-success';
+      document.getElementById('model-status-badge').textContent = 'Models: Trained & Evaluated';
+      document.getElementById('whatif-warning-banner').style.display = 'none';
+
+      showToast('Training complete! All models evaluated on held-out test set.');
+    }
+
+    // --- LOSS CHART HANDLERS ---
+    function initLossChart() {
+      if (appState.charts.loss) appState.charts.loss.destroy();
+      const ctx = document.getElementById('chart-loss-history').getContext('2d');
+      appState.charts.loss = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [
+            {
+              label: 'Training Loss (MSE)',
+              data: [],
+              borderColor: '#4f46e5',
+              backgroundColor: 'transparent',
+              borderWidth: 2,
+              pointRadius: 0
+            },
+            {
+              label: 'Validation Loss (MSE)',
+              data: [],
+              borderColor: '#ef4444',
+              backgroundColor: 'transparent',
+              borderWidth: 2,
+              borderDash: [5, 5],
+              pointRadius: 0
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top' },
+            tooltip: { mode: 'index', intersect: false }
+          },
+          scales: {
+            x: { title: { display: true, text: 'Epoch' }, grid: { display: false } },
+            y: { title: { display: true, text: 'Loss (MSE)' }, grid: { color: '#f1f5f9' }, beginAtZero: false }
+          }
+        }
+      });
+    }
+
+    function updateLossChart(modelKey = 'ann2') {
+      const history = appState.histories[modelKey];
+      if (!history || !appState.charts.loss) return;
+
+      const epochs = history.trainLoss.length;
+      appState.charts.loss.data.labels = Array.from({ length: epochs }, (_, i) => i + 1);
+      appState.charts.loss.data.datasets[0].data = history.trainLoss;
+      appState.charts.loss.data.datasets[1].data = history.valLoss;
+      appState.charts.loss.update('none');
+    }
+
+    document.getElementById('btn-view-loss-baseline').addEventListener('click', () => {
+      setActiveLossButton('btn-view-loss-baseline');
+      updateLossChart('baseline');
+    });
+    document.getElementById('btn-view-loss-ann1').addEventListener('click', () => {
+      setActiveLossButton('btn-view-loss-ann1');
+      updateLossChart('ann1');
+    });
+    document.getElementById('btn-view-loss-ann2').addEventListener('click', () => {
+      setActiveLossButton('btn-view-loss-ann2');
+      updateLossChart('ann2');
+    });
+
+    function setActiveLossButton(id) {
+      ['btn-view-loss-baseline', 'btn-view-loss-ann1', 'btn-view-loss-ann2'].forEach(b => {
+        const el = document.getElementById(b);
+        el.className = b === id ? 'btn btn-primary btn-sm' : 'btn btn-secondary btn-sm';
+      });
+    }
+
+    // =========================================================================
+    // 5. EVALUATION & BENCHMARKING (TEST SET ONLY)
+    // =========================================================================
+    function evaluateAllModels() {
+      const splits = appState.splits;
+      const scalers = appState.scalers;
+      if (!splits || !scalers) return;
+
+      const normTestX = splits.normTestX;
+      const actualY = splits.rawTestY; // Real units
+      const testRecords = splits.testRecords;
+      const nTest = actualY.length;
+
+      // Tensor of test inputs
+      const tTestX = tf.tensor2d(normTestX);
+
+      const evalResults = {};
+      const modelKeys = ['baseline', 'ann1', 'ann2'];
+
+      modelKeys.forEach(key => {
+        const model = appState.models[key];
+        const predStandardizedTensor = model.predict(tTestX);
+        const predStdArray = Array.from(predStandardizedTensor.dataSync());
+        predStandardizedTensor.dispose();
+
+        // Convert predictions BACK to real units
+        const predRealUnits = predStdArray.map(z => {
+          const raw = z * scalers.stdY + scalers.meanY;
+          return Math.max(0, Math.round(raw)); // Natural sales unit floor
+        });
+
+        // Compute metrics
+        let sumAbsErr = 0;
+        let sumSqErr = 0;
+        let sumY = 0;
+
+        for (let i = 0; i < nTest; i++) {
+          const actual = actualY[i];
+          const pred = predRealUnits[i];
+          const err = actual - pred;
+
+          sumAbsErr += Math.abs(err);
+          sumSqErr += err * err;
+          sumY += actual;
+        }
+
+        const meanY = sumY / nTest;
+        let sumTotalSq = 0;
+        for (let i = 0; i < nTest; i++) {
+          sumTotalSq += Math.pow(actualY[i] - meanY, 2);
+        }
+
+        const mae = sumAbsErr / nTest;
+        const rmse = Math.sqrt(sumSqErr / nTest);
+        const r2 = 1.0 - (sumSqErr / (sumTotalSq || 1e-7));
+
+        evalResults[key] = {
+          mae,
+          rmse,
+          r2,
+          predRealUnits,
+          epochsTrained: appState.histories[key].trainLoss.length
+        };
+      });
+
+      tTestX.dispose();
+
+      // Determine Best Model (Highest R2)
+      let bestKey = 'baseline';
+      let bestR2 = -Infinity;
+      modelKeys.forEach(k => {
+        if (evalResults[k].r2 > bestR2) {
+          bestR2 = evalResults[k].r2;
+          bestKey = k;
+        }
+      });
+
+      evalResults.bestKey = bestKey;
+      appState.results = evalResults;
+
+      // Render Results Tab
+      renderResultsTab();
+
+      // Update Overview Tab Banner
+      updateOverviewModelBanner();
+    }
+
+    function renderResultsTab() {
+      const results = appState.results;
+      const splits = appState.splits;
+      if (!results || !splits) return;
+
+      document.getElementById('results-empty-state').style.display = 'none';
+      document.getElementById('results-content-box').style.display = 'block';
+
+      // Record counts
+      document.getElementById('res-count-total').textContent = splits.totalRecords.toLocaleString();
+      document.getElementById('res-count-train').textContent = splits.trainCount.toLocaleString();
+      document.getElementById('res-count-val').textContent = splits.valCount.toLocaleString();
+      document.getElementById('res-count-test').textContent = splits.testCount.toLocaleString();
+
+      const bestKey = results.bestKey;
+      const best = results[bestKey];
+      const baseline = results.baseline;
+
+      const modelNames = {
+        baseline: 'Linear Regression Baseline',
+        ann1: 'ANN-1 (Shallow)',
+        ann2: 'ANN-2 (Deeper Regularized)'
+      };
+
+      // Banner text & score
+      document.getElementById('best-model-headline').textContent = `${modelNames[bestKey]} Ranked Best`;
+      document.getElementById('best-model-score').textContent = best.r2.toFixed(3);
+
+      let insight = '';
+      if (bestKey !== 'baseline') {
+        const maeImprovement = ((baseline.mae - best.mae) / baseline.mae * 100).toFixed(1);
+        const r2Gain = (best.r2 - baseline.r2).toFixed(3);
+        insight = `${modelNames[bestKey]} achieved the highest test performance with an R² of ${best.r2.toFixed(3)} and MAE of ${best.mae.toFixed(1)} units, reducing forecast error by ${maeImprovement}% compared to the linear baseline (R² ${baseline.r2.toFixed(3)}). Non-linear ReLU activations successfully captured diminishing marketing returns and festival demand synergy.`;
+      } else {
+        insight = `Linear Regression performed best or tied with an R² of ${best.r2.toFixed(3)}. The data demand trends are largely linear, and additional neural layers did not yield significant marginal accuracy gains.`;
+      }
+      document.getElementById('best-model-insight-text').textContent = insight;
+
+      // Table population
+      const tbody = document.getElementById('results-table-body');
+      tbody.innerHTML = '';
+
+      const specs = {
+        baseline: { name: 'Linear Regression', arch: 'Dense(1, Linear)', p: 18 },
+        ann1: { name: 'ANN-1 (Shallow)', arch: 'Dense(32, ReLU) &rarr; Dense(1)', p: 609 },
+        ann2: { name: 'ANN-2 (Deep Regularized)', arch: 'Dense(64) &rarr; Drop &rarr; Dense(32) &rarr; Dense(1)', p: 3265 }
+      };
+
+      ['baseline', 'ann1', 'ann2'].forEach(k => {
+        const r = results[k];
+        const isBest = k === bestKey;
+        const tr = document.createElement('tr');
+        if (isBest) tr.style.backgroundColor = '#f5f3ff';
+
+        tr.innerHTML = `
+          <td><strong>${specs[k].name}</strong></td>
+          <td><span style="font-family: var(--font-mono); font-size: 0.75rem;">${specs[k].arch}</span></td>
+          <td>${r.mae.toFixed(2)} units</td>
+          <td>${r.rmse.toFixed(2)} units</td>
+          <td style="font-weight: 700; color: ${isBest ? '#4f46e5' : 'inherit'};">${r.r2.toFixed(3)}</td>
+          <td>${isBest ? '<span class="badge badge-status-success">Best Model</span>' : '<span class="badge badge-status-neutral">Evaluated</span>'}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Render Charts
+      renderResultsCharts();
+    }
+
+    function renderResultsCharts() {
+      const results = appState.results;
+      const splits = appState.splits;
+      const bestKey = results.bestKey;
+      const actualY = splits.rawTestY;
+      const predY = results[bestKey].predRealUnits;
+
+      // 1. Grouped Bar: Metrics Comparison
+      if (appState.charts.metricsComp) appState.charts.metricsComp.destroy();
+      const ctxComp = document.getElementById('chart-metrics-comparison').getContext('2d');
+      appState.charts.metricsComp = new Chart(ctxComp, {
+        type: 'bar',
+        data: {
+          labels: ['MAE (Lower is Better)', 'RMSE (Lower is Better)', 'R² Score (Higher is Better)'],
+          datasets: [
+            {
+              label: 'Baseline Linear',
+              data: [results.baseline.mae, results.baseline.rmse, results.baseline.r2 * 100],
+              backgroundColor: '#94a3b8'
+            },
+            {
+              label: 'ANN-1 (Shallow)',
+              data: [results.ann1.mae, results.ann1.rmse, results.ann1.r2 * 100],
+              backgroundColor: '#818cf8'
+            },
+            {
+              label: 'ANN-2 (Deep Regularized)',
+              data: [results.ann2.mae, results.ann2.rmse, results.ann2.r2 * 100],
+              backgroundColor: '#4f46e5'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  if (ctx.dataIndex === 2) return `${ctx.dataset.label}: ${(ctx.raw / 100).toFixed(3)} (R²)`;
+                  return `${ctx.dataset.label}: ${ctx.raw.toFixed(1)} units`;
+                }
+              }
+            }
+          },
+          scales: {
+            y: { grid: { color: '#f1f5f9' }, beginAtZero: true }
+          }
+        }
+      });
+
+      // 2. Scatter: Actual vs Predicted
+      if (appState.charts.actualVsPred) appState.charts.actualVsPred.destroy();
+      const ctxScat = document.getElementById('chart-actual-vs-pred').getContext('2d');
+      
+      const scatterPoints = [];
+      let minVal = Infinity;
+      let maxVal = -Infinity;
+      for (let i = 0; i < actualY.length; i++) {
+        scatterPoints.push({ x: actualY[i], y: predY[i] });
+        if (actualY[i] < minVal) minVal = actualY[i];
+        if (actualY[i] > maxVal) maxVal = actualY[i];
+      }
+
+      appState.charts.actualVsPred = new Chart(ctxScat, {
+        type: 'scatter',
+        data: {
+          datasets: [
+            {
+              label: 'Test Samples',
+              data: scatterPoints,
+              backgroundColor: 'rgba(99, 102, 241, 0.4)',
+              borderColor: '#6366f1',
+              pointRadius: 3
+            },
+            {
+              type: 'line',
+              label: 'Perfect Fit (y = x)',
+              data: [{ x: minVal, y: minVal }, { x: maxVal, y: maxVal }],
+              borderColor: '#ef4444',
+              borderWidth: 2,
+              borderDash: [5, 5],
+              pointRadius: 0,
+              fill: false
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { title: { display: true, text: 'Actual Sales (Units)' }, grid: { color: '#f1f5f9' } },
+            y: { title: { display: true, text: 'Predicted Sales (Units)' }, grid: { color: '#f1f5f9' } }
+          }
+        }
+      });
+
+      // 3. Histogram: Residuals Distribution
+      if (appState.charts.residuals) appState.charts.residuals.destroy();
+      const ctxRes = document.getElementById('chart-residuals').getContext('2d');
+
+      const residuals = [];
+      for (let i = 0; i < actualY.length; i++) residuals.push(actualY[i] - predY[i]);
+
+      // Bin into 12 bins
+      const binCount = 12;
+      const minRes = Math.min(...residuals);
+      const maxRes = Math.max(...residuals);
+      const binWidth = (maxRes - minRes) / binCount;
+
+      const bins = Array(binCount).fill(0);
+      const binLabels = [];
+      for (let b = 0; b < binCount; b++) {
+        const start = minRes + b * binWidth;
+        const end = start + binWidth;
+        binLabels.push(`${Math.round(start)} to ${Math.round(end)}`);
+      }
+
+      residuals.forEach(r => {
+        let bIdx = Math.floor((r - minRes) / binWidth);
+        if (bIdx >= binCount) bIdx = binCount - 1;
+        if (bIdx < 0) bIdx = 0;
+        bins[bIdx]++;
+      });
+
+      appState.charts.residuals = new Chart(ctxRes, {
+        type: 'bar',
+        data: {
+          labels: binLabels,
+          datasets: [{
+            label: 'Residual Frequency',
+            data: bins,
+            backgroundColor: '#10b981',
+            borderRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { title: { display: true, text: 'Error Bin (Actual - Predicted)' }, grid: { display: false } },
+            y: { title: { display: true, text: 'Sample Count' }, grid: { color: '#f1f5f9' }, beginAtZero: true }
+          }
+        }
+      });
+    }
+
+    function updateOverviewModelBanner() {
+      const results = appState.results;
+      if (!results) return;
+      const best = results[results.bestKey];
+
+      const names = {
+        baseline: 'Linear Regression Baseline',
+        ann1: 'ANN-1 (Shallow Neural Network)',
+        ann2: 'ANN-2 (Deeper Regularized Network)'
+      };
+
+      document.getElementById('overview-model-banner').style.display = 'flex';
+      document.getElementById('overview-best-model-name').textContent = `Best Model: ${names[results.bestKey]}`;
+      document.getElementById('overview-test-r2').textContent = best.r2.toFixed(3);
+      document.getElementById('overview-test-mae').textContent = `MAE: ${best.mae.toFixed(1)} units`;
+    }
+
+    // CSV Download of Test Predictions
+    document.getElementById('btn-download-predictions').addEventListener('click', () => {
+      const results = appState.results;
+      const splits = appState.splits;
+      if (!results || !splits) {
+        showToast('Please train and evaluate models first!', 'error');
+        return;
+      }
+
+      const bestKey = results.bestKey;
+      const preds = results[bestKey].predRealUnits;
+      const actuals = splits.rawTestY;
+      const records = splits.testRecords;
+
+      const exportRows = records.map((r, i) => ({
+        Week_ID: r.Week_ID,
+        Category: r.Category,
+        Actual_Units: actuals[i],
+        Predicted_Units: preds[i],
+        Error: actuals[i] - preds[i]
+      }));
+
+      exportToCSV('stylesense_test_predictions.csv', exportRows);
+    });
+
+    // =========================================================================
+    // 6. WHAT-IF PREDICTOR
+    // =========================================================================
+    function updateDefaultPriceForCategory() {
+      const cat = document.getElementById('whatif-category').value;
+      const range = PRICE_RANGES[cat];
+      if (range) {
+        document.getElementById('whatif-price').value = range.default;
+        document.getElementById('whatif-price-hint').textContent = `Typical: ₹${range.min} - ₹${range.max}`;
+      }
+    }
+
+    function runWhatIfPrediction() {
+      if (!appState.results || !appState.scalers) {
+        showToast('Please train the models in the "Train Models" tab first!', 'warning');
+        switchTab('tab-train');
+        return;
+      }
+
+      // Collect inputs
+      const month = parseInt(document.getElementById('whatif-month').value);
+      const category = document.getElementById('whatif-category').value;
+      const channel = document.getElementById('whatif-channel').value;
+      const price = parseFloat(document.getElementById('whatif-price').value);
+      const discountPct = parseFloat(document.getElementById('whatif-discount').value);
+      const adSpend = parseFloat(document.getElementById('whatif-adspend').value);
+      const festivalSeason = parseInt(document.getElementById('whatif-festival').value);
+      const influencerCampaign = parseInt(document.getElementById('whatif-influencer').value);
+      const emailCampaign = parseInt(document.getElementById('whatif-email').value);
+      const stockLevel = parseInt(document.getElementById('whatif-stock').value);
+
+      // Validate
+      if (isNaN(price) || price < 100 || price > 50000) {
+        showToast('Price must be between ₹100 and ₹50,000', 'error');
+        return;
+      }
+      if (isNaN(stockLevel) || stockLevel < 10 || stockLevel > 10000) {
+        showToast('Stock level must be between 10 and 10,000 units', 'error');
+        return;
+      }
+
+      const bestKey = appState.results.bestKey;
+      const bestModel = appState.models[bestKey];
+
+      // Convert to feature vector
+      const featureVec = recordToFeatureVector({
+        Month: month,
+        Category: category,
+        Channel: channel,
+        Price: price,
+        Discount_Pct: discountPct,
+        Ad_Spend: adSpend,
+        Festival_Season: festivalSeason,
+        Influencer_Campaign: influencerCampaign,
+        Email_Campaign: emailCampaign,
+        Stock_Level: stockLevel
+      });
+
+      // Standardize input
+      const scalers = appState.scalers;
+      const normInput = featureVec.map((val, f) => (val - scalers.meanX[f]) / scalers.stdX[f]);
+
+      const tInput = tf.tensor2d([normInput]);
+      const tPred = bestModel.predict(tInput);
+      const rawPredZ = tPred.dataSync()[0];
+      tInput.dispose();
+      tPred.dispose();
+
+      // Convert back to natural units
+      const rawUnits = rawPredZ * scalers.stdY + scalers.meanY;
+      const unconstrainedUnits = Math.round(rawUnits);
+      // Realistic business cap: can't sell below 0 or above available stock
+      const finalUnits = Math.max(0, Math.min(unconstrainedUnits, stockLevel));
+
+      // Financial computations
+      const postDiscPrice = price * (1.0 - discountPct / 100.0);
+      const grossRevenue = finalUnits * postDiscPrice;
+      const netRevenue = grossRevenue - (adSpend * 1000);
+      const stockUtil = (finalUnits / stockLevel) * 100;
+
+      // Update UI
+      document.getElementById('whatif-pred-units').textContent = finalUnits.toLocaleString();
+      document.getElementById('whatif-pred-revenue').textContent = formatINR(grossRevenue);
+      document.getElementById('whatif-pred-net').textContent = formatINR(netRevenue);
+      document.getElementById('whatif-pred-stock-util').textContent = stockUtil.toFixed(1) + '%';
+
+      const warningEl = document.getElementById('whatif-stock-warning');
+      if (stockUtil >= 98) {
+        warningEl.innerHTML = '<span style="color: #dc2626; font-weight: 700;">⚠️ High stockout risk! Demand capped by inventory.</span>';
+      } else {
+        warningEl.textContent = 'Healthy inventory buffer';
+      }
+
+      const modelNames = {
+        baseline: 'Linear Baseline',
+        ann1: 'ANN-1 (32 ReLU)',
+        ann2: 'ANN-2 (64-Drop-32)'
+      };
+      document.getElementById('whatif-model-badge').textContent = `Predicted with ${modelNames[bestKey]}`;
+
+      // Generate Discount Sensitivity Curve
+      generateDiscountSensitivityCurve({
+        month, category, channel, price, adSpend, festivalSeason, influencerCampaign, emailCampaign, stockLevel
+      });
+
+      showToast('Simulation updated successfully!');
+    }
+
+    // --- DISCOUNT SENSITIVITY CURVE ---
+    function generateDiscountSensitivityCurve(baseParams) {
+      const bestKey = appState.results.bestKey;
+      const bestModel = appState.models[bestKey];
+      const scalers = appState.scalers;
+
+      const discountValues = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
+      const normInputRows = [];
+
+      discountValues.forEach(d => {
+        const vec = recordToFeatureVector({
+          ...baseParams,
+          Discount_Pct: d
+        });
+        const norm = vec.map((val, f) => (val - scalers.meanX[f]) / scalers.stdX[f]);
+        normInputRows.push(norm);
+      });
+
+      const tBatch = tf.tensor2d(normInputRows);
+      const tPreds = bestModel.predict(tBatch);
+      const zArray = Array.from(tPreds.dataSync());
+      tBatch.dispose();
+      tPreds.dispose();
+
+      const predictedUnits = [];
+      const grossRevenues = [];
+
+      for (let i = 0; i < discountValues.length; i++) {
+        const d = discountValues[i];
+        const rawU = zArray[i] * scalers.stdY + scalers.meanY;
+        const finalU = Math.max(0, Math.min(Math.round(rawU), baseParams.stockLevel));
+        const postDiscPrice = baseParams.price * (1.0 - d / 100.0);
+        const rev = finalU * postDiscPrice;
+
+        predictedUnits.push(finalU);
+        grossRevenues.push(Math.round(rev));
+      }
+
+      // Render Sensitivity Chart
+      if (appState.charts.discountSens) appState.charts.discountSens.destroy();
+      const ctx = document.getElementById('chart-discount-sensitivity').getContext('2d');
+
+      appState.charts.discountSens = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: discountValues.map(d => d + '%'),
+          datasets: [
+            {
+              label: 'Predicted Units Sold (Demand)',
+              data: predictedUnits,
+              borderColor: '#4f46e5',
+              backgroundColor: 'rgba(79, 70, 229, 0.08)',
+              borderWidth: 2.5,
+              yAxisID: 'yUnits',
+              tension: 0.3,
+              fill: true,
+              pointRadius: 4
+            },
+            {
+              label: 'Gross Revenue (INR ₹)',
+              data: grossRevenues,
+              borderColor: '#10b981',
+              backgroundColor: 'transparent',
+              borderWidth: 2.5,
+              borderDash: [4, 4],
+              yAxisID: 'yRevenue',
+              tension: 0.3,
+              pointRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          scales: {
+            x: { title: { display: true, text: 'Promotional Discount %' }, grid: { display: false } },
+            yUnits: {
+              type: 'linear',
+              display: true,
+              position: 'left',
+              title: { display: true, text: 'Units Sold' },
+              grid: { color: '#f1f5f9' },
+              beginAtZero: true
+            },
+            yRevenue: {
+              type: 'linear',
+              display: true,
+              position: 'right',
+              title: { display: true, text: 'Gross Revenue (₹)' },
+              grid: { drawOnChartArea: false },
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    }
+
+    // =========================================================================
+    // 7. INITIALIZATION ON PAGE LOAD
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      // Connect Generator button
+      document.getElementById('btn-generate-data').addEventListener('click', () => {
+        const size = parseInt(document.getElementById('dataset-size-select').value) || 2000;
+        generateDataset(size);
+      });
+
+      // Connect Train button
+      document.getElementById('btn-start-training').addEventListener('click', () => {
+        trainAllModels();
+      });
+
+      // Initial dataset generation so dashboard is rich on first load
+      generateDataset(2000);
+      updateDefaultPriceForCategory();
+    });
+  </script>
+</body>
+</html>
