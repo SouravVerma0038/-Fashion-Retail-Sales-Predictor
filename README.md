@@ -81,3 +81,8 @@ Modern Direct-to-Consumer (D2C) fashion brands face compressed seasonal cycles, 
 
 ## 📜 License & Academic Integrity
 Developed as an academic submission for MBA Data Science & Artificial Intelligence (*Neural Networks and Deep Learning* module). All synthetic formulas and architectural implementations are open for educational study.
+
+
+SOURAV VERMA
+25MDA10040
+MBA-Data science and AI
