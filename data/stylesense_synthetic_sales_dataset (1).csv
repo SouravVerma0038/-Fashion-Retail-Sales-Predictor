@@ -1,0 +1,2001 @@
+Week_ID,Month,Category,Channel,Price,Discount_Pct,Ad_Spend,Festival_Season,Influencer_Campaign,Email_Campaign,Stock_Level,Units_Sold
+W0001,1,T-Shirts,Marketplace,1199,15,12.6,1,0,1,600,297
+W0002,4,T-Shirts,Mobile App,549,40,179.4,0,0,1,709,430
+W0003,11,T-Shirts,Website,699,30,172,1,1,0,754,394
+W0004,4,T-Shirts,Mobile App,599,25,127.8,1,0,0,582,375
+W0005,7,Ethnic Wear,Marketplace,3249,0,110.3,0,0,1,772,169
+W0006,10,Footwear,Mobile App,3399,40,148.2,0,0,1,643,235
+W0007,12,Dresses,Mobile App,2799,50,79.6,1,0,0,304,304
+W0008,6,Footwear,Website,2299,0,50.9,0,0,1,609,147
+W0009,6,Dresses,Mobile App,1799,5,22.7,1,0,1,322,246
+W0010,8,Accessories,Website,349,25,8,0,0,1,551,226
+W0011,6,Dresses,Marketplace,1949,40,100,0,1,0,378,284
+W0012,8,Dresses,Marketplace,2499,30,24.5,1,0,0,465,279
+W0013,9,T-Shirts,Mobile App,649,40,0.4,0,0,1,832,352
+W0014,12,Dresses,Marketplace,1949,0,110,1,0,1,434,259
+W0015,8,Dresses,Mobile App,1799,30,174.1,0,0,0,662,261
+W0016,7,T-Shirts,Mobile App,1149,5,7.1,1,0,0,781,210
+W0017,11,Dresses,Marketplace,1649,15,144.1,1,1,0,487,318
+W0018,9,T-Shirts,Website,1249,5,13.3,0,0,0,328,177
+W0019,6,Jeans,Website,3249,10,151.3,0,0,1,269,182
+W0020,11,Accessories,Website,649,30,110.1,1,0,0,427,330
+W0021,3,Dresses,Marketplace,2649,30,159.6,0,0,0,759,206
+W0022,7,Accessories,Marketplace,899,40,65.1,0,0,0,628,277
+W0023,8,Footwear,Mobile App,1699,5,20.4,0,1,0,577,150
+W0024,12,T-Shirts,Marketplace,699,50,169.1,1,0,0,220,220
+W0025,2,Footwear,Marketplace,3299,10,41.1,1,0,0,722,178
+W0026,1,T-Shirts,Mobile App,1249,10,111.5,1,0,0,783,271
+W0027,8,Ethnic Wear,Website,3799,5,168.1,0,1,0,620,164
+W0028,6,Footwear,Website,2649,25,103,0,0,0,368,181
+W0029,8,Ethnic Wear,Marketplace,3949,20,32,0,0,0,283,156
+W0030,6,Accessories,Mobile App,449,10,88.7,0,0,0,655,257
+W0031,8,Footwear,Mobile App,1699,50,36.7,0,0,0,430,186
+W0032,8,Ethnic Wear,Mobile App,3699,0,21.3,1,0,0,374,180
+W0033,11,T-Shirts,Website,749,50,59,1,0,0,574,455
+W0034,7,Ethnic Wear,Website,3099,40,18.8,1,1,0,315,255
+W0035,8,T-Shirts,Mobile App,1099,60,26.7,0,0,1,215,215
+W0036,9,Dresses,Marketplace,1249,15,161,0,1,0,835,281
+W0037,12,Jeans,Marketplace,2599,20,177.8,1,0,0,706,284
+W0038,12,Jeans,Website,2499,40,72.2,1,0,0,724,258
+W0039,1,Ethnic Wear,Website,4499,20,112.4,1,0,0,792,208
+W0040,12,Accessories,Website,1049,15,168.7,1,0,1,294,271
+W0041,3,Footwear,Mobile App,3749,35,143.6,0,0,1,401,209
+W0042,3,Ethnic Wear,Marketplace,3249,5,168.2,0,0,1,351,176
+W0043,12,Accessories,Mobile App,1049,15,167.9,1,0,0,642,271
+W0044,3,Dresses,Mobile App,1249,10,0.9,0,1,0,583,152
+W0045,9,Dresses,Marketplace,2399,25,65.2,0,0,0,619,203
+W0046,4,Accessories,Mobile App,449,20,40.4,0,0,1,542,280
+W0047,8,T-Shirts,Website,1199,25,88.8,0,1,1,756,302
+W0048,10,Ethnic Wear,Marketplace,4599,5,78.8,0,0,1,599,142
+W0049,9,Dresses,Mobile App,1599,0,135.1,1,0,0,646,253
+W0050,9,Dresses,Mobile App,2099,10,154.5,0,0,1,224,203
+W0051,2,Dresses,Mobile App,2499,40,151.3,1,1,0,838,354
+W0052,12,Accessories,Mobile App,649,60,3.2,0,1,0,704,319
+W0053,9,Footwear,Marketplace,2149,5,13.9,0,0,1,573,146
+W0054,5,Footwear,Mobile App,3049,10,169.2,0,0,1,481,177
+W0055,7,Jeans,Website,2099,0,33.5,1,0,0,499,175
+W0056,12,Accessories,Marketplace,599,15,178.6,1,1,0,421,394
+W0057,5,Jeans,Mobile App,3049,20,94.2,1,0,1,790,237
+W0058,5,Dresses,Marketplace,1649,20,86.1,0,0,0,430,218
+W0059,1,Jeans,Website,2899,35,179.6,1,0,0,371,248
+W0060,6,Jeans,Mobile App,2999,0,91.6,0,0,0,230,172
+W0061,1,T-Shirts,Marketplace,649,15,107.8,1,0,1,352,352
+W0062,9,Footwear,Marketplace,1849,35,121.6,0,1,1,634,297
+W0063,9,Jeans,Marketplace,1899,35,161.3,0,1,1,499,329
+W0064,8,Ethnic Wear,Marketplace,4649,50,163.9,0,0,0,432,228
+W0065,6,Ethnic Wear,Mobile App,2999,5,75,0,0,1,516,151
+W0066,6,Ethnic Wear,Mobile App,4949,15,109.2,0,0,0,737,165
+W0067,2,Dresses,Marketplace,2049,30,152.7,0,1,0,326,275
+W0068,12,Jeans,Website,3149,10,53.3,1,0,0,466,181
+W0069,11,Footwear,Mobile App,2249,10,130.3,1,0,0,839,206
+W0070,11,Footwear,Website,2249,30,2.2,0,0,0,335,133
+W0071,8,Accessories,Mobile App,699,15,83,1,0,1,727,306
+W0072,4,Footwear,Mobile App,1699,0,141.1,0,1,0,207,205
+W0073,11,Dresses,Mobile App,1399,5,156.8,1,0,0,732,255
+W0074,4,Dresses,Website,2899,60,129.5,0,0,0,502,205
+W0075,3,Dresses,Marketplace,1399,0,71.7,0,0,0,554,229
+W0076,7,Dresses,Website,2349,10,112.6,0,1,0,203,200
+W0077,7,Accessories,Marketplace,399,35,125.5,0,1,0,213,213
+W0078,12,Dresses,Website,1499,60,49.2,1,0,1,272,272
+W0079,10,Footwear,Website,1699,20,33.2,1,0,0,249,176
+W0080,3,Jeans,Mobile App,2049,10,48.3,0,0,0,695,170
+W0081,9,Footwear,Mobile App,2999,10,53.3,0,0,1,491,173
+W0082,10,Jeans,Mobile App,2799,0,60.9,0,0,1,838,168
+W0083,5,Dresses,Website,1549,10,113.8,0,0,1,484,193
+W0084,6,T-Shirts,Website,549,10,134.9,0,0,0,710,258
+W0085,4,Accessories,Website,349,5,179.2,0,0,1,808,233
+W0086,8,Footwear,Mobile App,3299,40,155.8,0,0,0,798,202
+W0087,6,T-Shirts,Mobile App,1249,30,50.3,0,0,1,719,272
+W0088,12,Footwear,Website,1749,30,140.3,1,1,0,313,263
+W0089,10,Footwear,Marketplace,2049,15,58.2,1,0,0,500,185
+W0090,5,Ethnic Wear,Mobile App,3449,20,58.3,0,0,0,476,157
+W0091,2,T-Shirts,Mobile App,1249,30,136.4,0,0,0,454,285
+W0092,8,Accessories,Marketplace,699,0,22.1,0,1,1,813,246
+W0093,5,T-Shirts,Website,1199,15,61.4,0,0,1,207,207
+W0094,5,Ethnic Wear,Website,3249,25,12.6,0,0,1,844,124
+W0095,8,Footwear,Website,2349,0,114.2,0,0,0,435,147
+W0096,3,Dresses,Website,1649,5,67.6,0,0,1,622,200
+W0097,6,Jeans,Marketplace,2049,40,94.6,0,1,1,308,308
+W0098,6,Footwear,Marketplace,3649,40,110.9,0,1,0,228,226
+W0099,8,Accessories,Mobile App,549,25,33.6,1,0,0,491,301
+W0100,8,Ethnic Wear,Marketplace,4999,50,38.9,1,0,0,711,276
+W0101,12,Ethnic Wear,Marketplace,2749,15,170.9,0,0,1,399,195
+W0102,5,T-Shirts,Mobile App,899,15,105.8,1,0,0,693,318
+W0103,12,Jeans,Mobile App,1899,5,72.2,0,1,0,267,238
+W0104,11,Ethnic Wear,Mobile App,4349,50,171.8,1,1,1,358,358
+W0105,4,Ethnic Wear,Website,4949,25,96.9,0,1,0,684,165
+W0106,7,Accessories,Website,749,25,88.5,0,0,0,503,228
+W0107,11,Footwear,Marketplace,3299,5,173,1,0,0,628,206
+W0108,9,Ethnic Wear,Marketplace,3199,40,92.5,0,1,0,337,235
+W0109,10,Ethnic Wear,Mobile App,2299,25,101.3,1,1,0,780,331
+W0110,6,Footwear,Marketplace,2849,35,72.9,1,0,0,660,232
+W0111,4,Accessories,Website,449,25,19.2,0,0,0,565,207
+W0112,2,Jeans,Mobile App,2749,50,163,1,0,0,701,316
+W0113,8,Jeans,Website,2199,0,77.9,1,0,1,840,204
+W0114,6,Dresses,Marketplace,2349,0,148.3,0,1,1,698,235
+W0115,7,Dresses,Mobile App,2699,25,91.4,0,0,0,469,183
+W0116,10,Accessories,Mobile App,1049,0,108.9,1,1,1,677,303
+W0117,2,Dresses,Marketplace,2849,20,171.4,0,1,1,788,283
+W0118,3,Dresses,Website,1449,35,111.9,0,1,1,419,289
+W0119,2,T-Shirts,Mobile App,999,15,15.5,1,0,1,842,263
+W0120,9,T-Shirts,Website,1249,20,139.5,0,0,1,390,276
+W0121,1,Accessories,Marketplace,699,10,146,1,0,1,458,337
+W0122,8,T-Shirts,Marketplace,999,15,145.5,0,0,1,333,305
+W0123,5,Dresses,Marketplace,1949,20,159.8,0,0,0,407,215
+W0124,1,Jeans,Marketplace,2949,10,130,1,0,1,663,223
+W0125,1,Ethnic Wear,Website,5449,15,12.7,1,0,0,815,142
+W0126,10,Accessories,Marketplace,849,0,15,0,0,0,594,188
+W0127,3,Accessories,Marketplace,1099,5,37.7,0,0,1,670,253
+W0128,10,Footwear,Marketplace,3249,5,143.3,1,0,1,819,193
+W0129,12,T-Shirts,Mobile App,999,5,79.3,1,0,0,345,280
+W0130,5,T-Shirts,Website,999,20,145.5,1,0,0,827,323
+W0131,5,Footwear,Website,3149,0,3.5,0,0,0,604,97
+W0132,7,Footwear,Marketplace,3399,5,44.7,0,0,0,836,144
+W0133,7,Ethnic Wear,Marketplace,5199,15,156.9,0,0,1,627,173
+W0134,12,Jeans,Mobile App,2849,60,111.6,1,0,0,630,348
+W0135,6,Jeans,Marketplace,3349,0,169.8,0,0,0,445,214
+W0136,9,Footwear,Mobile App,2349,0,175.9,0,1,1,595,201
+W0137,1,T-Shirts,Mobile App,649,20,165.2,1,1,1,575,472
+W0138,3,Dresses,Marketplace,2849,15,151.6,0,0,1,321,255
+W0139,5,Ethnic Wear,Website,4299,40,83.1,0,0,0,685,167
+W0140,5,Jeans,Marketplace,1899,20,62.7,1,0,0,683,236
+W0141,2,Ethnic Wear,Marketplace,1999,40,166.7,1,0,0,660,322
+W0142,8,Jeans,Website,2999,30,147.8,1,0,1,615,233
+W0143,12,Dresses,Website,2149,5,161,1,0,0,273,194
+W0144,7,Ethnic Wear,Website,5249,30,172.4,1,0,0,512,223
+W0145,9,Footwear,Mobile App,2349,15,34.8,0,0,0,762,149
+W0146,2,Dresses,Mobile App,1499,35,170.6,1,0,1,444,385
+W0147,11,Ethnic Wear,Website,4899,10,140,1,0,0,539,200
+W0148,10,Jeans,Marketplace,2499,25,8.3,1,0,0,832,242
+W0149,1,Ethnic Wear,Website,5349,35,3.8,1,1,1,430,185
+W0150,11,Footwear,Website,2049,5,133.8,1,0,1,381,201
+W0151,5,Accessories,Marketplace,349,40,179.4,1,0,0,608,474
+W0152,4,Ethnic Wear,Marketplace,2899,30,109.4,0,1,1,663,226
+W0153,8,Jeans,Website,2499,10,66.3,0,0,0,245,174
+W0154,4,Footwear,Marketplace,1799,5,6,0,0,0,772,139
+W0155,3,Ethnic Wear,Website,2549,50,164.8,0,0,1,398,211
+W0156,5,Dresses,Website,2749,25,86.3,0,0,0,556,170
+W0157,3,Footwear,Marketplace,1549,60,94,0,0,1,274,274
+W0158,7,Jeans,Marketplace,2449,25,116.8,0,0,0,750,269
+W0159,6,T-Shirts,Website,999,35,5.7,0,0,1,450,244
+W0160,12,T-Shirts,Marketplace,649,5,32.6,1,1,1,477,392
+W0161,4,Dresses,Marketplace,1749,20,115.7,1,0,0,223,223
+W0162,11,Accessories,Marketplace,649,10,87,1,0,0,226,226
+W0163,8,Dresses,Website,2699,35,104.6,0,0,1,495,225
+W0164,9,Dresses,Marketplace,2349,35,36.4,1,0,1,777,313
+W0165,6,Jeans,Website,3349,50,8.8,0,0,0,221,166
+W0166,8,Accessories,Mobile App,749,0,103.9,1,0,0,485,231
+W0167,11,Footwear,Marketplace,3099,10,28.1,1,1,1,554,219
+W0168,12,Footwear,Marketplace,1699,20,60.7,1,0,0,466,220
+W0169,5,Jeans,Marketplace,1949,0,27.3,0,0,0,808,164
+W0170,3,Jeans,Website,3449,15,32.7,0,0,0,230,143
+W0171,7,Accessories,Marketplace,899,20,140.3,0,1,0,797,324
+W0172,8,Accessories,Mobile App,449,0,126.9,0,1,0,809,263
+W0173,8,Dresses,Mobile App,1599,20,13.1,1,0,0,290,262
+W0174,3,Footwear,Marketplace,1899,15,83.5,0,0,1,769,185
+W0175,8,Footwear,Website,2949,20,83.1,1,0,1,773,230
+W0176,12,Dresses,Mobile App,2149,35,61.6,0,0,0,344,206
+W0177,1,Accessories,Marketplace,1149,0,48.1,1,0,0,452,206
+W0178,10,Jeans,Marketplace,1749,0,152.1,1,0,0,279,239
+W0179,9,T-Shirts,Marketplace,599,20,178.9,0,0,0,259,259
+W0180,5,Footwear,Marketplace,3349,10,63.5,0,1,0,658,183
+W0181,8,Footwear,Website,2699,5,73,0,0,1,746,167
+W0182,10,Accessories,Website,799,5,66.7,1,1,0,560,222
+W0183,1,Accessories,Website,999,10,101.8,1,0,0,343,209
+W0184,2,Accessories,Mobile App,1049,50,57,0,1,0,347,328
+W0185,7,Footwear,Marketplace,3699,0,175.6,0,0,0,791,169
+W0186,4,Footwear,Mobile App,3399,15,176.6,0,0,1,314,197
+W0187,1,Dresses,Mobile App,1349,25,94.1,1,0,1,346,321
+W0188,3,Accessories,Marketplace,549,20,94,0,1,0,635,332
+W0189,12,T-Shirts,Website,549,40,90.8,1,0,0,687,361
+W0190,10,Ethnic Wear,Marketplace,3199,15,93.6,0,0,0,613,172
+W0191,11,Footwear,Marketplace,2649,10,135.7,1,1,0,746,246
+W0192,5,Ethnic Wear,Marketplace,5449,25,175.5,0,0,0,705,166
+W0193,1,T-Shirts,Website,799,30,100.4,0,0,0,764,291
+W0194,9,Jeans,Marketplace,3399,50,168.6,0,0,0,458,298
+W0195,1,T-Shirts,Marketplace,1049,35,161.4,1,0,1,632,419
+W0196,10,Accessories,Website,1099,20,4.1,1,0,0,551,174
+W0197,7,Footwear,Marketplace,2649,25,94.4,0,1,0,616,197
+W0198,12,Accessories,Marketplace,349,35,77.3,1,0,1,301,301
+W0199,5,T-Shirts,Marketplace,699,15,157.5,0,0,1,659,354
+W0200,12,Accessories,Mobile App,999,25,79.7,0,0,0,527,260
+W0201,12,Accessories,Marketplace,1099,15,54.4,1,0,0,309,266
+W0202,2,Jeans,Mobile App,3399,25,175.2,0,0,0,288,215
+W0203,9,Footwear,Website,2299,10,45.3,1,0,1,566,171
+W0204,8,Ethnic Wear,Marketplace,5199,25,93.7,0,1,0,833,180
+W0205,3,Footwear,Marketplace,1449,20,71.1,0,1,1,635,230
+W0206,7,Dresses,Mobile App,2649,20,53.3,0,1,1,363,233
+W0207,4,Jeans,Mobile App,2799,40,76.9,0,1,0,574,268
+W0208,8,Accessories,Mobile App,699,60,44.9,0,0,0,768,376
+W0209,9,T-Shirts,Marketplace,1099,5,125.9,0,1,0,510,307
+W0210,6,Jeans,Mobile App,2649,15,158.9,0,1,0,806,219
+W0211,11,Footwear,Marketplace,1449,10,92.9,1,0,0,389,245
+W0212,12,Jeans,Mobile App,3099,20,78,0,0,1,370,211
+W0213,4,Jeans,Marketplace,3149,10,54.5,0,0,0,578,161
+W0214,8,T-Shirts,Mobile App,1049,0,110.1,0,1,1,348,294
+W0215,4,Footwear,Website,3449,10,85.6,0,0,1,393,159
+W0216,2,Dresses,Marketplace,2149,0,99.4,1,0,1,518,264
+W0217,6,Dresses,Mobile App,1949,5,23.8,0,1,0,680,181
+W0218,9,Ethnic Wear,Mobile App,3099,0,121,0,0,1,701,155
+W0219,8,Footwear,Website,3649,5,177.6,0,1,0,637,139
+W0220,2,Dresses,Mobile App,2849,30,142.5,1,0,0,395,323
+W0221,7,Dresses,Mobile App,2549,25,1.5,0,0,0,338,151
+W0222,7,T-Shirts,Mobile App,649,50,109,0,0,0,785,419
+W0223,12,T-Shirts,Marketplace,1249,25,58.2,1,0,0,707,284
+W0224,7,Ethnic Wear,Mobile App,2799,25,38.5,1,0,1,683,269
+W0225,5,Ethnic Wear,Marketplace,4099,0,126,0,1,0,683,159
+W0226,4,Footwear,Mobile App,3899,20,144.6,0,1,1,726,219
+W0227,12,Jeans,Mobile App,3149,0,62.4,0,1,0,723,182
+W0228,6,Footwear,Mobile App,2799,20,55.1,0,0,1,425,166
+W0229,7,Accessories,Website,1049,35,174.2,1,0,0,465,292
+W0230,2,Footwear,Website,2699,15,140.3,1,1,0,286,211
+W0231,4,T-Shirts,Marketplace,699,15,158.2,1,1,0,607,406
+W0232,9,T-Shirts,Website,549,20,139.8,0,0,0,537,292
+W0233,8,Ethnic Wear,Website,3299,30,114.9,1,1,1,577,321
+W0234,10,T-Shirts,Website,599,10,4.5,1,0,1,526,251
+W0235,12,Jeans,Website,1749,15,35.4,1,0,0,424,214
+W0236,8,Ethnic Wear,Website,3899,15,127,1,0,0,266,203
+W0237,4,Dresses,Mobile App,1649,40,171.2,0,0,0,545,254
+W0238,12,Dresses,Marketplace,1449,0,156.9,1,0,0,436,295
+W0239,9,T-Shirts,Website,749,5,148,1,0,0,286,286
+W0240,9,Footwear,Mobile App,3599,40,66.3,0,0,0,404,177
+W0241,2,T-Shirts,Marketplace,899,5,132,1,0,1,374,306
+W0242,8,Ethnic Wear,Website,4099,10,62.6,0,0,1,256,134
+W0243,2,Jeans,Marketplace,2049,0,97.9,1,1,1,561,261
+W0244,8,T-Shirts,Marketplace,899,20,106.7,0,1,0,846,344
+W0245,8,Accessories,Mobile App,349,20,141.1,0,0,1,809,306
+W0246,4,T-Shirts,Marketplace,1099,5,88.6,0,0,1,791,281
+W0247,4,Dresses,Website,1899,50,146.2,0,0,1,284,254
+W0248,3,Dresses,Website,1349,20,59.2,1,1,0,203,203
+W0249,7,Jeans,Website,1649,20,111.2,1,0,0,850,206
+W0250,2,Dresses,Marketplace,2449,15,144.8,1,0,0,274,274
+W0251,7,Footwear,Marketplace,2499,30,157.1,0,0,0,207,207
+W0252,7,Jeans,Mobile App,2649,5,20.6,0,1,1,682,207
+W0253,6,Ethnic Wear,Marketplace,4899,35,150.9,0,0,1,614,198
+W0254,5,T-Shirts,Mobile App,849,35,133.4,0,0,1,330,330
+W0255,5,Accessories,Marketplace,1099,25,4.4,0,1,1,669,272
+W0256,2,Dresses,Mobile App,1599,10,37.4,1,0,0,362,256
+W0257,9,Accessories,Mobile App,749,30,1,0,0,0,255,239
+W0258,1,Jeans,Website,1999,20,75.9,1,1,1,402,320
+W0259,5,T-Shirts,Marketplace,949,5,24.7,0,0,0,471,259
+W0260,8,Footwear,Mobile App,2149,30,6.6,0,0,1,752,157
+W0261,4,Ethnic Wear,Website,3399,15,90.3,1,0,1,306,227
+W0262,8,Ethnic Wear,Marketplace,2249,25,35.1,0,0,0,440,170
+W0263,9,Ethnic Wear,Mobile App,4899,0,34.8,0,1,0,602,120
+W0264,1,T-Shirts,Website,999,10,74,0,1,1,375,273
+W0265,10,Footwear,Marketplace,2249,10,115.7,0,1,1,578,202
+W0266,8,Dresses,Website,1249,40,161.4,0,0,1,685,235
+W0267,11,Footwear,Marketplace,3499,10,83.5,1,0,1,413,214
+W0268,7,Accessories,Mobile App,799,25,124.5,0,1,0,292,292
+W0269,1,T-Shirts,Marketplace,849,15,15.1,1,0,1,526,370
+W0270,12,Jeans,Mobile App,3449,0,33.9,1,1,1,323,212
+W0271,3,Jeans,Mobile App,3149,50,154.2,0,0,0,518,261
+W0272,9,T-Shirts,Marketplace,949,25,179.9,0,1,1,684,408
+W0273,9,Accessories,Marketplace,849,30,151.8,0,0,1,576,316
+W0274,6,Footwear,Mobile App,2549,50,179.8,0,0,1,261,257
+W0275,7,T-Shirts,Website,599,5,111.1,0,0,1,525,247
+W0276,4,Footwear,Marketplace,2699,15,112.6,0,1,1,546,235
+W0277,9,Jeans,Mobile App,3399,10,48.9,0,0,0,735,199
+W0278,5,Jeans,Website,2949,10,33,0,0,1,751,143
+W0279,5,Jeans,Marketplace,3249,25,65.3,0,1,0,586,220
+W0280,8,Jeans,Website,3049,0,178.1,0,0,0,325,180
+W0281,3,T-Shirts,Marketplace,1249,25,121.9,0,0,0,535,332
+W0282,4,Jeans,Marketplace,1649,15,54.8,0,0,1,370,259
+W0283,10,Footwear,Marketplace,2549,15,22.6,1,1,1,310,224
+W0284,8,Jeans,Marketplace,1949,25,147.1,0,1,0,449,304
+W0285,9,Accessories,Website,699,20,142.4,0,0,0,839,253
+W0286,6,Accessories,Website,1099,30,112.4,0,0,1,221,221
+W0287,3,Accessories,Mobile App,799,40,174.6,0,0,0,215,215
+W0288,10,T-Shirts,Marketplace,1249,10,5.1,1,0,1,724,273
+W0289,2,Dresses,Mobile App,1799,5,147.4,1,1,1,786,280
+W0290,11,Footwear,Mobile App,2899,10,48.7,1,0,1,603,193
+W0291,1,Dresses,Marketplace,2349,10,71,1,1,1,441,337
+W0292,4,Jeans,Website,3099,25,56,0,0,0,641,184
+W0293,3,Jeans,Website,3199,10,65,0,0,0,572,158
+W0294,11,Jeans,Website,2749,15,44.4,0,0,0,461,176
+W0295,3,Jeans,Website,2699,35,27.2,0,0,0,426,208
+W0296,12,Accessories,Website,899,20,71.9,1,1,1,630,314
+W0297,12,Footwear,Mobile App,3549,20,139.4,1,1,1,833,258
+W0298,7,Footwear,Mobile App,1599,10,87.1,0,0,0,402,175
+W0299,9,Dresses,Marketplace,2899,20,5.6,1,0,0,370,186
+W0300,10,Ethnic Wear,Mobile App,4649,40,150.5,0,0,1,737,153
+W0301,6,Accessories,Mobile App,649,5,24.6,1,0,1,717,244
+W0302,2,T-Shirts,Marketplace,1249,50,158.2,1,0,1,489,427
+W0303,5,Ethnic Wear,Website,3099,25,65.9,1,1,0,798,228
+W0304,10,Accessories,Mobile App,749,15,167.6,1,0,0,585,318
+W0305,4,Ethnic Wear,Mobile App,4949,30,52.7,0,0,1,218,159
+W0306,5,Footwear,Website,2749,10,74.3,1,1,0,789,170
+W0307,5,Accessories,Website,349,40,36.7,0,0,1,353,282
+W0308,8,Dresses,Website,1399,15,33.5,0,1,0,259,188
+W0309,6,Dresses,Website,1549,5,152.5,0,0,0,468,184
+W0310,3,T-Shirts,Mobile App,649,0,65,0,0,1,594,294
+W0311,7,T-Shirts,Marketplace,1149,20,152.7,1,0,1,346,346
+W0312,9,Accessories,Marketplace,599,50,48.4,0,0,0,619,352
+W0313,2,Footwear,Website,2299,40,56.4,0,0,1,371,186
+W0314,10,Dresses,Marketplace,1449,10,17.4,1,0,0,220,220
+W0315,12,Dresses,Mobile App,1299,25,74.3,1,0,0,574,321
+W0316,2,Accessories,Marketplace,349,15,105.5,1,1,1,249,249
+W0317,8,Footwear,Marketplace,1699,15,149.9,0,0,1,446,207
+W0318,3,Accessories,Mobile App,999,30,40.2,0,1,0,239,239
+W0319,11,Dresses,Marketplace,2099,15,18.2,1,0,0,674,247
+W0320,12,T-Shirts,Website,699,0,129,0,0,0,493,263
+W0321,6,Footwear,Website,3599,5,97.5,0,0,0,766,154
+W0322,4,T-Shirts,Mobile App,949,15,158.1,0,1,0,352,315
+W0323,11,Footwear,Mobile App,1849,60,58.7,1,0,1,756,363
+W0324,8,Dresses,Marketplace,2949,40,52.1,1,0,1,811,330
+W0325,12,Jeans,Marketplace,1949,5,67.2,0,0,0,381,202
+W0326,5,Accessories,Mobile App,399,25,38.7,0,1,0,353,320
+W0327,3,Dresses,Mobile App,2649,5,29,0,0,0,504,153
+W0328,2,Accessories,Mobile App,1149,15,29.6,0,0,1,313,215
+W0329,12,Footwear,Website,1749,40,84.6,1,1,0,840,280
+W0330,12,Jeans,Mobile App,1599,5,42.7,1,0,1,710,228
+W0331,5,Dresses,Mobile App,2849,30,59.1,0,1,0,562,229
+W0332,6,Footwear,Marketplace,1999,0,136.5,0,0,0,784,174
+W0333,3,Accessories,Marketplace,349,5,110.8,0,0,0,542,279
+W0334,12,Ethnic Wear,Website,4249,15,62.9,1,1,0,626,220
+W0335,5,Accessories,Mobile App,849,35,124.1,0,0,0,796,251
+W0336,4,Dresses,Mobile App,2949,5,157,0,0,0,419,204
+W0337,5,Ethnic Wear,Mobile App,3549,25,111.9,0,0,1,316,169
+W0338,7,Accessories,Marketplace,849,20,159.1,0,0,1,383,273
+W0339,10,Jeans,Website,2299,20,1.9,1,0,0,581,170
+W0340,2,Dresses,Mobile App,2799,20,148.5,1,0,0,608,282
+W0341,12,T-Shirts,Mobile App,1249,0,56.8,1,0,1,315,253
+W0342,6,T-Shirts,Marketplace,1249,25,85.2,0,0,0,453,255
+W0343,3,T-Shirts,Website,849,10,60.7,0,0,1,736,205
+W0344,6,Ethnic Wear,Website,4299,15,152.3,1,1,0,390,252
+W0345,9,Ethnic Wear,Website,3099,10,61.4,0,0,0,389,154
+W0346,12,Footwear,Mobile App,1549,5,129.7,1,0,0,561,214
+W0347,7,Dresses,Mobile App,2149,30,135.3,0,0,0,434,242
+W0348,11,Jeans,Marketplace,2749,15,105.3,0,0,0,704,212
+W0349,8,Jeans,Marketplace,3349,30,26.6,0,0,0,614,210
+W0350,3,Jeans,Mobile App,2399,25,129.5,0,0,0,517,250
+W0351,10,Accessories,Marketplace,1049,40,91,0,0,0,292,292
+W0352,7,T-Shirts,Mobile App,799,5,143.4,0,1,1,826,307
+W0353,5,Ethnic Wear,Website,4849,10,63.4,0,1,0,363,144
+W0354,2,Ethnic Wear,Marketplace,2449,0,118.2,1,1,0,336,267
+W0355,6,T-Shirts,Mobile App,1199,0,164.2,0,0,0,633,214
+W0356,4,T-Shirts,Mobile App,899,0,104.2,0,0,1,714,262
+W0357,7,Footwear,Website,2149,20,3.7,0,1,0,352,150
+W0358,5,Footwear,Marketplace,3149,20,24,1,0,0,612,199
+W0359,5,Ethnic Wear,Website,3949,15,137.5,0,0,0,819,158
+W0360,5,Ethnic Wear,Marketplace,2649,25,21,0,0,0,495,175
+W0361,3,Jeans,Marketplace,2399,25,38.5,0,0,1,289,231
+W0362,12,Ethnic Wear,Website,4349,15,37.6,0,0,1,232,130
+W0363,7,Footwear,Mobile App,1849,10,0.6,0,0,1,546,128
+W0364,8,Dresses,Marketplace,2599,50,69.9,0,0,1,658,276
+W0365,5,Footwear,Mobile App,3849,25,61.3,0,0,1,668,177
+W0366,10,Footwear,Mobile App,2499,40,134.6,1,0,1,300,290
+W0367,11,Dresses,Website,1999,60,67.1,0,1,1,781,292
+W0368,11,Accessories,Marketplace,949,40,122.3,1,0,0,555,344
+W0369,12,Footwear,Website,3449,15,57.4,0,0,1,454,145
+W0370,1,Jeans,Website,2149,25,132.1,1,0,1,320,247
+W0371,8,T-Shirts,Marketplace,699,10,36.5,0,0,0,400,280
+W0372,7,T-Shirts,Website,1249,0,144,0,0,0,336,182
+W0373,8,Footwear,Marketplace,3699,40,6.7,1,0,1,314,202
+W0374,6,T-Shirts,Mobile App,1149,25,20.1,0,1,0,430,242
+W0375,5,Jeans,Marketplace,2749,0,104,0,0,1,600,187
+W0376,9,Jeans,Mobile App,3249,5,65.4,0,0,0,814,169
+W0377,7,Dresses,Marketplace,1399,25,155.4,0,0,1,200,200
+W0378,6,Jeans,Website,1649,0,45.7,0,0,0,694,152
+W0379,11,Ethnic Wear,Website,4699,25,25.5,1,0,0,749,164
+W0380,3,Footwear,Mobile App,2149,25,121.1,0,0,0,677,196
+W0381,1,T-Shirts,Marketplace,1249,25,103.5,0,0,0,341,293
+W0382,11,Dresses,Website,1299,20,173.9,1,1,0,825,294
+W0383,12,Dresses,Website,1249,20,70.8,0,0,0,838,205
+W0384,5,Ethnic Wear,Mobile App,3599,5,168.2,1,0,1,751,235
+W0385,7,T-Shirts,Mobile App,749,20,60.6,0,0,1,809,327
+W0386,8,Footwear,Mobile App,3399,25,40,0,1,1,368,153
+W0387,6,Dresses,Marketplace,2199,25,89.2,0,0,0,846,205
+W0388,5,Footwear,Website,3849,0,130.5,0,1,1,297,154
+W0389,1,Accessories,Mobile App,599,10,56.5,0,1,1,837,265
+W0390,6,Ethnic Wear,Website,5349,5,171.2,0,1,1,717,172
+W0391,6,Accessories,Mobile App,899,30,15.9,1,0,1,233,233
+W0392,1,Jeans,Marketplace,3049,20,150.6,1,0,1,331,293
+W0393,1,Ethnic Wear,Marketplace,2649,10,130.1,1,0,0,432,216
+W0394,6,Footwear,Marketplace,3349,35,85.7,0,0,1,221,221
+W0395,10,Accessories,Website,849,0,154.4,1,1,0,804,223
+W0396,10,Accessories,Marketplace,949,15,58.8,1,1,1,234,234
+W0397,4,T-Shirts,Website,999,30,7.5,1,1,0,430,333
+W0398,11,Accessories,Marketplace,649,0,26.3,0,0,1,489,251
+W0399,3,Accessories,Mobile App,699,50,90.2,0,0,1,631,338
+W0400,3,Footwear,Website,3899,15,164.1,0,1,1,225,163
+W0401,10,Ethnic Wear,Website,4899,40,58.3,1,1,1,594,275
+W0402,8,Ethnic Wear,Website,2099,15,112.2,0,1,1,784,198
+W0403,6,Dresses,Website,2599,50,127.3,0,0,1,442,243
+W0404,9,Jeans,Website,2999,15,91.3,0,0,1,225,190
+W0405,5,Dresses,Mobile App,2299,10,138.3,0,0,0,560,190
+W0406,6,T-Shirts,Mobile App,1249,25,178.2,0,0,0,475,283
+W0407,1,T-Shirts,Mobile App,749,0,126.8,1,0,0,214,214
+W0408,5,Accessories,Marketplace,949,40,24.6,0,0,0,282,282
+W0409,9,Footwear,Website,3549,5,135.7,0,0,0,722,139
+W0410,9,Footwear,Website,3899,20,26.7,0,0,0,589,131
+W0411,1,Dresses,Mobile App,1649,10,114.8,1,0,0,418,273
+W0412,9,Footwear,Marketplace,1599,35,16.9,1,1,0,344,281
+W0413,1,Accessories,Website,849,0,35.2,0,1,0,255,199
+W0414,11,Accessories,Website,749,40,87.9,1,0,0,640,289
+W0415,10,Accessories,Website,799,30,88.8,1,0,1,261,261
+W0416,7,T-Shirts,Website,1049,20,1.1,0,0,1,720,195
+W0417,8,Ethnic Wear,Website,3999,10,71.4,0,1,0,374,156
+W0418,4,Ethnic Wear,Marketplace,2149,20,91.2,1,0,1,473,330
+W0419,2,Ethnic Wear,Mobile App,3849,25,89.8,1,1,0,428,251
+W0420,4,T-Shirts,Marketplace,799,25,117.6,0,0,0,351,346
+W0421,6,Dresses,Marketplace,1599,50,172.7,0,0,0,838,306
+W0422,6,Accessories,Marketplace,949,5,20.8,0,0,1,338,202
+W0423,4,Ethnic Wear,Mobile App,5099,25,30.6,0,0,0,287,141
+W0424,1,Footwear,Marketplace,2249,30,60.6,1,0,1,220,220
+W0425,11,Accessories,Website,549,50,62.6,1,0,0,331,331
+W0426,10,T-Shirts,Website,849,0,100.6,1,0,0,728,269
+W0427,8,Dresses,Website,1599,60,76.3,0,1,0,748,305
+W0428,5,Jeans,Website,2899,5,95.5,0,0,1,481,179
+W0429,8,Dresses,Website,2349,0,121.1,0,1,1,410,171
+W0430,12,Footwear,Website,3899,30,73.2,1,0,0,237,191
+W0431,5,Footwear,Mobile App,3299,5,117.2,0,0,0,617,141
+W0432,9,Footwear,Marketplace,3899,15,102.3,1,0,0,324,218
+W0433,9,Accessories,Mobile App,899,10,146,0,0,0,420,229
+W0434,9,Footwear,Mobile App,1449,25,175.5,0,0,0,844,211
+W0435,10,Footwear,Marketplace,2549,15,177.3,1,1,0,648,275
+W0436,4,Ethnic Wear,Website,3199,5,70.8,0,0,0,716,126
+W0437,8,Jeans,Mobile App,2449,10,17.4,0,1,0,618,196
+W0438,4,Dresses,Website,2699,40,120.2,0,0,1,419,225
+W0439,2,Ethnic Wear,Marketplace,3649,5,21.7,0,1,0,765,152
+W0440,8,Footwear,Website,3599,0,35.8,1,0,1,221,135
+W0441,8,Footwear,Mobile App,3299,20,108.2,0,1,1,519,213
+W0442,6,Accessories,Website,599,15,12.5,0,1,0,287,251
+W0443,11,Accessories,Marketplace,499,40,82.5,0,1,0,348,348
+W0444,6,Footwear,Website,1749,20,61.5,0,1,0,726,199
+W0445,3,Accessories,Mobile App,999,20,44,0,1,0,370,263
+W0446,11,T-Shirts,Website,599,5,160.7,1,0,0,786,295
+W0447,3,Jeans,Mobile App,1949,20,83,1,1,0,304,286
+W0448,7,Jeans,Mobile App,2699,15,133.2,1,0,0,347,237
+W0449,2,Footwear,Marketplace,3699,15,148.2,1,0,0,672,218
+W0450,8,T-Shirts,Mobile App,1099,10,20.4,0,0,0,820,222
+W0451,7,Accessories,Marketplace,749,30,62.9,0,0,1,611,341
+W0452,8,Ethnic Wear,Mobile App,3749,10,30.5,0,1,0,369,153
+W0453,5,Jeans,Marketplace,1549,20,101.7,0,1,0,633,271
+W0454,7,Ethnic Wear,Mobile App,3849,40,42.4,0,0,0,601,174
+W0455,12,Jeans,Marketplace,2899,5,43.8,1,1,0,794,254
+W0456,10,Jeans,Marketplace,1849,25,86.4,0,0,1,746,270
+W0457,5,Dresses,Mobile App,2049,40,113.5,0,0,1,466,276
+W0458,6,Jeans,Mobile App,1999,25,7.3,0,1,1,597,245
+W0459,3,T-Shirts,Marketplace,1149,20,156.7,0,0,0,786,293
+W0460,7,Dresses,Mobile App,1799,15,168.5,0,0,0,395,222
+W0461,12,T-Shirts,Mobile App,699,40,126.7,0,1,1,486,454
+W0462,12,Footwear,Mobile App,2699,10,30,1,1,0,302,197
+W0463,10,Ethnic Wear,Mobile App,5149,0,88.4,1,0,1,518,186
+W0464,9,Jeans,Website,2099,20,99.2,0,0,1,350,230
+W0465,11,Ethnic Wear,Mobile App,4549,30,52.4,1,0,1,427,228
+W0466,4,T-Shirts,Mobile App,899,0,153.1,0,1,0,717,267
+W0467,4,Dresses,Website,1649,5,31.5,1,1,0,726,216
+W0468,2,Dresses,Website,1999,0,23.5,0,0,0,829,127
+W0469,2,Accessories,Marketplace,499,15,16.2,0,0,1,726,248
+W0470,1,Ethnic Wear,Marketplace,3799,40,71.9,1,0,1,368,341
+W0471,8,Ethnic Wear,Marketplace,3049,60,139.3,0,0,0,229,229
+W0472,1,Jeans,Website,3349,20,26.4,1,0,0,274,173
+W0473,3,Ethnic Wear,Website,2749,30,118.6,0,0,0,401,175
+W0474,2,Footwear,Marketplace,2999,30,140,1,0,0,799,207
+W0475,11,Ethnic Wear,Mobile App,4099,50,125.8,1,0,0,687,282
+W0476,9,Jeans,Mobile App,2649,20,53.4,0,1,0,230,222
+W0477,1,Footwear,Marketplace,3649,50,45.6,1,1,1,691,261
+W0478,9,Jeans,Website,3049,30,155.1,0,0,0,216,207
+W0479,1,Jeans,Website,1649,30,51.3,1,1,0,348,286
+W0480,10,Jeans,Mobile App,2549,0,29.5,1,0,1,393,207
+W0481,8,Dresses,Website,2799,60,165.6,0,1,0,705,264
+W0482,7,Footwear,Mobile App,1499,10,86.3,0,0,0,812,190
+W0483,5,Dresses,Marketplace,2349,60,74.4,1,0,0,239,239
+W0484,10,Ethnic Wear,Website,4949,0,110,0,0,1,428,144
+W0485,1,Footwear,Website,2499,25,159.8,1,0,0,426,217
+W0486,8,Footwear,Website,3149,30,52.1,0,1,1,564,170
+W0487,1,Jeans,Website,3449,15,13.1,1,0,1,614,182
+W0488,3,Footwear,Mobile App,1899,0,29.6,0,1,0,500,171
+W0489,1,Dresses,Marketplace,2749,10,102.7,1,0,1,614,277
+W0490,2,Ethnic Wear,Website,5249,0,64.8,1,0,0,436,173
+W0491,5,Jeans,Marketplace,2599,15,153.3,1,0,1,232,232
+W0492,10,Dresses,Mobile App,1899,15,90.2,0,1,0,727,188
+W0493,10,Ethnic Wear,Website,4049,50,164.4,1,1,0,621,337
+W0494,1,Accessories,Mobile App,449,30,61.1,1,0,0,475,331
+W0495,10,T-Shirts,Website,949,5,41.9,0,0,0,638,189
+W0496,10,Jeans,Website,2849,25,95.7,1,1,0,230,223
+W0497,5,Accessories,Website,349,35,39.1,0,0,1,659,292
+W0498,7,Footwear,Marketplace,2549,15,36.5,0,0,0,292,164
+W0499,4,Accessories,Website,1049,35,155.8,0,0,1,541,271
+W0500,11,Footwear,Mobile App,1599,10,155,1,0,1,561,249
+W0501,8,T-Shirts,Mobile App,1049,50,161.9,0,1,0,559,432
+W0502,9,Dresses,Website,2649,15,77.3,0,0,1,447,189
+W0503,4,T-Shirts,Marketplace,849,40,78.3,0,0,0,530,370
+W0504,12,T-Shirts,Marketplace,1049,35,111.5,1,0,1,527,433
+W0505,12,T-Shirts,Mobile App,849,0,138.9,1,0,1,272,272
+W0506,6,Dresses,Mobile App,1349,15,65.9,0,0,0,386,218
+W0507,2,Jeans,Website,3199,25,89.4,1,1,1,304,260
+W0508,11,Dresses,Website,1749,40,112.7,1,0,0,703,297
+W0509,3,Jeans,Mobile App,3249,15,104.1,0,0,1,379,182
+W0510,1,Dresses,Mobile App,1899,30,162.2,1,1,1,564,373
+W0511,3,Ethnic Wear,Marketplace,4899,20,60.3,0,0,0,597,147
+W0512,5,Jeans,Website,2049,0,136.4,0,1,1,387,171
+W0513,8,Footwear,Mobile App,2099,25,108,0,0,0,614,194
+W0514,4,Ethnic Wear,Marketplace,2749,30,16.4,0,0,0,446,165
+W0515,4,Dresses,Mobile App,2149,50,135.8,0,0,0,603,260
+W0516,6,T-Shirts,Marketplace,749,15,47.1,0,0,0,668,269
+W0517,10,T-Shirts,Mobile App,649,50,175.4,0,0,1,497,405
+W0518,7,Jeans,Website,3199,30,125.3,1,0,0,412,247
+W0519,4,Footwear,Marketplace,2899,20,28.3,0,0,0,603,155
+W0520,9,Dresses,Website,1949,20,179.6,0,1,1,474,235
+W0521,1,Dresses,Website,2449,40,94.5,0,1,1,308,257
+W0522,5,T-Shirts,Website,599,5,45.7,0,0,0,223,202
+W0523,5,T-Shirts,Website,599,30,157.9,1,0,1,744,373
+W0524,11,T-Shirts,Website,649,30,72.2,1,1,0,483,392
+W0525,1,Dresses,Marketplace,2849,20,159.6,1,0,1,681,276
+W0526,12,Accessories,Mobile App,699,20,62.2,1,0,1,616,322
+W0527,11,Footwear,Marketplace,3049,30,128.6,1,0,1,346,263
+W0528,6,Ethnic Wear,Website,3549,50,106.7,0,0,0,694,174
+W0529,5,Accessories,Marketplace,549,10,31.7,0,0,0,337,245
+W0530,7,Footwear,Marketplace,1499,40,0.7,0,0,1,331,197
+W0531,6,T-Shirts,Website,749,5,154.9,0,0,0,567,256
+W0532,10,Dresses,Mobile App,1549,15,98.8,1,0,1,718,338
+W0533,8,Dresses,Website,1799,20,134.8,0,1,0,609,229
+W0534,6,Ethnic Wear,Website,3149,10,135,0,0,1,727,149
+W0535,5,T-Shirts,Mobile App,1049,5,18.1,0,1,0,410,203
+W0536,7,Footwear,Mobile App,1649,15,127.8,0,0,1,842,223
+W0537,10,Footwear,Marketplace,2049,30,79.1,1,0,0,330,236
+W0538,2,T-Shirts,Marketplace,949,0,85,0,0,0,838,243
+W0539,11,Accessories,Mobile App,1149,50,122.3,0,1,0,353,336
+W0540,1,Ethnic Wear,Website,2049,40,118.1,1,0,0,530,274
+W0541,1,Ethnic Wear,Marketplace,5349,40,7.6,1,0,0,381,217
+W0542,7,Ethnic Wear,Website,4149,40,61.9,0,0,1,409,169
+W0543,10,T-Shirts,Marketplace,849,25,135.3,1,0,0,648,400
+W0544,8,Ethnic Wear,Mobile App,2049,20,110.2,0,0,0,329,176
+W0545,2,Dresses,Website,2549,30,77.1,1,0,0,512,224
+W0546,7,Dresses,Marketplace,2699,15,114.8,0,0,0,381,213
+W0547,11,Accessories,Website,649,30,19,1,1,1,297,297
+W0548,8,Accessories,Marketplace,399,35,159.5,0,0,0,478,332
+W0549,7,Accessories,Marketplace,349,15,6.7,0,1,1,802,301
+W0550,10,Jeans,Website,2549,5,20.3,1,0,1,577,159
+W0551,5,Jeans,Mobile App,3299,15,125.3,0,0,0,677,187
+W0552,11,Dresses,Marketplace,1649,50,130.8,1,0,1,393,393
+W0553,4,T-Shirts,Mobile App,999,5,60.3,0,0,0,562,235
+W0554,9,Ethnic Wear,Marketplace,5349,0,65.4,0,0,0,203,136
+W0555,11,Footwear,Marketplace,3649,20,133.3,1,0,1,395,235
+W0556,8,Jeans,Website,2299,35,171.2,0,0,0,742,226
+W0557,12,Accessories,Marketplace,699,30,132,0,0,0,522,322
+W0558,8,T-Shirts,Mobile App,899,35,28.6,0,0,1,484,307
+W0559,11,Dresses,Mobile App,2249,15,52.2,0,1,1,482,243
+W0560,1,Jeans,Marketplace,2999,10,174.9,1,0,0,781,237
+W0561,1,Jeans,Mobile App,2199,20,46.8,1,0,1,666,234
+W0562,5,T-Shirts,Website,1099,30,148.2,0,0,1,377,280
+W0563,11,Ethnic Wear,Mobile App,5449,10,50.3,1,0,1,545,178
+W0564,8,Footwear,Website,3399,25,172.2,0,1,0,699,194
+W0565,3,Dresses,Website,1699,40,82.8,0,0,0,359,212
+W0566,8,T-Shirts,Marketplace,599,20,102.9,0,1,0,809,393
+W0567,7,Jeans,Website,2099,50,57.1,0,1,0,237,237
+W0568,11,T-Shirts,Marketplace,799,0,40.3,1,1,0,614,337
+W0569,7,Footwear,Website,2849,30,70,1,0,0,816,180
+W0570,3,Footwear,Marketplace,1499,10,9,0,1,0,418,170
+W0571,4,T-Shirts,Website,849,20,94,0,0,0,347,244
+W0572,4,Ethnic Wear,Marketplace,3399,0,94.6,1,0,0,485,233
+W0573,5,Accessories,Website,1049,40,102.5,0,0,1,389,305
+W0574,6,Ethnic Wear,Website,2949,40,80,1,0,0,412,238
+W0575,5,T-Shirts,Website,549,25,18.5,0,0,1,446,291
+W0576,2,Ethnic Wear,Marketplace,2499,25,45.4,0,0,0,808,168
+W0577,12,Accessories,Mobile App,949,40,84.4,1,0,1,350,331
+W0578,6,Jeans,Mobile App,2749,10,65.5,0,0,1,672,187
+W0579,11,T-Shirts,Marketplace,949,50,9.9,1,1,0,281,281
+W0580,8,Ethnic Wear,Website,4249,30,6.6,1,0,1,528,192
+W0581,5,Ethnic Wear,Mobile App,2399,0,13.3,0,0,1,837,118
+W0582,10,Footwear,Marketplace,2649,40,51,1,1,0,654,299
+W0583,10,Jeans,Marketplace,2249,25,133.7,1,0,1,677,337
+W0584,6,Jeans,Website,2349,10,7.1,0,0,0,593,133
+W0585,10,T-Shirts,Mobile App,1249,35,69.7,1,1,0,682,433
+W0586,2,Ethnic Wear,Mobile App,4249,35,129.8,1,0,0,773,257
+W0587,5,Accessories,Marketplace,1149,5,69.3,0,0,0,332,175
+W0588,11,Ethnic Wear,Website,4949,40,1.9,1,0,0,542,161
+W0589,4,Ethnic Wear,Mobile App,2899,20,84.5,0,0,1,207,181
+W0590,3,Dresses,Mobile App,1899,5,62.2,1,0,0,564,225
+W0591,9,Accessories,Website,899,30,64.7,0,0,0,406,243
+W0592,10,Ethnic Wear,Mobile App,4049,35,174,1,0,0,543,252
+W0593,1,Accessories,Marketplace,499,20,160.3,1,0,1,699,378
+W0594,4,Jeans,Website,1999,35,97.5,0,0,1,473,262
+W0595,5,Ethnic Wear,Mobile App,4799,25,16,1,1,1,777,298
+W0596,4,Ethnic Wear,Website,3799,25,24.7,0,0,1,845,146
+W0597,12,Footwear,Marketplace,3299,10,36.7,1,0,0,770,197
+W0598,5,T-Shirts,Marketplace,1149,20,138.9,0,0,0,431,279
+W0599,10,T-Shirts,Mobile App,599,15,75.2,1,0,0,574,389
+W0600,11,Accessories,Marketplace,649,15,26.5,1,1,0,526,337
+W0601,11,Dresses,Website,1799,25,129.4,0,0,1,552,217
+W0602,11,Accessories,Marketplace,349,0,136.8,1,1,0,793,352
+W0603,2,T-Shirts,Mobile App,649,40,6.4,1,0,0,288,288
+W0604,3,Footwear,Website,3699,10,142.3,1,1,1,776,214
+W0605,3,Ethnic Wear,Mobile App,5199,30,132.4,0,1,0,779,175
+W0606,7,Dresses,Mobile App,1949,15,75.1,0,0,1,575,229
+W0607,5,T-Shirts,Mobile App,699,10,29.9,0,0,1,774,234
+W0608,8,T-Shirts,Website,1049,40,54.3,1,1,0,759,316
+W0609,8,Dresses,Website,2099,30,56.2,0,0,0,201,198
+W0610,9,Dresses,Website,2099,60,49.8,0,0,0,646,217
+W0611,2,Jeans,Mobile App,2399,10,164.3,1,1,0,395,280
+W0612,7,T-Shirts,Marketplace,599,30,74.9,0,0,0,208,208
+W0613,12,Ethnic Wear,Mobile App,2699,10,123.6,0,0,1,338,189
+W0614,10,Accessories,Website,999,20,78.4,1,0,0,300,234
+W0615,8,Jeans,Marketplace,3049,20,55.8,0,1,1,795,238
+W0616,2,Footwear,Mobile App,1999,35,127.2,0,1,0,250,250
+W0617,2,Dresses,Website,2049,25,12.5,0,0,0,268,157
+W0618,12,Footwear,Marketplace,3449,25,154.8,0,0,0,224,192
+W0619,3,Jeans,Marketplace,2799,10,139,0,0,0,797,227
+W0620,1,Ethnic Wear,Marketplace,4749,20,64.1,1,0,1,460,216
+W0621,8,T-Shirts,Marketplace,999,10,87.2,0,1,0,839,333
+W0622,2,Jeans,Website,1799,60,31,1,0,0,282,282
+W0623,3,Footwear,Website,1549,15,159.3,0,1,0,547,214
+W0624,10,Jeans,Website,1899,40,79.7,0,0,1,679,248
+W0625,8,Ethnic Wear,Mobile App,4999,40,148.7,0,1,1,800,217
+W0626,11,T-Shirts,Mobile App,699,10,10.9,1,0,1,675,321
+W0627,2,Accessories,Marketplace,1049,10,137.4,1,0,0,405,276
+W0628,5,T-Shirts,Mobile App,1049,20,63,0,1,0,523,297
+W0629,1,Footwear,Website,2049,25,133,1,0,0,797,225
+W0630,7,Ethnic Wear,Mobile App,4049,15,80,0,0,0,580,135
+W0631,7,Dresses,Marketplace,1799,10,8.7,0,0,0,516,170
+W0632,6,Accessories,Marketplace,549,20,90.1,0,1,0,209,209
+W0633,10,Jeans,Website,1649,60,130.4,0,0,0,325,260
+W0634,8,Footwear,Mobile App,3199,10,15.3,0,0,1,636,133
+W0635,5,Ethnic Wear,Website,3449,30,10.1,0,0,0,801,122
+W0636,7,Footwear,Website,3649,30,126.7,0,0,0,429,172
+W0637,8,Dresses,Mobile App,2249,20,9.6,0,1,0,669,184
+W0638,6,T-Shirts,Website,999,15,47.5,0,1,0,785,274
+W0639,4,Ethnic Wear,Marketplace,2799,20,72.6,0,0,0,334,189
+W0640,9,Ethnic Wear,Website,2949,35,172.1,0,0,0,617,184
+W0641,4,Ethnic Wear,Mobile App,3649,30,85,0,0,1,825,184
+W0642,11,T-Shirts,Mobile App,749,10,107.2,1,0,1,684,382
+W0643,1,Accessories,Mobile App,999,30,141.4,0,0,0,312,283
+W0644,8,Ethnic Wear,Mobile App,2449,0,46.8,0,1,1,424,139
+W0645,10,Accessories,Website,1149,0,43.5,1,1,1,526,208
+W0646,11,Ethnic Wear,Website,2649,5,136.2,1,0,0,377,209
+W0647,4,Ethnic Wear,Mobile App,2799,30,82,0,0,0,388,185
+W0648,4,Jeans,Marketplace,2299,10,165.7,0,0,0,211,211
+W0649,5,Dresses,Marketplace,2899,40,137.2,0,0,0,842,242
+W0650,1,Accessories,Mobile App,999,30,82.9,1,1,1,328,328
+W0651,7,Dresses,Marketplace,2899,5,65.4,0,0,0,675,181
+W0652,2,Footwear,Website,2049,20,133.8,1,0,0,253,201
+W0653,2,Jeans,Marketplace,2549,60,2.8,1,1,1,271,271
+W0654,11,T-Shirts,Marketplace,749,0,120,1,1,1,325,325
+W0655,7,Dresses,Marketplace,2699,25,98.7,0,0,1,605,225
+W0656,8,Footwear,Marketplace,3249,0,56.6,1,0,1,533,161
+W0657,7,Accessories,Website,599,30,140.3,0,0,0,488,300
+W0658,3,Footwear,Website,2649,25,39.1,0,0,1,286,149
+W0659,5,Dresses,Mobile App,2549,25,0.3,0,1,1,635,184
+W0660,6,Ethnic Wear,Website,3049,10,174.4,1,0,0,348,225
+W0661,9,Footwear,Mobile App,3499,10,100.1,0,0,1,500,136
+W0662,10,Dresses,Marketplace,1849,15,36.6,0,0,0,281,188
+W0663,7,Footwear,Marketplace,1949,10,140.8,0,0,1,262,213
+W0664,11,Jeans,Mobile App,1999,15,28.8,0,1,0,584,208
+W0665,1,Dresses,Marketplace,2849,20,113.3,1,0,0,667,258
+W0666,3,Footwear,Marketplace,1949,60,70.3,0,1,0,675,288
+W0667,11,Jeans,Website,1999,25,141.9,0,0,0,389,220
+W0668,12,Footwear,Mobile App,2099,40,152.9,0,1,0,733,255
+W0669,11,Ethnic Wear,Website,5249,30,79.4,0,0,1,275,154
+W0670,1,Dresses,Mobile App,2199,15,44.4,1,0,1,621,276
+W0671,4,T-Shirts,Website,999,25,130.8,0,0,1,383,324
+W0672,3,Jeans,Mobile App,2749,25,94.5,1,0,0,287,266
+W0673,3,Dresses,Mobile App,2699,15,50.8,0,1,0,794,181
+W0674,7,Dresses,Mobile App,2549,25,16.9,0,1,0,380,202
+W0675,10,Accessories,Mobile App,1149,50,155.3,0,0,1,630,290
+W0676,12,Accessories,Mobile App,899,5,100.7,1,0,0,380,247
+W0677,10,Footwear,Website,3349,25,156,1,0,1,429,232
+W0678,12,T-Shirts,Website,749,25,151.5,1,1,0,205,205
+W0679,7,Footwear,Website,1899,35,104.7,0,1,1,529,210
+W0680,7,T-Shirts,Website,549,0,177.8,0,0,1,617,270
+W0681,5,T-Shirts,Mobile App,1199,30,149.3,1,1,1,666,407
+W0682,6,Jeans,Website,1849,50,56.9,0,1,1,303,303
+W0683,2,Accessories,Marketplace,399,60,157.3,0,1,1,337,337
+W0684,9,Accessories,Marketplace,849,0,11.4,0,0,1,228,188
+W0685,3,Ethnic Wear,Marketplace,4299,30,147.2,0,1,0,633,202
+W0686,5,Jeans,Mobile App,1749,0,115.4,0,0,0,664,209
+W0687,1,Dresses,Marketplace,2049,35,164,0,0,1,355,282
+W0688,6,Footwear,Marketplace,1849,35,18.7,0,1,1,670,257
+W0689,8,T-Shirts,Website,849,15,58.5,0,0,1,618,215
+W0690,12,Ethnic Wear,Marketplace,4099,40,116.7,1,0,0,256,256
+W0691,10,Ethnic Wear,Marketplace,2649,10,90.9,1,0,1,472,265
+W0692,7,T-Shirts,Mobile App,749,15,37.8,0,1,0,621,280
+W0693,7,Accessories,Marketplace,549,30,34.4,0,1,0,740,282
+W0694,2,Footwear,Mobile App,2849,5,100.7,0,0,1,504,185
+W0695,4,Jeans,Website,2999,10,128.5,0,0,1,747,185
+W0696,11,Footwear,Marketplace,2549,10,67.2,0,0,0,742,185
+W0697,6,Accessories,Marketplace,749,35,156.2,0,0,0,428,310
+W0698,9,Ethnic Wear,Website,4599,15,159.9,1,0,1,660,253
+W0699,11,Ethnic Wear,Marketplace,2949,10,86.8,1,0,0,524,229
+W0700,8,Dresses,Mobile App,1899,20,90.5,0,1,0,411,206
+W0701,12,T-Shirts,Website,1049,40,155.5,1,1,0,490,351
+W0702,6,Jeans,Mobile App,3199,0,103.1,1,0,0,549,205
+W0703,5,Footwear,Website,3499,10,137.1,1,0,0,525,194
+W0704,10,Accessories,Website,949,40,104.9,0,0,1,670,307
+W0705,2,Footwear,Mobile App,2149,20,152,1,0,0,497,255
+W0706,1,Dresses,Website,2199,35,86.9,1,1,0,618,295
+W0707,8,Dresses,Website,2749,10,23.7,1,0,0,634,191
+W0708,2,Jeans,Marketplace,3349,15,18.7,1,0,1,431,224
+W0709,4,T-Shirts,Website,799,30,176.3,0,0,0,336,259
+W0710,4,Dresses,Mobile App,1899,30,27.6,1,1,0,664,348
+W0711,12,Dresses,Website,1399,35,171.5,1,0,0,281,281
+W0712,3,Footwear,Mobile App,3749,20,171.5,1,1,0,539,236
+W0713,5,T-Shirts,Mobile App,749,5,110.8,0,0,0,683,242
+W0714,6,Jeans,Website,2299,5,77.9,1,0,1,449,206
+W0715,8,Accessories,Mobile App,599,5,65.6,1,0,0,219,219
+W0716,11,Dresses,Marketplace,1899,40,158,1,0,1,228,228
+W0717,9,Ethnic Wear,Mobile App,4399,25,139.4,1,0,1,555,272
+W0718,11,T-Shirts,Marketplace,999,25,33,1,1,0,635,410
+W0719,6,Dresses,Mobile App,2099,5,42.6,1,0,1,571,235
+W0720,11,Dresses,Website,2899,0,148.4,1,0,1,326,227
+W0721,3,Accessories,Website,849,25,1.1,0,1,0,402,200
+W0722,8,Footwear,Website,3649,30,142.4,0,0,1,745,200
+W0723,8,Dresses,Website,2749,20,117,0,0,1,353,186
+W0724,9,Dresses,Marketplace,2299,25,17.9,0,0,0,262,188
+W0725,7,Accessories,Marketplace,349,20,105.1,1,0,1,690,336
+W0726,4,Jeans,Marketplace,2499,30,104.5,0,0,0,427,250
+W0727,4,Ethnic Wear,Website,2099,25,22.6,0,0,1,774,143
+W0728,11,Footwear,Marketplace,2449,5,97.7,1,0,1,730,215
+W0729,10,Jeans,Marketplace,1599,50,52.9,1,0,0,350,331
+W0730,12,Jeans,Mobile App,1549,30,89.3,1,0,1,462,343
+W0731,8,Ethnic Wear,Marketplace,1999,30,135.8,0,0,0,332,215
+W0732,4,Ethnic Wear,Mobile App,4549,25,37.8,0,0,1,471,159
+W0733,4,Ethnic Wear,Mobile App,5249,35,152.4,0,0,0,463,183
+W0734,5,T-Shirts,Mobile App,749,30,174.2,0,0,0,340,340
+W0735,2,T-Shirts,Mobile App,549,0,57.6,1,0,0,313,274
+W0736,2,Ethnic Wear,Mobile App,2299,30,90.8,1,0,0,434,266
+W0737,9,Dresses,Marketplace,1599,35,90.7,0,0,0,560,242
+W0738,6,T-Shirts,Website,649,10,55.6,0,0,0,750,236
+W0739,8,Jeans,Website,2349,40,93.2,0,0,0,454,219
+W0740,10,Footwear,Website,1999,30,44.5,1,0,1,789,217
+W0741,5,Ethnic Wear,Marketplace,4699,10,1.3,1,1,0,783,191
+W0742,1,Dresses,Mobile App,2649,30,95,0,0,0,580,195
+W0743,8,Footwear,Marketplace,1849,0,21.2,1,0,0,248,176
+W0744,10,Footwear,Website,1949,10,43.5,0,1,0,662,163
+W0745,10,Dresses,Marketplace,1799,20,177.8,1,1,1,269,269
+W0746,8,Accessories,Mobile App,799,25,170,0,0,1,493,308
+W0747,4,T-Shirts,Marketplace,1199,0,64,0,1,0,543,224
+W0748,12,Accessories,Website,799,0,53.3,1,0,0,479,195
+W0749,7,T-Shirts,Mobile App,1149,20,50.5,0,0,1,471,280
+W0750,1,T-Shirts,Marketplace,849,5,153.8,1,0,1,207,207
+W0751,5,T-Shirts,Mobile App,849,40,125.8,0,0,0,426,319
+W0752,4,Jeans,Mobile App,2849,10,129.6,0,0,0,420,176
+W0753,6,T-Shirts,Website,1149,10,42.5,0,0,0,635,204
+W0754,10,Ethnic Wear,Website,4899,15,133.1,1,1,0,647,237
+W0755,9,Ethnic Wear,Mobile App,3649,35,19.8,0,0,0,753,163
+W0756,5,Jeans,Mobile App,2499,35,61.9,0,0,0,465,212
+W0757,3,Ethnic Wear,Marketplace,4349,25,118.7,0,0,1,561,199
+W0758,4,Jeans,Mobile App,2549,15,11.8,0,0,1,789,185
+W0759,5,Ethnic Wear,Marketplace,4849,50,57.2,0,0,0,826,186
+W0760,11,Footwear,Mobile App,2049,30,55.9,1,0,1,728,223
+W0761,9,Jeans,Mobile App,2599,5,154.1,0,0,0,612,187
+W0762,6,Jeans,Marketplace,2049,35,91.4,0,0,1,500,315
+W0763,7,Footwear,Marketplace,2899,15,94.4,0,1,0,570,199
+W0764,10,Footwear,Marketplace,2899,30,151.3,0,0,0,254,222
+W0765,11,Jeans,Mobile App,2199,15,97.3,1,0,0,764,262
+W0766,5,Jeans,Mobile App,1799,5,125.8,1,0,0,599,226
+W0767,6,Footwear,Website,1899,25,160.2,0,0,0,377,196
+W0768,11,T-Shirts,Marketplace,999,60,87.9,1,0,0,537,495
+W0769,5,Accessories,Mobile App,349,10,0.5,0,1,0,293,236
+W0770,4,Dresses,Mobile App,1849,30,109.8,0,0,0,683,224
+W0771,4,Dresses,Mobile App,2749,0,68,0,0,1,529,157
+W0772,6,Ethnic Wear,Mobile App,5399,25,150.6,0,0,1,638,162
+W0773,5,Dresses,Mobile App,2549,5,164.6,0,0,0,508,203
+W0774,12,Ethnic Wear,Mobile App,4249,0,116.3,1,1,0,702,238
+W0775,12,Ethnic Wear,Website,2999,15,161,1,0,1,319,228
+W0776,11,Ethnic Wear,Website,2849,25,16.7,0,1,1,730,154
+W0777,1,Footwear,Website,2299,20,90.2,0,1,0,679,195
+W0778,10,Jeans,Marketplace,2099,30,59.2,1,1,0,727,325
+W0779,7,Footwear,Website,3949,10,165.1,0,1,1,333,190
+W0780,12,Ethnic Wear,Website,1999,10,101.5,1,1,0,357,262
+W0781,9,Dresses,Marketplace,2149,40,98.9,0,1,1,410,314
+W0782,5,Footwear,Marketplace,2799,60,28.8,0,0,0,420,212
+W0783,3,T-Shirts,Website,1149,35,54.1,1,1,0,372,305
+W0784,2,T-Shirts,Website,1249,35,134.6,1,0,0,358,294
+W0785,12,Dresses,Website,1449,40,42.2,1,0,0,456,293
+W0786,5,T-Shirts,Marketplace,849,15,147,0,1,0,734,363
+W0787,4,Footwear,Website,3349,15,118.9,0,0,1,414,157
+W0788,7,Ethnic Wear,Website,2899,20,131.9,0,1,0,628,192
+W0789,7,Dresses,Mobile App,2149,60,71.8,0,0,0,817,249
+W0790,5,Footwear,Mobile App,2049,20,119,1,0,0,602,210
+W0791,6,Accessories,Mobile App,849,20,123.3,0,0,0,296,246
+W0792,11,Footwear,Website,1699,5,116.5,1,0,0,359,183
+W0793,9,Jeans,Mobile App,3049,30,22.5,0,1,1,722,241
+W0794,5,Accessories,Website,849,30,60.1,0,0,1,660,255
+W0795,9,Footwear,Mobile App,2849,0,164.8,0,0,1,535,171
+W0796,5,Ethnic Wear,Website,4949,15,169.4,0,0,0,683,153
+W0797,11,Ethnic Wear,Marketplace,2599,40,105.3,0,0,1,722,250
+W0798,5,T-Shirts,Marketplace,849,50,86,0,0,0,345,345
+W0799,9,Jeans,Mobile App,1549,50,47.7,0,0,0,449,281
+W0800,10,Dresses,Mobile App,2849,15,138.6,0,0,0,737,203
+W0801,10,Dresses,Website,2149,10,61.6,1,0,1,465,229
+W0802,5,Ethnic Wear,Mobile App,3499,30,5.9,0,0,0,620,119
+W0803,1,Dresses,Marketplace,1449,20,107.7,1,0,1,350,347
+W0804,11,Jeans,Marketplace,2449,0,116.6,1,0,0,610,261
+W0805,3,Accessories,Marketplace,649,15,2.7,0,0,1,811,219
+W0806,9,Jeans,Marketplace,2299,20,169.3,0,0,0,753,246
+W0807,11,Ethnic Wear,Mobile App,4549,10,93.5,1,0,1,505,193
+W0808,12,Dresses,Website,1399,20,125.5,1,0,1,642,292
+W0809,1,Dresses,Mobile App,1349,40,170.2,1,0,0,315,315
+W0810,8,T-Shirts,Website,699,10,122.6,0,1,1,677,325
+W0811,3,Dresses,Website,2749,15,132.2,0,1,0,825,188
+W0812,6,Dresses,Marketplace,2799,40,167,0,0,0,284,258
+W0813,8,Ethnic Wear,Website,3249,10,55.2,0,0,1,769,138
+W0814,11,Jeans,Marketplace,1599,35,113.4,0,0,1,469,328
+W0815,8,Accessories,Website,849,0,158.7,0,1,0,653,230
+W0816,6,Accessories,Website,1049,20,84.6,0,0,1,424,244
+W0817,10,Ethnic Wear,Mobile App,3249,5,46.4,0,1,1,413,179
+W0818,5,Accessories,Website,749,35,130.3,0,0,1,835,296
+W0819,5,Jeans,Website,2249,35,169.4,0,1,1,762,282
+W0820,11,Dresses,Website,1749,35,0.9,1,1,1,556,284
+W0821,5,Accessories,Mobile App,1049,20,56.5,0,0,1,291,230
+W0822,8,T-Shirts,Marketplace,1099,10,43.8,1,1,1,553,400
+W0823,5,Footwear,Marketplace,3049,35,14.9,0,1,0,287,172
+W0824,6,Accessories,Website,599,20,132.6,0,0,0,301,258
+W0825,6,Dresses,Marketplace,2549,25,130.7,0,0,1,623,255
+W0826,2,Jeans,Mobile App,3349,5,97.7,1,0,1,493,207
+W0827,7,Dresses,Mobile App,1749,10,27.6,0,0,0,203,164
+W0828,1,Ethnic Wear,Marketplace,3149,0,70.1,1,0,0,744,216
+W0829,6,Footwear,Mobile App,1849,15,104.2,0,0,0,617,195
+W0830,9,Jeans,Marketplace,2949,20,158.4,0,1,0,386,269
+W0831,5,Jeans,Marketplace,2449,35,85.8,0,1,0,700,276
+W0832,4,Accessories,Mobile App,599,10,164,0,0,1,748,266
+W0833,1,Dresses,Website,1349,10,100.1,1,0,0,353,270
+W0834,2,Jeans,Website,2099,15,79.3,1,0,1,627,223
+W0835,9,Jeans,Website,3399,15,147.4,0,1,0,428,191
+W0836,2,Footwear,Marketplace,3649,40,140.2,0,0,1,788,203
+W0837,11,Footwear,Mobile App,2599,0,29.3,0,0,1,403,125
+W0838,2,Footwear,Mobile App,3149,35,173.2,0,0,0,220,220
+W0839,6,T-Shirts,Marketplace,1249,20,129.3,0,1,0,612,337
+W0840,6,Ethnic Wear,Website,4499,25,13.1,0,0,1,305,103
+W0841,10,T-Shirts,Mobile App,799,30,177.2,1,1,0,709,396
+W0842,9,Ethnic Wear,Website,4649,15,9.8,0,0,0,539,102
+W0843,5,Footwear,Marketplace,2099,35,168.6,1,1,1,779,367
+W0844,7,Ethnic Wear,Website,3149,50,146.9,0,0,0,612,192
+W0845,6,Dresses,Mobile App,2699,10,74.4,0,0,1,590,171
+W0846,10,Footwear,Website,3799,25,151.8,1,0,1,259,202
+W0847,9,Jeans,Website,1549,0,136,0,0,1,391,193
+W0848,2,Accessories,Marketplace,1149,40,55.6,1,0,1,354,312
+W0849,2,T-Shirts,Website,799,10,133.7,0,0,0,812,246
+W0850,10,Jeans,Website,2799,15,103.5,1,0,1,335,207
+W0851,3,Footwear,Mobile App,3249,5,112,0,0,1,747,170
+W0852,9,Footwear,Marketplace,3249,35,166.4,0,0,1,352,209
+W0853,12,Ethnic Wear,Website,2099,30,176.3,1,0,0,519,249
+W0854,11,Accessories,Marketplace,549,20,133.3,1,0,1,719,403
+W0855,7,Footwear,Website,1599,30,154.6,0,0,0,795,216
+W0856,11,T-Shirts,Marketplace,1149,15,38.5,1,1,1,471,362
+W0857,12,Jeans,Website,1999,15,85.7,1,1,0,606,244
+W0858,3,Ethnic Wear,Mobile App,4049,5,98.8,0,1,0,766,148
+W0859,11,Jeans,Website,2399,50,88.2,1,0,1,327,305
+W0860,8,Accessories,Marketplace,849,25,138.7,0,0,1,297,297
+W0861,12,Ethnic Wear,Marketplace,3499,20,104.3,1,1,0,724,293
+W0862,7,Footwear,Website,2649,40,107.5,1,0,0,733,217
+W0863,4,Ethnic Wear,Mobile App,4549,50,169.6,1,1,0,323,291
+W0864,11,Jeans,Website,3349,15,141.1,0,1,0,660,204
+W0865,10,Ethnic Wear,Marketplace,3849,10,59.2,0,0,0,476,149
+W0866,6,Footwear,Marketplace,2149,35,166.7,0,0,0,580,229
+W0867,1,Footwear,Marketplace,1499,5,31.9,1,0,0,532,193
+W0868,4,Accessories,Website,599,5,43.9,0,1,1,839,258
+W0869,1,Accessories,Website,399,35,169.3,0,0,1,276,276
+W0870,12,Dresses,Website,2849,30,18,1,1,1,844,290
+W0871,12,Ethnic Wear,Website,2299,15,64.9,1,0,1,475,235
+W0872,10,T-Shirts,Website,1099,35,12.9,0,0,1,343,256
+W0873,12,Jeans,Marketplace,2449,10,139.4,0,1,0,779,254
+W0874,12,Ethnic Wear,Marketplace,2049,10,27.4,0,1,0,285,191
+W0875,10,T-Shirts,Mobile App,749,20,58.4,1,1,0,804,359
+W0876,12,Ethnic Wear,Marketplace,3149,15,16,1,0,1,292,229
+W0877,12,Ethnic Wear,Website,2099,0,86.7,1,0,0,753,185
+W0878,12,Dresses,Website,1249,10,2.8,1,0,0,647,195
+W0879,7,T-Shirts,Mobile App,1149,20,82.4,0,0,1,362,277
+W0880,3,Jeans,Marketplace,1949,50,38.2,0,0,1,714,306
+W0881,4,Jeans,Mobile App,3049,25,12.7,1,0,0,846,208
+W0882,2,T-Shirts,Website,699,30,26.8,0,0,0,778,284
+W0883,4,Accessories,Website,399,40,101,1,0,0,742,349
+W0884,3,Jeans,Mobile App,2649,20,108.3,0,1,0,699,199
+W0885,11,Accessories,Marketplace,649,30,1.7,1,0,1,430,308
+W0886,4,Dresses,Website,2949,5,44.2,0,1,1,603,129
+W0887,8,Jeans,Mobile App,1949,15,25.5,0,0,1,634,179
+W0888,3,Footwear,Mobile App,3149,0,29.1,0,0,0,743,130
+W0889,7,Ethnic Wear,Mobile App,4199,25,122.8,0,0,0,540,178
+W0890,1,Dresses,Marketplace,2099,60,14.7,1,0,1,423,412
+W0891,7,Ethnic Wear,Website,4049,5,66,0,0,0,682,125
+W0892,1,Ethnic Wear,Marketplace,5199,15,149.5,0,0,0,340,176
+W0893,2,Ethnic Wear,Website,4649,15,1,1,1,0,317,154
+W0894,2,Footwear,Mobile App,3699,50,127.4,0,1,0,795,252
+W0895,6,T-Shirts,Mobile App,1049,30,6.3,0,0,0,396,278
+W0896,4,Footwear,Mobile App,3149,5,53.1,0,1,1,646,157
+W0897,8,T-Shirts,Mobile App,1199,30,94.6,0,0,0,712,268
+W0898,12,Ethnic Wear,Mobile App,3199,0,21.1,1,0,0,271,159
+W0899,7,Accessories,Marketplace,899,20,12.1,0,1,1,802,230
+W0900,7,Jeans,Website,2749,0,125.1,0,1,0,611,186
+W0901,12,Dresses,Website,1549,15,25.4,0,0,0,745,153
+W0902,10,Jeans,Website,2599,40,5.8,1,0,1,814,236
+W0903,3,Ethnic Wear,Marketplace,3999,40,158.6,1,0,0,497,248
+W0904,6,Jeans,Website,1999,30,72.3,0,0,1,715,225
+W0905,7,Ethnic Wear,Mobile App,3099,40,149.2,1,1,0,567,361
+W0906,1,Footwear,Website,2299,5,79.1,1,0,0,834,172
+W0907,2,Dresses,Website,1799,20,78.1,0,0,0,228,180
+W0908,3,T-Shirts,Website,1099,20,128.1,0,1,1,716,289
+W0909,11,Accessories,Marketplace,599,10,36.7,1,0,1,377,330
+W0910,10,T-Shirts,Mobile App,999,20,70.1,1,0,1,215,215
+W0911,10,Accessories,Website,949,15,161.1,1,0,0,344,276
+W0912,3,Jeans,Marketplace,2549,5,139,0,1,0,832,200
+W0913,10,Accessories,Marketplace,1049,25,36.4,0,0,1,668,277
+W0914,8,Jeans,Marketplace,2849,10,172,0,0,0,470,191
+W0915,11,Ethnic Wear,Website,2499,20,78.7,0,0,1,769,166
+W0916,12,Accessories,Mobile App,1149,15,116.8,1,0,1,285,285
+W0917,9,Ethnic Wear,Website,2199,35,122.1,0,0,1,585,189
+W0918,2,Footwear,Mobile App,3649,40,25.4,1,0,0,390,194
+W0919,5,Accessories,Marketplace,899,40,146.4,0,1,0,445,316
+W0920,12,T-Shirts,Marketplace,749,20,126.3,1,0,1,798,372
+W0921,7,Ethnic Wear,Mobile App,3899,5,36.8,0,0,0,477,131
+W0922,7,Ethnic Wear,Mobile App,5049,10,145.4,1,0,1,244,220
+W0923,6,Ethnic Wear,Mobile App,3399,0,1.2,0,0,0,417,77
+W0924,5,Dresses,Website,2349,5,66.5,0,0,1,489,168
+W0925,7,Dresses,Marketplace,2499,20,87.2,0,1,1,612,252
+W0926,6,Footwear,Marketplace,2599,0,116.5,0,0,0,829,162
+W0927,5,Accessories,Mobile App,849,20,152.8,0,1,0,583,298
+W0928,3,Accessories,Marketplace,399,15,47.8,0,0,1,657,268
+W0929,7,Dresses,Marketplace,1249,10,57.8,0,0,1,599,196
+W0930,4,Dresses,Marketplace,1949,15,24.7,0,0,0,703,171
+W0931,4,T-Shirts,Website,599,0,173.2,0,0,1,507,245
+W0932,1,Dresses,Mobile App,1849,0,153.5,1,1,1,807,284
+W0933,11,T-Shirts,Marketplace,699,30,163,1,0,0,222,222
+W0934,11,Accessories,Marketplace,749,15,151.1,1,0,1,334,334
+W0935,8,T-Shirts,Mobile App,949,0,116.3,0,0,0,641,229
+W0936,8,T-Shirts,Website,849,15,119.9,0,0,0,454,254
+W0937,8,Footwear,Website,1749,40,24.1,0,0,1,407,159
+W0938,11,T-Shirts,Marketplace,999,0,117.8,1,1,0,484,312
+W0939,8,T-Shirts,Marketplace,1199,15,144.4,0,1,1,730,332
+W0940,7,Jeans,Website,2449,0,23.1,0,0,1,435,160
+W0941,10,T-Shirts,Website,749,30,143.4,1,0,0,270,270
+W0942,11,Jeans,Marketplace,2149,15,146.6,1,0,1,413,294
+W0943,7,T-Shirts,Website,949,30,99.9,0,0,1,341,310
+W0944,10,Dresses,Website,2149,50,159.7,0,0,1,644,279
+W0945,11,Dresses,Marketplace,2299,15,49.8,0,1,0,259,208
+W0946,6,Jeans,Marketplace,3399,35,59.9,0,0,0,361,237
+W0947,6,Dresses,Website,2299,25,126.3,0,1,0,765,215
+W0948,7,T-Shirts,Marketplace,1249,5,18.7,0,0,1,300,240
+W0949,5,T-Shirts,Website,799,10,175,0,0,0,218,210
+W0950,8,Ethnic Wear,Marketplace,2399,25,176.1,0,0,0,604,194
+W0951,2,Dresses,Marketplace,2649,40,72.3,1,0,0,797,314
+W0952,8,T-Shirts,Website,899,50,60.8,0,0,0,429,312
+W0953,10,Ethnic Wear,Mobile App,2499,30,40.1,0,0,1,362,171
+W0954,1,Jeans,Website,1599,50,112.1,1,1,1,321,321
+W0955,10,Ethnic Wear,Website,2199,0,75.6,1,0,1,781,211
+W0956,8,Dresses,Marketplace,2749,40,161.8,0,0,1,765,249
+W0957,1,Dresses,Marketplace,2799,15,3.6,1,1,0,252,247
+W0958,6,Footwear,Marketplace,2299,50,168.1,0,0,0,837,263
+W0959,8,Jeans,Website,3449,30,147.7,0,0,0,787,229
+W0960,9,T-Shirts,Website,749,0,144.7,0,0,0,842,225
+W0961,12,Accessories,Marketplace,699,5,3.6,1,0,1,395,251
+W0962,1,T-Shirts,Marketplace,649,25,106.7,0,0,1,675,333
+W0963,1,Ethnic Wear,Website,4549,15,31,1,0,1,247,168
+W0964,5,Jeans,Marketplace,3149,40,9.7,0,0,1,494,214
+W0965,12,Dresses,Marketplace,2899,35,170.8,1,0,0,554,337
+W0966,9,Ethnic Wear,Marketplace,4649,20,153.5,1,0,0,401,244
+W0967,3,Ethnic Wear,Mobile App,3749,5,159.1,1,0,0,617,193
+W0968,8,Dresses,Website,2149,0,49.7,0,0,1,409,171
+W0969,7,Dresses,Mobile App,2449,10,145.5,0,0,1,626,218
+W0970,8,T-Shirts,Website,699,35,125,0,0,0,284,272
+W0971,9,Jeans,Website,2949,60,147.3,0,0,0,670,255
+W0972,5,Footwear,Marketplace,1849,50,21.1,0,1,0,553,249
+W0973,11,Dresses,Mobile App,1699,20,37.2,1,0,1,679,304
+W0974,8,Accessories,Mobile App,899,15,120,0,1,0,259,259
+W0975,12,Accessories,Mobile App,849,25,134.4,0,0,0,651,290
+W0976,11,Jeans,Marketplace,3099,50,13,0,0,0,212,212
+W0977,9,Footwear,Marketplace,1499,35,129.3,0,0,1,483,261
+W0978,2,Jeans,Mobile App,2899,25,126.2,0,1,0,445,218
+W0979,12,Accessories,Mobile App,349,30,169.6,0,1,0,557,360
+W0980,8,T-Shirts,Mobile App,999,5,25.6,0,0,0,376,240
+W0981,1,Ethnic Wear,Website,5049,30,91.8,1,0,0,589,233
+W0982,11,Dresses,Mobile App,1599,50,57.5,1,1,0,372,372
+W0983,4,Footwear,Mobile App,1699,40,174.8,0,1,0,451,277
+W0984,2,Footwear,Marketplace,3399,15,171.8,1,1,1,658,275
+W0985,6,Accessories,Marketplace,949,20,124.9,1,1,1,272,272
+W0986,5,Dresses,Marketplace,2599,10,134.5,0,1,0,501,229
+W0987,6,T-Shirts,Marketplace,549,40,0.7,1,1,1,331,331
+W0988,5,Footwear,Website,2549,0,61.8,0,1,0,588,142
+W0989,2,T-Shirts,Marketplace,1249,50,10.9,1,0,0,780,385
+W0990,4,Jeans,Website,1599,10,164.8,0,0,0,296,197
+W0991,2,Jeans,Website,3049,35,104.4,0,0,1,476,217
+W0992,8,Accessories,Website,399,35,48.3,0,0,0,687,276
+W0993,6,Jeans,Website,2099,50,80.6,0,0,1,570,250
+W0994,3,Dresses,Website,1749,25,63,1,0,0,441,246
+W0995,12,Footwear,Website,2249,20,70,1,0,0,364,168
+W0996,3,Footwear,Mobile App,3399,10,81.2,1,0,0,412,176
+W0997,7,Footwear,Mobile App,2899,5,109.4,0,1,1,693,196
+W0998,7,T-Shirts,Website,1249,25,111.2,0,0,1,675,250
+W0999,1,Dresses,Website,1549,15,15.1,1,1,0,307,255
+W1000,9,Dresses,Website,1949,25,172.2,0,0,0,311,190
+W1001,6,Ethnic Wear,Website,2249,30,160.9,0,0,0,831,200
+W1002,5,Dresses,Mobile App,1299,35,6.5,1,0,0,371,277
+W1003,6,Footwear,Website,3299,10,61.8,1,1,0,752,180
+W1004,4,T-Shirts,Website,949,5,53.8,0,0,1,790,244
+W1005,9,Footwear,Mobile App,1599,50,22.8,0,0,1,576,223
+W1006,10,Dresses,Website,2599,15,54.3,1,0,1,493,232
+W1007,7,T-Shirts,Marketplace,599,0,126.4,0,0,0,422,300
+W1008,8,Ethnic Wear,Website,2399,5,77.7,1,1,0,730,209
+W1009,2,Dresses,Mobile App,1449,30,108.5,0,1,0,771,278
+W1010,3,Dresses,Mobile App,2199,25,91.5,0,0,0,744,212
+W1011,5,T-Shirts,Marketplace,599,40,18.5,0,0,0,662,324
+W1012,9,Dresses,Marketplace,1349,15,144.3,1,0,1,343,343
+W1013,10,Accessories,Mobile App,599,20,12.1,1,1,1,488,342
+W1014,8,Jeans,Website,2699,0,165.9,0,1,0,556,193
+W1015,1,Jeans,Mobile App,3249,0,88.5,0,1,0,681,173
+W1016,3,Accessories,Website,899,15,134.9,1,0,1,350,256
+W1017,5,Accessories,Marketplace,649,50,14.6,0,0,1,230,230
+W1018,12,T-Shirts,Website,1149,5,45.6,1,1,0,468,234
+W1019,4,Accessories,Marketplace,999,30,119.5,0,0,1,548,310
+W1020,4,T-Shirts,Mobile App,1199,60,169.2,0,0,1,342,342
+W1021,7,Jeans,Marketplace,2249,15,61.2,0,0,1,314,226
+W1022,3,Dresses,Marketplace,2149,25,29.2,0,1,1,770,231
+W1023,12,T-Shirts,Marketplace,849,25,116.6,1,1,1,338,338
+W1024,4,Ethnic Wear,Website,2499,40,118.1,0,1,1,422,229
+W1025,5,Footwear,Mobile App,1799,30,119,0,0,0,623,212
+W1026,12,Jeans,Mobile App,2549,15,133.8,1,0,0,533,218
+W1027,4,Dresses,Marketplace,2499,0,145.4,0,0,1,643,226
+W1028,11,Jeans,Marketplace,1699,0,40.4,1,1,0,388,261
+W1029,6,Ethnic Wear,Mobile App,2349,30,134.9,0,1,0,769,236
+W1030,10,Ethnic Wear,Marketplace,2449,30,4,1,0,1,801,267
+W1031,1,Jeans,Website,2899,30,38.5,0,1,0,586,203
+W1032,8,Accessories,Marketplace,649,5,131.1,0,1,0,483,306
+W1033,8,Ethnic Wear,Website,3699,0,3.6,0,1,0,682,93
+W1034,5,Footwear,Mobile App,2499,25,33.2,0,1,0,322,188
+W1035,2,Jeans,Marketplace,2599,5,108.9,0,0,0,655,219
+W1036,1,Accessories,Marketplace,999,10,48.2,0,1,0,669,259
+W1037,12,Footwear,Mobile App,3499,20,163.5,1,0,0,680,182
+W1038,3,Footwear,Website,1949,15,101.2,0,0,1,376,167
+W1039,9,Jeans,Marketplace,3149,10,3.3,1,0,1,778,170
+W1040,9,Jeans,Website,3049,5,79.4,0,0,0,318,159
+W1041,5,Ethnic Wear,Mobile App,3149,40,93.7,0,0,0,767,180
+W1042,1,Dresses,Mobile App,2749,5,143.2,1,0,1,302,277
+W1043,9,Accessories,Website,349,10,0.8,0,1,0,454,222
+W1044,2,Ethnic Wear,Mobile App,4999,0,101.9,1,1,1,204,204
+W1045,6,Dresses,Website,1299,0,142.7,0,0,1,639,190
+W1046,2,Dresses,Mobile App,2099,25,65.4,0,0,0,283,195
+W1047,8,Jeans,Website,2999,15,15.7,0,0,0,720,128
+W1048,6,Ethnic Wear,Mobile App,2899,35,160.3,0,1,1,423,233
+W1049,7,Jeans,Marketplace,2349,5,109.5,0,0,0,349,205
+W1050,3,Footwear,Marketplace,1549,20,162.2,0,0,0,515,216
+W1051,4,Footwear,Marketplace,2399,15,116.9,1,1,0,685,252
+W1052,4,Dresses,Marketplace,2149,30,34.2,0,1,1,743,275
+W1053,1,Accessories,Mobile App,699,35,108.8,0,0,0,696,316
+W1054,11,Footwear,Marketplace,2249,35,179.7,1,1,0,409,324
+W1055,6,T-Shirts,Mobile App,649,35,88.9,1,0,0,722,358
+W1056,2,Accessories,Website,599,10,65.5,1,0,0,527,261
+W1057,4,Jeans,Marketplace,1649,20,111.6,0,0,1,770,297
+W1058,9,Accessories,Marketplace,799,5,31.1,1,1,0,792,277
+W1059,2,Dresses,Website,1449,15,94.1,1,0,1,807,241
+W1060,8,Jeans,Marketplace,1749,35,108.7,1,0,0,613,336
+W1061,6,Accessories,Website,1149,25,42.6,1,1,1,826,273
+W1062,3,Footwear,Marketplace,3649,10,174.2,0,0,1,539,194
+W1063,9,Footwear,Marketplace,2299,40,84.1,0,0,0,654,209
+W1064,5,Ethnic Wear,Website,4499,5,80.2,0,1,1,530,172
+W1065,7,Ethnic Wear,Website,2849,40,128.9,1,0,1,714,257
+W1066,1,Dresses,Marketplace,1299,40,71.4,1,0,0,222,222
+W1067,8,Jeans,Mobile App,2999,50,139,1,0,0,717,299
+W1068,11,Jeans,Mobile App,1699,25,31.4,1,0,1,344,276
+W1069,3,Accessories,Mobile App,699,30,51.2,0,0,0,407,237
+W1070,8,Dresses,Website,1249,30,93.2,1,1,1,536,393
+W1071,2,Dresses,Website,1949,10,58.1,1,0,1,303,227
+W1072,12,Jeans,Mobile App,3099,20,72.7,1,0,1,362,260
+W1073,3,Accessories,Marketplace,849,40,6,0,0,0,691,266
+W1074,10,Accessories,Mobile App,799,10,140.3,1,1,1,690,341
+W1075,3,Ethnic Wear,Website,5249,50,5.2,1,0,1,795,195
+W1076,7,Dresses,Marketplace,2599,5,24.4,0,0,0,512,144
+W1077,12,T-Shirts,Marketplace,949,15,129.3,1,0,1,752,388
+W1078,4,Footwear,Mobile App,1449,50,92.9,0,0,0,311,227
+W1079,2,Accessories,Mobile App,549,10,102,0,0,1,794,282
+W1080,7,Accessories,Mobile App,599,20,168.7,0,1,0,225,225
+W1081,5,Dresses,Marketplace,1449,15,42.2,0,0,1,644,229
+W1082,6,Footwear,Marketplace,3649,5,177.8,0,0,0,583,184
+W1083,11,Dresses,Marketplace,2249,5,45.8,1,0,1,482,240
+W1084,9,Jeans,Website,1599,35,62.7,0,0,0,362,220
+W1085,12,Ethnic Wear,Website,5249,10,34.3,1,0,0,253,157
+W1086,2,Ethnic Wear,Mobile App,3149,10,138.9,1,0,0,627,228
+W1087,9,Jeans,Mobile App,1899,0,153.2,0,0,0,373,223
+W1088,4,Ethnic Wear,Marketplace,2699,30,70.7,0,0,0,744,175
+W1089,12,Accessories,Website,1149,30,137.6,0,1,0,595,234
+W1090,10,Footwear,Mobile App,2699,40,105.3,1,1,0,310,310
+W1091,1,Accessories,Website,349,10,105.6,0,0,1,663,234
+W1092,5,Footwear,Marketplace,2699,15,108,0,1,0,428,197
+W1093,12,Jeans,Website,1549,10,128.2,1,0,0,579,236
+W1094,12,Footwear,Website,3149,10,11.1,1,1,0,282,156
+W1095,9,Accessories,Website,749,35,35.1,0,1,0,285,285
+W1096,4,Dresses,Mobile App,2899,20,91.6,0,0,0,450,190
+W1097,1,T-Shirts,Marketplace,599,30,73.1,1,1,0,399,399
+W1098,4,Ethnic Wear,Marketplace,2949,25,114.9,0,0,0,462,199
+W1099,8,Accessories,Mobile App,1099,5,10,0,0,0,395,174
+W1100,12,Jeans,Marketplace,3099,5,108.4,1,0,0,374,219
+W1101,7,Ethnic Wear,Website,1999,20,64.8,0,0,1,397,173
+W1102,8,Jeans,Website,2149,25,174.1,0,0,0,412,239
+W1103,5,T-Shirts,Marketplace,1199,0,138.4,0,0,0,797,229
+W1104,11,Footwear,Mobile App,2949,10,32.5,0,1,1,615,174
+W1105,2,Accessories,Website,349,0,93.6,0,1,0,848,259
+W1106,6,Accessories,Mobile App,999,10,158.9,0,0,0,473,214
+W1107,7,T-Shirts,Marketplace,1099,0,49.1,0,0,1,479,265
+W1108,11,Dresses,Mobile App,2849,20,48.8,1,0,0,318,250
+W1109,6,Footwear,Marketplace,2999,30,106.5,0,0,1,295,190
+W1110,12,Footwear,Marketplace,3049,15,4,1,0,1,202,186
+W1111,5,Jeans,Website,2149,5,34,0,0,0,434,146
+W1112,4,Footwear,Website,1999,15,142.3,1,0,0,596,201
+W1113,8,T-Shirts,Mobile App,949,35,23.9,0,0,0,773,298
+W1114,7,Jeans,Mobile App,3049,50,9.3,0,0,0,223,217
+W1115,12,Accessories,Marketplace,1149,25,27.8,0,0,1,764,225
+W1116,3,Dresses,Marketplace,1899,30,34.9,0,0,1,257,243
+W1117,6,Jeans,Website,3299,0,20.7,1,0,0,289,145
+W1118,2,Accessories,Mobile App,349,5,176.7,1,1,1,713,403
+W1119,2,Accessories,Marketplace,849,40,178,1,0,0,263,263
+W1120,1,Ethnic Wear,Website,4699,50,8,1,1,0,799,239
+W1121,10,T-Shirts,Marketplace,749,15,81.3,1,0,0,304,304
+W1122,8,Jeans,Website,1999,15,138.4,0,0,1,681,238
+W1123,1,Ethnic Wear,Website,4149,25,69.7,1,1,1,645,224
+W1124,4,T-Shirts,Mobile App,1199,0,44.3,1,1,0,692,261
+W1125,9,T-Shirts,Website,1099,40,65.3,0,0,1,674,300
+W1126,7,Dresses,Website,2599,30,69.9,0,0,1,758,201
+W1127,6,Ethnic Wear,Website,3949,5,15.3,1,1,1,334,177
+W1128,10,Accessories,Marketplace,899,15,17.2,1,0,0,799,296
+W1129,6,T-Shirts,Mobile App,649,30,91.6,1,0,0,325,325
+W1130,8,Dresses,Website,1399,0,43.7,0,0,0,482,158
+W1131,1,Footwear,Website,1599,20,38.6,0,1,0,221,165
+W1132,9,Footwear,Marketplace,3349,20,145.4,0,0,1,489,176
+W1133,2,T-Shirts,Website,549,25,178.3,1,0,0,578,401
+W1134,10,Jeans,Mobile App,3299,15,105.5,0,0,0,226,221
+W1135,3,Ethnic Wear,Website,5299,25,118.9,0,0,1,408,159
+W1136,1,Ethnic Wear,Marketplace,4149,10,34.3,0,1,1,616,175
+W1137,4,Accessories,Website,549,25,167.5,0,1,0,464,295
+W1138,12,Dresses,Marketplace,2849,15,138.6,1,1,1,726,324
+W1139,10,Jeans,Mobile App,2349,15,135.2,0,0,0,479,225
+W1140,8,Jeans,Website,1549,30,174.7,0,0,0,394,223
+W1141,6,Jeans,Website,3449,30,112.9,0,1,1,747,225
+W1142,11,Accessories,Marketplace,449,15,121.4,1,0,0,243,243
+W1143,10,T-Shirts,Marketplace,799,30,39.3,1,0,1,207,207
+W1144,9,Footwear,Marketplace,1649,25,45.9,0,0,0,601,193
+W1145,4,Ethnic Wear,Mobile App,4799,15,145.8,0,0,0,555,165
+W1146,5,Accessories,Marketplace,999,25,17.5,0,0,0,769,245
+W1147,1,Ethnic Wear,Mobile App,3099,25,105.7,1,0,0,537,240
+W1148,8,Dresses,Mobile App,1949,10,77.8,0,0,1,451,221
+W1149,2,Jeans,Website,3149,50,74.4,1,0,0,834,257
+W1150,8,Ethnic Wear,Website,4399,40,131.7,0,1,0,804,209
+W1151,10,Footwear,Mobile App,1499,0,47.4,1,0,1,269,189
+W1152,11,Accessories,Website,349,20,60.9,1,0,0,599,280
+W1153,7,Footwear,Mobile App,2949,10,87.1,0,0,0,278,171
+W1154,4,T-Shirts,Marketplace,1049,10,121.9,0,0,0,272,249
+W1155,6,Ethnic Wear,Website,2149,0,9.7,0,0,1,503,105
+W1156,2,T-Shirts,Marketplace,1199,40,23.9,1,0,1,850,383
+W1157,1,Ethnic Wear,Mobile App,3399,20,30.8,1,0,0,443,196
+W1158,5,Dresses,Marketplace,2899,50,12,0,1,1,565,256
+W1159,1,Accessories,Mobile App,449,30,1.3,1,0,1,584,291
+W1160,4,Accessories,Marketplace,1049,25,48,0,0,0,452,254
+W1161,5,Footwear,Mobile App,3799,15,3.1,0,1,0,604,116
+W1162,6,Ethnic Wear,Website,1949,15,128.7,0,0,0,596,175
+W1163,8,Footwear,Mobile App,3799,40,44.7,0,0,1,700,196
+W1164,9,Accessories,Marketplace,449,30,28.6,0,0,1,636,321
+W1165,12,T-Shirts,Website,549,5,18.9,1,0,0,362,256
+W1166,10,Jeans,Website,2599,35,121.8,1,0,0,504,266
+W1167,12,Dresses,Website,1749,15,151.5,1,0,1,727,233
+W1168,3,Jeans,Marketplace,2449,0,154.4,1,0,0,284,264
+W1169,6,Accessories,Marketplace,1049,5,55.3,0,0,0,759,191
+W1170,3,Jeans,Mobile App,2299,15,52.4,0,0,0,775,196
+W1171,11,Footwear,Website,2299,25,21.1,1,0,0,350,181
+W1172,9,Footwear,Website,3799,5,9.2,0,0,1,357,96
+W1173,8,Accessories,Mobile App,749,25,20.5,0,1,0,498,275
+W1174,1,Footwear,Marketplace,3199,50,9.6,1,0,1,235,233
+W1175,1,T-Shirts,Website,599,10,81.2,1,0,0,374,284
+W1176,1,Accessories,Mobile App,1049,0,69.6,1,1,1,671,278
+W1177,2,Jeans,Marketplace,3299,5,132.7,1,1,1,522,266
+W1178,7,Ethnic Wear,Website,2499,15,176.9,0,0,1,767,166
+W1179,1,Jeans,Website,2149,35,29.8,1,0,0,593,250
+W1180,7,Ethnic Wear,Website,4049,15,117.3,0,0,1,492,156
+W1181,11,T-Shirts,Mobile App,699,5,94.8,0,0,1,365,292
+W1182,2,Ethnic Wear,Marketplace,2949,40,84.6,1,0,0,792,297
+W1183,1,Accessories,Mobile App,1099,5,19.7,1,0,1,296,209
+W1184,10,Jeans,Mobile App,2099,10,99,1,1,0,529,316
+W1185,1,Accessories,Website,749,35,152.7,1,1,1,408,394
+W1186,9,Footwear,Website,2199,60,39.5,0,0,0,764,226
+W1187,3,T-Shirts,Mobile App,899,5,83.6,0,0,0,495,232
+W1188,6,Footwear,Mobile App,3199,15,106.9,0,0,0,797,197
+W1189,4,T-Shirts,Marketplace,1199,5,145.5,0,0,1,353,234
+W1190,2,Dresses,Mobile App,1849,0,1.5,1,0,1,847,228
+W1191,2,Jeans,Marketplace,2849,15,75.3,1,1,1,490,251
+W1192,9,Ethnic Wear,Mobile App,3049,35,177.7,0,1,0,726,230
+W1193,4,Jeans,Marketplace,1649,35,101.2,0,1,0,439,346
+W1194,8,Dresses,Mobile App,1499,30,91.1,0,1,1,693,286
+W1195,3,Footwear,Mobile App,3899,15,38.8,0,0,0,804,136
+W1196,3,T-Shirts,Website,799,50,119.7,0,0,0,785,386
+W1197,7,Accessories,Marketplace,899,30,36.8,0,0,0,661,288
+W1198,2,Dresses,Website,1949,15,147.6,1,0,1,472,260
+W1199,4,T-Shirts,Mobile App,599,0,174.3,0,0,0,676,266
+W1200,9,Ethnic Wear,Website,5449,25,37.7,0,0,0,301,122
+W1201,3,Accessories,Mobile App,999,5,8.6,0,0,1,248,160
+W1202,12,Dresses,Website,1899,25,118.4,1,0,1,586,310
+W1203,1,Jeans,Mobile App,2199,25,131.7,0,0,0,515,233
+W1204,11,Jeans,Mobile App,2299,40,110.4,0,0,0,435,256
+W1205,8,Dresses,Marketplace,2599,35,141,0,0,0,832,232
+W1206,2,Dresses,Mobile App,2899,25,26.7,0,0,0,210,166
+W1207,7,Dresses,Mobile App,1999,5,4.7,0,0,1,770,153
+W1208,2,Footwear,Website,2649,20,31.1,1,0,0,379,160
+W1209,8,Accessories,Marketplace,999,5,59.6,1,1,0,391,271
+W1210,6,Footwear,Mobile App,1499,25,136.8,0,0,0,234,189
+W1211,12,Accessories,Marketplace,649,35,137.3,1,1,1,236,236
+W1212,3,Accessories,Website,1099,10,30.8,0,0,0,359,169
+W1213,5,Accessories,Marketplace,949,0,111.7,0,1,0,643,239
+W1214,6,T-Shirts,Marketplace,1099,15,90.4,0,0,0,489,248
+W1215,7,Ethnic Wear,Marketplace,3349,25,17.1,0,0,1,613,164
+W1216,3,Jeans,Mobile App,1849,20,82.8,0,0,0,508,237
+W1217,6,Dresses,Website,2549,30,7,1,0,0,742,184
+W1218,3,T-Shirts,Website,699,10,8.1,1,0,0,790,225
+W1219,2,Ethnic Wear,Website,4899,20,16,1,0,1,663,180
+W1220,11,T-Shirts,Website,799,10,48.4,0,1,1,796,289
+W1221,3,Ethnic Wear,Marketplace,2149,25,81.8,0,1,1,597,230
+W1222,5,Jeans,Marketplace,2049,40,48.9,0,0,0,723,293
+W1223,11,Footwear,Website,2599,0,57.5,0,0,0,392,131
+W1224,10,Accessories,Mobile App,999,40,36.5,0,1,1,487,284
+W1225,5,Accessories,Mobile App,699,50,101.6,0,0,1,759,365
+W1226,3,T-Shirts,Website,1149,40,163.2,0,0,1,624,307
+W1227,9,Ethnic Wear,Mobile App,3749,15,43.5,0,0,0,638,139
+W1228,1,Footwear,Marketplace,3949,10,45.4,1,0,1,379,213
+W1229,1,Jeans,Mobile App,2249,5,45.1,1,1,0,673,229
+W1230,11,Ethnic Wear,Website,4349,15,96.8,0,1,1,713,189
+W1231,11,Dresses,Mobile App,2949,0,138.8,0,0,1,475,173
+W1232,7,Dresses,Mobile App,1499,15,139.9,0,0,1,625,236
+W1233,10,Dresses,Website,1549,15,161,1,1,1,701,294
+W1234,9,Ethnic Wear,Website,4349,15,71.7,0,0,0,740,157
+W1235,4,Dresses,Mobile App,2549,0,70.3,0,1,0,322,184
+W1236,10,Dresses,Mobile App,2449,10,35.3,0,0,0,594,175
+W1237,1,Ethnic Wear,Website,2449,30,48.2,0,0,0,263,155
+W1238,7,Ethnic Wear,Marketplace,5149,30,118.4,0,0,0,778,175
+W1239,4,Jeans,Marketplace,1799,20,142.5,0,1,1,802,299
+W1240,11,Accessories,Marketplace,349,15,71.6,0,0,1,451,312
+W1241,12,T-Shirts,Marketplace,549,15,89.9,1,0,1,207,207
+W1242,8,Ethnic Wear,Website,5399,10,61.4,0,0,1,695,129
+W1243,9,Accessories,Marketplace,799,20,26.1,0,0,0,783,265
+W1244,9,Accessories,Marketplace,449,0,145.5,0,0,1,747,263
+W1245,2,T-Shirts,Marketplace,1249,35,156.7,0,0,0,552,342
+W1246,7,T-Shirts,Marketplace,999,30,166.1,0,0,0,432,302
+W1247,7,Jeans,Marketplace,3099,40,67.4,0,1,0,237,237
+W1248,9,Footwear,Marketplace,1949,40,119.3,0,0,0,272,211
+W1249,12,Jeans,Mobile App,1849,25,127.6,0,0,0,533,257
+W1250,7,Ethnic Wear,Website,4749,0,27.6,1,0,0,436,141
+W1251,5,Dresses,Marketplace,2599,25,76,0,0,0,389,200
+W1252,5,Ethnic Wear,Marketplace,3899,10,73.2,1,0,0,217,217
+W1253,12,Footwear,Website,1799,40,4.2,1,1,0,557,200
+W1254,10,Ethnic Wear,Mobile App,4049,35,140.6,0,1,0,359,213
+W1255,10,Accessories,Website,1149,25,135.6,1,0,0,276,237
+W1256,6,Accessories,Mobile App,1149,5,87.9,1,0,0,724,202
+W1257,5,Dresses,Website,1249,30,107.8,0,1,1,706,247
+W1258,4,Jeans,Mobile App,2649,40,148.3,1,1,0,362,357
+W1259,4,Dresses,Marketplace,1699,5,5.1,0,0,0,441,146
+W1260,6,Ethnic Wear,Marketplace,4749,0,66.3,0,0,0,662,131
+W1261,1,Ethnic Wear,Website,2799,10,48.3,1,1,1,618,220
+W1262,2,Footwear,Mobile App,1449,10,138.3,1,0,0,299,197
+W1263,11,Footwear,Marketplace,1999,40,67.1,1,0,0,580,236
+W1264,8,Accessories,Website,349,10,26.3,0,0,0,813,200
+W1265,1,T-Shirts,Marketplace,899,0,117.2,1,0,1,672,323
+W1266,2,Ethnic Wear,Marketplace,4299,25,104,0,0,0,614,172
+W1267,4,Jeans,Marketplace,1549,20,121.4,0,0,1,707,226
+W1268,10,Dresses,Mobile App,2849,15,179.6,0,0,1,521,197
+W1269,1,Ethnic Wear,Marketplace,2749,50,135.3,1,0,0,697,359
+W1270,11,Accessories,Website,949,20,33.3,1,0,1,451,265
+W1271,2,Jeans,Website,2499,35,178.9,1,0,1,228,228
+W1272,5,Ethnic Wear,Marketplace,3999,40,56.5,0,0,0,822,173
+W1273,9,Dresses,Website,2549,15,10.2,0,0,1,308,141
+W1274,5,Accessories,Mobile App,1099,10,122,0,0,0,714,229
+W1275,12,Accessories,Mobile App,1099,30,115.3,1,0,0,294,276
+W1276,12,Jeans,Marketplace,2849,40,12.6,0,0,0,481,213
+W1277,3,Ethnic Wear,Marketplace,4849,20,155.9,0,0,0,398,181
+W1278,6,Footwear,Mobile App,2999,10,19.7,0,0,1,786,153
+W1279,8,Ethnic Wear,Website,5399,40,77.4,0,0,0,257,149
+W1280,4,Footwear,Marketplace,2499,25,129.1,0,0,0,543,205
+W1281,11,T-Shirts,Marketplace,899,15,79.2,1,1,0,786,345
+W1282,2,Accessories,Website,899,40,6.3,1,0,1,407,252
+W1283,8,Footwear,Mobile App,2499,5,59.9,0,1,0,755,175
+W1284,6,Ethnic Wear,Marketplace,2299,20,135.3,0,0,0,294,178
+W1285,6,T-Shirts,Marketplace,1099,0,128.3,0,1,0,369,283
+W1286,5,Accessories,Marketplace,749,5,5.9,0,1,1,510,240
+W1287,3,Ethnic Wear,Marketplace,2599,30,165.7,0,0,1,666,221
+W1288,11,Accessories,Marketplace,599,25,69.3,1,1,0,386,356
+W1289,6,Footwear,Website,1899,15,108.3,0,0,0,444,159
+W1290,9,T-Shirts,Website,699,50,38.8,0,1,0,750,319
+W1291,11,Dresses,Website,1799,30,88.6,1,0,0,736,270
+W1292,1,Ethnic Wear,Mobile App,4399,15,176.8,0,1,1,512,205
+W1293,1,T-Shirts,Website,999,5,19.3,0,0,1,207,201
+W1294,7,Accessories,Mobile App,799,30,48.9,0,0,1,359,258
+W1295,4,Ethnic Wear,Website,5399,30,43.1,0,0,0,769,120
+W1296,4,Accessories,Marketplace,1099,20,36.7,0,0,1,251,235
+W1297,12,Jeans,Mobile App,2849,15,1.3,1,0,1,341,193
+W1298,2,Footwear,Website,3349,20,60,1,0,0,785,169
+W1299,1,Jeans,Mobile App,2299,25,140.8,1,0,1,712,321
+W1300,8,T-Shirts,Marketplace,749,0,102.2,1,0,1,494,349
+W1301,9,Jeans,Mobile App,1549,25,95.4,1,0,0,807,294
+W1302,3,Ethnic Wear,Mobile App,4099,20,100.3,0,1,0,791,189
+W1303,4,Jeans,Website,1799,0,38.9,0,1,0,693,168
+W1304,5,Accessories,Marketplace,1099,20,144,0,1,1,302,302
+W1305,11,T-Shirts,Mobile App,1149,50,123.3,1,0,0,547,412
+W1306,7,Dresses,Marketplace,2299,30,73,0,1,0,397,245
+W1307,5,Dresses,Marketplace,2949,30,3.7,0,0,0,270,144
+W1308,5,Ethnic Wear,Marketplace,3649,50,162.7,1,0,0,779,294
+W1309,9,Dresses,Mobile App,2249,35,176.4,1,1,0,488,370
+W1310,10,Dresses,Website,2599,15,37,1,1,1,597,221
+W1311,8,Accessories,Marketplace,749,25,43,0,0,0,285,219
+W1312,3,Dresses,Website,1399,10,5.1,1,1,0,332,219
+W1313,1,Jeans,Website,1899,30,49.5,1,0,1,597,225
+W1314,4,T-Shirts,Mobile App,949,30,44.6,0,1,0,279,279
+W1315,10,Ethnic Wear,Website,5399,0,178.2,0,0,1,612,137
+W1316,12,Footwear,Mobile App,1999,25,154.7,1,1,1,491,292
+W1317,8,Footwear,Website,3799,60,83.5,0,1,0,415,197
+W1318,6,Jeans,Marketplace,1549,20,134.8,0,0,1,813,255
+W1319,7,Accessories,Marketplace,799,0,79.2,1,0,1,646,262
+W1320,1,T-Shirts,Website,549,50,152.5,1,0,0,331,331
+W1321,11,T-Shirts,Marketplace,799,15,48.3,0,0,1,342,294
+W1322,1,Jeans,Website,2899,15,61.7,1,0,1,512,229
+W1323,9,Jeans,Mobile App,2999,30,117.5,0,0,0,326,218
+W1324,5,Ethnic Wear,Website,2399,0,81.8,0,0,1,465,161
+W1325,2,Ethnic Wear,Marketplace,2199,10,105.9,1,1,0,789,249
+W1326,9,Dresses,Mobile App,1999,15,90.8,0,1,0,245,229
+W1327,9,Accessories,Marketplace,749,50,159.6,0,0,1,692,355
+W1328,8,Jeans,Mobile App,1799,30,96,0,0,1,518,262
+W1329,3,Ethnic Wear,Mobile App,4149,25,115,0,0,0,526,167
+W1330,4,Footwear,Mobile App,3749,10,166.7,0,0,1,321,179
+W1331,3,Dresses,Mobile App,2949,35,59.3,0,1,0,387,229
+W1332,9,Accessories,Mobile App,699,40,128.9,0,0,0,462,295
+W1333,9,Jeans,Marketplace,2549,5,154.6,0,0,0,740,196
+W1334,2,Jeans,Mobile App,3149,20,15.2,0,0,0,639,148
+W1335,12,T-Shirts,Website,949,35,59.5,1,1,1,778,390
+W1336,8,Ethnic Wear,Website,3449,5,20.7,0,0,1,679,109
+W1337,2,Jeans,Website,2799,15,92.4,0,0,0,269,167
+W1338,11,Dresses,Mobile App,2099,35,18.4,0,0,0,285,200
+W1339,9,Dresses,Mobile App,1299,15,166.9,0,0,1,487,223
+W1340,3,Footwear,Mobile App,2949,30,164.4,0,1,0,324,254
+W1341,3,Ethnic Wear,Marketplace,2099,15,14.9,1,0,0,791,215
+W1342,7,Footwear,Website,2149,25,176.8,0,0,0,840,184
+W1343,12,Dresses,Website,2949,25,152.3,0,1,0,252,205
+W1344,5,T-Shirts,Marketplace,549,35,97.2,0,0,0,791,382
+W1345,11,Footwear,Website,2349,35,91.8,0,1,1,494,229
+W1346,12,T-Shirts,Marketplace,799,20,142.8,1,0,1,210,210
+W1347,3,Dresses,Mobile App,1699,0,86.5,0,1,0,670,207
+W1348,7,Ethnic Wear,Marketplace,3849,25,57.8,0,0,1,700,167
+W1349,7,Footwear,Website,2549,15,33.1,0,0,0,304,135
+W1350,5,Ethnic Wear,Website,2799,25,81.2,0,1,0,477,180
+W1351,4,Jeans,Marketplace,1799,15,48.4,0,0,0,496,208
+W1352,12,Footwear,Website,2699,25,77.1,1,0,1,787,217
+W1353,4,Ethnic Wear,Mobile App,2899,15,74.6,0,0,0,609,158
+W1354,12,Accessories,Mobile App,749,30,88,1,1,1,640,411
+W1355,10,Dresses,Website,2299,35,39.8,0,0,1,447,190
+W1356,5,T-Shirts,Mobile App,1199,10,60.4,0,0,1,346,233
+W1357,4,Jeans,Marketplace,1849,15,7.7,1,0,0,689,221
+W1358,8,Dresses,Mobile App,2699,20,155,0,0,0,504,176
+W1359,1,T-Shirts,Marketplace,1099,0,46,1,0,1,699,287
+W1360,2,Dresses,Marketplace,2949,35,135.9,1,0,0,765,321
+W1361,10,Accessories,Website,749,10,43.8,1,0,0,210,210
+W1362,12,Jeans,Mobile App,2949,35,141.7,1,0,0,206,206
+W1363,5,Footwear,Marketplace,1599,40,161.6,0,0,1,823,256
+W1364,8,Footwear,Website,1649,50,147,0,1,0,281,252
+W1365,10,T-Shirts,Website,1049,5,76.2,1,1,0,502,285
+W1366,2,T-Shirts,Marketplace,1199,35,31.2,0,0,1,830,311
+W1367,2,Ethnic Wear,Website,3899,10,102.3,1,0,1,624,208
+W1368,10,Ethnic Wear,Website,2599,0,151.7,1,0,0,559,178
+W1369,6,Footwear,Marketplace,1849,40,141.2,0,0,0,754,254
+W1370,9,Jeans,Website,2299,25,56.5,0,1,1,390,216
+W1371,7,Dresses,Mobile App,2949,20,105,0,0,0,681,193
+W1372,9,T-Shirts,Website,799,15,94.5,0,0,1,762,265
+W1373,1,Footwear,Website,2249,0,59.6,1,0,0,248,165
+W1374,6,Dresses,Mobile App,1799,15,48.3,1,0,0,835,250
+W1375,9,Jeans,Website,3399,5,112.9,0,0,0,659,152
+W1376,6,Footwear,Mobile App,2799,60,37.2,0,0,0,535,194
+W1377,1,T-Shirts,Mobile App,799,15,5,1,1,0,226,226
+W1378,6,Accessories,Mobile App,1099,20,53,0,0,1,515,230
+W1379,8,Dresses,Mobile App,1299,40,118.5,0,0,0,489,272
+W1380,12,Accessories,Marketplace,399,15,159.4,1,0,1,793,348
+W1381,10,Footwear,Marketplace,1499,40,135.9,1,0,0,437,265
+W1382,10,Ethnic Wear,Mobile App,4799,30,114.5,1,0,0,435,248
+W1383,4,Accessories,Mobile App,599,25,151,0,0,0,360,260
+W1384,1,Accessories,Marketplace,1049,20,81.2,1,0,0,629,292
+W1385,2,Jeans,Website,2399,40,55.7,0,0,0,316,215
+W1386,9,Accessories,Mobile App,449,5,149.9,1,0,1,712,294
+W1387,1,Ethnic Wear,Mobile App,4799,5,5.6,1,0,0,265,136
+W1388,9,Ethnic Wear,Website,4499,30,22.9,0,0,1,447,136
+W1389,9,Jeans,Marketplace,3249,20,106.9,0,1,1,624,255
+W1390,3,Dresses,Marketplace,2549,10,151,0,0,0,471,222
+W1391,4,Jeans,Website,2599,25,116.5,0,0,0,610,185
+W1392,1,T-Shirts,Marketplace,949,15,2.2,1,1,1,569,341
+W1393,1,Accessories,Marketplace,699,20,16.9,0,1,1,666,311
+W1394,4,Dresses,Marketplace,2949,25,131.1,0,0,0,813,202
+W1395,10,Ethnic Wear,Website,4599,30,145.2,1,0,0,370,210
+W1396,9,T-Shirts,Marketplace,849,40,96.1,0,0,1,280,280
+W1397,6,T-Shirts,Marketplace,649,40,45.4,0,1,0,365,365
+W1398,12,Ethnic Wear,Marketplace,2699,5,178.6,1,1,0,251,251
+W1399,10,Footwear,Marketplace,2949,30,13.1,1,0,0,443,207
+W1400,4,Ethnic Wear,Mobile App,3749,20,173.1,0,1,0,789,210
+W1401,4,Dresses,Marketplace,2649,10,110,0,0,0,582,192
+W1402,7,Dresses,Mobile App,1849,20,23.3,1,0,1,674,283
+W1403,6,Ethnic Wear,Website,2099,20,36.4,0,0,1,546,153
+W1404,1,Accessories,Mobile App,1099,40,178.4,0,0,1,603,326
+W1405,4,Dresses,Website,1949,15,101.2,1,0,1,842,241
+W1406,6,T-Shirts,Marketplace,949,35,67.8,0,0,0,337,328
+W1407,6,Ethnic Wear,Mobile App,4199,50,130.6,0,0,0,644,197
+W1408,8,Ethnic Wear,Mobile App,3599,10,135.6,1,0,1,375,247
+W1409,8,Accessories,Marketplace,949,5,127,0,0,0,606,254
+W1410,3,Footwear,Marketplace,2499,5,32.4,0,1,1,615,154
+W1411,11,T-Shirts,Marketplace,699,30,86.3,0,0,0,547,358
+W1412,5,Dresses,Website,2649,15,116.1,0,0,0,408,175
+W1413,2,Dresses,Website,2399,0,51.2,1,0,0,443,203
+W1414,5,Jeans,Website,2249,0,151.6,0,0,0,327,193
+W1415,7,Dresses,Marketplace,2399,15,157.8,0,0,1,364,239
+W1416,10,Ethnic Wear,Marketplace,2599,15,93.8,0,0,0,614,194
+W1417,9,Ethnic Wear,Mobile App,2399,50,152.5,0,0,0,275,236
+W1418,11,Jeans,Mobile App,2749,35,127.1,1,0,0,729,256
+W1419,7,Footwear,Mobile App,2299,50,99.1,0,0,0,471,223
+W1420,2,T-Shirts,Website,999,25,89.8,1,0,1,327,301
+W1421,2,T-Shirts,Mobile App,1249,20,42.5,0,0,0,803,238
+W1422,11,T-Shirts,Mobile App,649,30,19.2,1,0,1,437,387
+W1423,12,T-Shirts,Website,699,5,94.5,1,0,0,632,278
+W1424,8,Dresses,Mobile App,2849,15,65.4,0,0,0,804,184
+W1425,5,T-Shirts,Website,1149,30,65.9,1,0,1,499,322
+W1426,1,Jeans,Marketplace,2949,5,93.1,1,0,1,562,223
+W1427,11,Accessories,Mobile App,1149,40,104.2,1,0,0,232,232
+W1428,1,Footwear,Website,2949,25,132.8,1,0,1,263,220
+W1429,10,Footwear,Mobile App,2999,60,107.7,1,0,1,201,201
+W1430,1,Jeans,Website,2799,20,43.3,1,0,1,272,226
+W1431,4,Jeans,Marketplace,2599,30,111.5,0,0,1,570,276
+W1432,2,Ethnic Wear,Mobile App,5149,15,87.3,1,0,1,349,212
+W1433,8,Footwear,Mobile App,1899,20,38.5,0,1,0,246,191
+W1434,5,T-Shirts,Mobile App,849,5,29.3,0,1,1,495,253
+W1435,9,Ethnic Wear,Marketplace,4349,35,52.7,0,0,1,387,170
+W1436,7,Dresses,Marketplace,2699,40,150.7,0,1,0,287,266
+W1437,7,Jeans,Mobile App,1649,35,169.3,0,1,0,439,283
+W1438,3,Ethnic Wear,Website,3199,50,130.7,0,1,0,687,237
+W1439,8,Dresses,Mobile App,2699,10,11.7,0,0,0,455,148
+W1440,5,Jeans,Marketplace,1999,5,35.9,0,0,1,659,202
+W1441,2,T-Shirts,Mobile App,649,50,79.1,1,0,1,405,405
+W1442,2,Accessories,Website,899,20,117,0,0,1,420,258
+W1443,2,Ethnic Wear,Mobile App,2849,25,133.8,0,1,0,339,193
+W1444,8,Dresses,Website,1449,40,118.6,0,1,1,785,287
+W1445,10,Jeans,Mobile App,2999,20,67.5,1,1,0,509,242
+W1446,11,T-Shirts,Website,1099,35,49.1,1,0,0,689,329
+W1447,4,Footwear,Website,3949,15,86.3,0,0,0,284,137
+W1448,4,Jeans,Marketplace,2449,35,149.9,1,0,1,756,324
+W1449,4,Accessories,Marketplace,349,15,108.7,1,0,1,728,356
+W1450,4,T-Shirts,Marketplace,699,30,122.9,0,0,0,218,218
+W1451,2,Accessories,Mobile App,599,10,1.5,1,0,0,318,239
+W1452,4,Footwear,Website,2299,15,73.4,0,0,0,785,183
+W1453,3,Ethnic Wear,Website,3799,15,118.4,0,0,1,712,166
+W1454,3,Dresses,Marketplace,2349,25,83.8,0,1,0,543,249
+W1455,3,Jeans,Website,2849,5,17.2,0,1,1,652,174
+W1456,9,Footwear,Mobile App,3399,15,163,0,1,0,529,211
+W1457,4,Jeans,Website,3049,30,121,0,0,0,533,208
+W1458,5,Footwear,Website,2949,15,104.9,0,1,1,681,172
+W1459,4,Ethnic Wear,Mobile App,3149,40,127.9,0,1,0,826,226
+W1460,12,Jeans,Website,1649,20,91.4,1,0,1,689,237
+W1461,10,Jeans,Website,1799,15,31.6,1,1,0,772,214
+W1462,6,Accessories,Website,399,50,179.9,0,0,1,336,336
+W1463,5,Dresses,Website,1699,25,55.1,0,0,0,727,162
+W1464,6,Dresses,Mobile App,2149,15,40.4,1,1,0,739,285
+W1465,7,Jeans,Marketplace,1899,60,158.5,0,0,0,550,342
+W1466,11,Jeans,Mobile App,1849,30,169.1,0,0,1,298,270
+W1467,12,Accessories,Website,699,40,52.3,0,0,0,688,251
+W1468,3,Jeans,Website,3249,15,69.8,0,0,0,555,172
+W1469,3,Dresses,Website,2149,20,89.2,0,0,0,692,193
+W1470,3,Footwear,Marketplace,3699,25,177,1,0,1,416,270
+W1471,1,Dresses,Mobile App,1849,15,95,0,1,0,637,228
+W1472,3,Dresses,Mobile App,1349,30,115.4,0,0,0,582,221
+W1473,4,Jeans,Mobile App,1799,20,56.6,0,1,0,539,223
+W1474,3,T-Shirts,Marketplace,1149,5,123.2,0,1,1,309,309
+W1475,10,Dresses,Website,2349,0,63,1,0,1,445,208
+W1476,1,Ethnic Wear,Mobile App,3949,15,153.4,1,0,0,348,238
+W1477,4,T-Shirts,Marketplace,699,10,165.5,0,0,0,727,273
+W1478,9,Ethnic Wear,Mobile App,2249,50,79.7,0,0,1,840,215
+W1479,8,Accessories,Mobile App,799,40,178.5,0,0,1,400,322
+W1480,8,Accessories,Marketplace,799,30,39,0,0,1,425,262
+W1481,10,Footwear,Mobile App,2749,0,145.8,1,0,1,850,205
+W1482,7,Accessories,Marketplace,699,50,146.6,0,1,0,566,379
+W1483,10,Accessories,Marketplace,549,5,152.5,1,0,0,371,305
+W1484,4,Ethnic Wear,Mobile App,2099,5,77.1,0,0,0,258,147
+W1485,10,Ethnic Wear,Marketplace,1949,35,175.9,1,1,1,822,376
+W1486,1,Accessories,Website,699,35,69.4,1,0,1,549,336
+W1487,3,Accessories,Marketplace,699,0,157.7,0,0,1,416,228
+W1488,12,Dresses,Mobile App,2699,50,92.1,1,1,1,225,225
+W1489,9,T-Shirts,Website,1149,40,84.2,0,0,0,712,297
+W1490,7,Jeans,Mobile App,2949,20,80.5,1,0,1,559,282
+W1491,9,Ethnic Wear,Mobile App,4649,25,178.5,0,0,0,633,170
+W1492,10,Ethnic Wear,Mobile App,2849,20,50.1,1,1,0,243,243
+W1493,3,T-Shirts,Website,699,5,80.7,0,0,0,321,209
+W1494,2,Dresses,Mobile App,1599,20,8.8,0,0,0,715,204
+W1495,10,Dresses,Website,1549,40,4.6,1,0,0,805,272
+W1496,7,Accessories,Mobile App,649,15,112.3,0,0,1,331,262
+W1497,11,T-Shirts,Mobile App,999,50,48.8,1,0,0,372,372
+W1498,8,Ethnic Wear,Mobile App,5199,50,62.9,0,1,0,398,193
+W1499,8,Footwear,Website,1699,0,18.6,0,0,0,353,112
+W1500,1,Accessories,Website,599,60,170.9,1,0,0,641,391
+W1501,12,T-Shirts,Marketplace,1249,25,60.8,1,0,1,568,304
+W1502,3,Jeans,Mobile App,2599,20,9.2,0,1,0,559,221
+W1503,8,Accessories,Mobile App,549,20,162.6,0,0,1,479,320
+W1504,2,Accessories,Marketplace,1099,20,19.7,1,1,0,244,244
+W1505,12,Ethnic Wear,Mobile App,3249,5,28.1,1,0,0,471,179
+W1506,3,Footwear,Marketplace,2299,40,50.4,0,0,1,491,230
+W1507,7,Jeans,Mobile App,1599,20,48.7,0,0,0,622,205
+W1508,10,Dresses,Marketplace,1999,10,72.3,0,0,0,647,186
+W1509,8,Jeans,Website,1799,60,16.6,0,1,1,336,301
+W1510,3,Dresses,Marketplace,2599,10,140.4,1,0,0,334,229
+W1511,9,Accessories,Marketplace,699,25,117.6,0,0,0,314,297
+W1512,1,Accessories,Website,649,20,10.6,1,1,1,688,269
+W1513,12,Jeans,Mobile App,2199,0,20,1,0,0,533,201
+W1514,6,Ethnic Wear,Website,1949,20,126.7,0,0,1,417,190
+W1515,7,Ethnic Wear,Mobile App,5199,25,108.9,1,0,0,289,237
+W1516,9,Ethnic Wear,Mobile App,5099,20,114.2,0,0,0,814,153
+W1517,5,Accessories,Website,599,35,15.6,0,1,0,698,254
+W1518,4,Accessories,Mobile App,499,5,85.6,0,1,0,275,275
+W1519,6,Ethnic Wear,Website,2549,0,51.2,0,0,0,788,129
+W1520,10,Accessories,Marketplace,599,25,39.9,0,0,1,751,308
+W1521,8,Dresses,Marketplace,1299,5,117.5,1,0,1,655,350
+W1522,1,Dresses,Mobile App,1749,10,169.4,0,1,0,621,253
+W1523,9,Dresses,Mobile App,1499,30,35.4,0,1,1,269,247
+W1524,2,Jeans,Mobile App,1849,40,132.2,0,0,0,318,267
+W1525,11,Accessories,Mobile App,849,25,42.7,1,0,1,632,361
+W1526,3,Jeans,Website,2849,40,25.9,0,1,0,673,180
+W1527,11,Ethnic Wear,Mobile App,2149,10,177.6,1,0,0,204,204
+W1528,12,Footwear,Website,2199,10,91,1,1,1,633,209
+W1529,11,T-Shirts,Mobile App,599,35,175.9,1,0,0,783,419
+W1530,11,Jeans,Marketplace,2949,0,54.7,1,0,0,496,204
+W1531,10,T-Shirts,Mobile App,999,20,172.5,1,1,1,408,376
+W1532,7,Dresses,Mobile App,2149,10,48.2,0,0,1,824,182
+W1533,3,Accessories,Marketplace,949,25,22.8,0,1,0,688,275
+W1534,6,Accessories,Mobile App,499,5,69.4,0,0,1,558,238
+W1535,2,T-Shirts,Marketplace,899,30,113.6,0,1,0,535,412
+W1536,7,T-Shirts,Website,1049,15,60.5,0,0,0,667,191
+W1537,7,Jeans,Mobile App,3199,5,89.3,0,0,0,221,182
+W1538,8,Footwear,Website,3249,5,25.9,0,0,1,711,119
+W1539,8,Accessories,Mobile App,749,15,88,0,0,0,826,245
+W1540,10,Footwear,Website,1949,20,148,1,0,0,551,225
+W1541,9,Dresses,Website,1899,30,47.7,0,0,1,651,201
+W1542,9,T-Shirts,Website,699,0,54.5,0,0,1,388,249
+W1543,11,Dresses,Website,1299,0,157.7,1,1,1,484,266
+W1544,12,Dresses,Marketplace,2299,35,166.8,1,0,0,670,349
+W1545,4,Ethnic Wear,Marketplace,4599,0,172,1,1,0,661,243
+W1546,10,Accessories,Mobile App,349,10,175.6,1,0,0,320,289
+W1547,9,Accessories,Mobile App,449,20,173.4,0,0,0,292,265
+W1548,11,Dresses,Website,2599,20,88.3,1,0,0,521,228
+W1549,10,T-Shirts,Marketplace,899,5,79.4,1,0,0,493,302
+W1550,10,Jeans,Website,1549,10,9.5,1,0,1,835,207
+W1551,3,Footwear,Marketplace,3149,40,86.3,0,1,0,277,215
+W1552,4,Dresses,Website,2949,15,128.1,0,0,1,843,179
+W1553,4,Footwear,Mobile App,3049,15,15.8,0,1,0,305,147
+W1554,12,Ethnic Wear,Marketplace,2999,5,160.2,0,1,0,750,201
+W1555,9,Footwear,Website,2049,5,132.8,0,0,0,240,181
+W1556,2,Ethnic Wear,Mobile App,2899,50,121.3,0,0,0,654,199
+W1557,8,Jeans,Marketplace,3049,5,123.2,0,0,0,561,190
+W1558,3,Dresses,Website,2499,40,174.3,0,1,0,474,253
+W1559,6,Dresses,Mobile App,2449,15,132.5,0,0,0,664,219
+W1560,12,Ethnic Wear,Website,4599,35,56.9,1,0,0,573,245
+W1561,4,Jeans,Marketplace,2449,5,121,0,0,0,464,225
+W1562,4,Ethnic Wear,Marketplace,4349,30,151.2,0,0,1,516,189
+W1563,3,Dresses,Website,2199,25,76.8,0,1,0,622,191
+W1564,12,Jeans,Website,3399,50,22.7,0,1,0,285,222
+W1565,2,Jeans,Mobile App,1549,0,140.9,1,1,0,200,200
+W1566,11,Jeans,Mobile App,2799,25,121.3,1,0,1,829,281
+W1567,7,Jeans,Marketplace,1999,50,110.3,0,0,1,321,321
+W1568,1,Dresses,Mobile App,2049,35,169.6,1,1,1,376,376
+W1569,11,Dresses,Mobile App,2499,15,67.8,1,1,0,536,285
+W1570,12,T-Shirts,Marketplace,899,0,139.1,1,1,1,518,354
+W1571,1,T-Shirts,Marketplace,1199,0,139.8,0,0,0,739,250
+W1572,12,Footwear,Mobile App,2249,15,167,1,0,0,247,206
+W1573,12,T-Shirts,Marketplace,949,20,51.5,0,0,0,280,278
+W1574,6,Dresses,Website,1949,20,104.3,0,1,0,315,249
+W1575,12,T-Shirts,Mobile App,1199,30,138.9,1,1,1,292,292
+W1576,12,Footwear,Marketplace,2999,30,16.4,0,1,1,228,198
+W1577,7,T-Shirts,Mobile App,999,40,1,0,0,0,849,276
+W1578,10,Ethnic Wear,Mobile App,4749,5,146.5,1,0,0,482,198
+W1579,3,T-Shirts,Website,1049,5,141.2,1,0,1,701,289
+W1580,3,T-Shirts,Mobile App,1049,5,150.6,1,0,0,591,266
+W1581,12,Ethnic Wear,Marketplace,4199,5,65.5,1,1,0,662,228
+W1582,2,Footwear,Marketplace,2449,0,70.5,0,0,0,655,143
+W1583,7,T-Shirts,Marketplace,1099,35,102.6,0,0,0,240,240
+W1584,11,Ethnic Wear,Mobile App,5099,25,153.1,1,0,0,412,243
+W1585,2,Footwear,Mobile App,1899,60,40.2,1,1,0,455,350
+W1586,2,Accessories,Website,1099,50,99.8,1,1,1,534,312
+W1587,12,Jeans,Mobile App,2599,20,0.1,1,0,1,589,175
+W1588,8,Accessories,Marketplace,699,10,170.6,0,0,0,535,254
+W1589,10,Footwear,Marketplace,3349,35,122.2,0,0,0,514,218
+W1590,12,Accessories,Marketplace,999,5,125.8,1,0,0,847,290
+W1591,7,Dresses,Marketplace,2849,25,67,0,0,0,386,179
+W1592,4,Jeans,Website,1999,30,71.4,0,0,1,556,249
+W1593,6,Footwear,Website,3399,10,177.9,0,0,0,509,165
+W1594,10,Footwear,Marketplace,2349,50,104.7,1,0,1,205,205
+W1595,2,T-Shirts,Website,849,30,132.2,1,1,0,806,373
+W1596,5,Footwear,Website,2899,30,101.6,0,0,1,667,185
+W1597,10,Ethnic Wear,Website,3049,5,14.6,0,1,0,594,123
+W1598,9,T-Shirts,Mobile App,1199,50,71,0,1,0,501,387
+W1599,8,Ethnic Wear,Mobile App,5199,0,84.2,0,0,0,573,127
+W1600,4,Jeans,Marketplace,2049,40,144.3,0,0,1,730,316
+W1601,3,Ethnic Wear,Mobile App,4249,0,66.2,0,0,0,434,118
+W1602,12,Ethnic Wear,Website,5149,10,141.9,1,0,1,602,205
+W1603,12,Footwear,Mobile App,2799,30,48.2,1,0,0,544,208
+W1604,4,T-Shirts,Website,849,60,117.7,0,0,0,446,365
+W1605,8,Dresses,Marketplace,2649,15,114.2,0,0,1,439,237
+W1606,12,Ethnic Wear,Website,4049,10,161.4,1,0,1,551,201
+W1607,2,Footwear,Mobile App,2349,15,136.1,1,1,0,334,248
+W1608,10,Accessories,Marketplace,849,0,172.7,0,0,1,625,238
+W1609,6,Jeans,Website,2249,50,53.4,0,1,0,226,226
+W1610,8,Footwear,Marketplace,2599,5,13.8,0,0,0,242,123
+W1611,10,Accessories,Mobile App,899,15,154.3,1,0,0,676,295
+W1612,3,Dresses,Marketplace,2599,5,3.5,0,0,0,234,136
+W1613,8,T-Shirts,Marketplace,899,50,151.7,0,0,1,708,395
+W1614,11,T-Shirts,Website,899,60,97.7,0,0,1,805,354
+W1615,7,Footwear,Website,2399,20,38.6,0,0,1,656,155
+W1616,7,Dresses,Marketplace,2699,5,86.5,0,1,0,492,198
+W1617,3,Dresses,Mobile App,1949,30,133.6,0,0,1,405,247
+W1618,5,Dresses,Mobile App,2699,60,132.9,0,0,0,827,293
+W1619,4,Ethnic Wear,Mobile App,4749,5,161.4,1,0,0,408,195
+W1620,9,T-Shirts,Marketplace,649,50,107.7,0,0,1,786,481
+W1621,1,Dresses,Website,1949,25,130,1,1,1,269,269
+W1622,12,Accessories,Mobile App,799,25,74.9,1,0,0,673,326
+W1623,11,Footwear,Marketplace,2749,25,32.1,1,0,1,390,203
+W1624,3,Ethnic Wear,Website,3849,10,131,0,1,0,297,158
+W1625,10,Dresses,Website,2449,15,111.9,0,0,0,366,182
+W1626,6,Accessories,Website,899,50,126.6,0,0,1,535,321
+W1627,1,Ethnic Wear,Website,3649,0,111.5,1,0,1,571,197
+W1628,6,Dresses,Website,2849,5,159.2,0,0,0,798,167
+W1629,8,T-Shirts,Mobile App,899,60,47.9,0,0,0,821,378
+W1630,6,Jeans,Mobile App,2699,60,129.5,0,0,0,784,263
+W1631,11,Dresses,Website,2499,10,12.8,1,0,0,706,172
+W1632,2,Accessories,Marketplace,1049,30,20.5,0,0,0,736,238
+W1633,1,Accessories,Mobile App,599,15,38,1,1,1,627,353
+W1634,1,Dresses,Website,1699,20,115,1,1,0,460,294
+W1635,2,Jeans,Website,3099,30,86.8,1,0,0,619,215
+W1636,11,T-Shirts,Website,1099,5,46.3,1,1,1,449,277
+W1637,4,Ethnic Wear,Website,4999,50,173.9,0,0,1,760,201
+W1638,4,Jeans,Marketplace,1749,20,135.1,0,0,0,740,252
+W1639,5,Footwear,Mobile App,1449,20,163.4,0,1,1,400,245
+W1640,10,Dresses,Mobile App,2249,20,130.7,1,0,1,281,281
+W1641,6,Accessories,Website,649,25,125.8,0,0,0,244,244
+W1642,9,Jeans,Marketplace,3249,10,77.6,0,1,0,466,231
+W1643,4,Jeans,Marketplace,2299,30,23.4,0,0,0,557,234
+W1644,12,T-Shirts,Mobile App,699,30,35.1,0,0,1,832,301
+W1645,11,Ethnic Wear,Mobile App,4599,20,39.6,0,1,1,206,179
+W1646,4,Accessories,Website,599,20,123.2,0,1,0,556,258
+W1647,9,Jeans,Mobile App,2549,15,132.6,0,0,0,784,198
+W1648,5,Ethnic Wear,Marketplace,2099,15,61,0,1,0,665,193
+W1649,3,Footwear,Website,2349,30,46.4,0,0,0,315,191
+W1650,8,Footwear,Mobile App,3399,35,150.7,0,0,1,271,185
+W1651,3,Footwear,Website,3049,0,154.9,0,0,0,683,157
+W1652,9,Accessories,Marketplace,949,35,33.6,0,0,0,645,293
+W1653,3,Footwear,Website,1449,25,142.5,0,0,1,796,201
+W1654,4,Dresses,Mobile App,1799,25,169.5,0,0,1,216,216
+W1655,12,Jeans,Mobile App,1549,15,31.2,1,0,0,561,255
+W1656,8,Dresses,Website,1549,0,89.8,0,0,1,664,192
+W1657,7,Footwear,Website,1599,35,128.3,0,0,1,377,223
+W1658,9,T-Shirts,Website,1149,10,170.7,0,0,0,508,239
+W1659,2,Jeans,Mobile App,2099,10,96.8,1,1,0,416,274
+W1660,11,Ethnic Wear,Marketplace,4949,15,178.2,0,0,0,799,201
+W1661,8,Accessories,Mobile App,749,20,65.4,0,1,0,446,272
+W1662,5,Accessories,Website,699,0,12.2,0,0,1,806,184
+W1663,10,T-Shirts,Marketplace,649,10,65.9,1,0,0,590,312
+W1664,4,Jeans,Website,2899,50,104.8,1,1,0,648,300
+W1665,11,Footwear,Marketplace,3549,60,167.7,1,0,1,484,310
+W1666,1,T-Shirts,Mobile App,1199,10,60.7,1,1,0,641,293
+W1667,11,Dresses,Website,1549,30,94.6,0,1,1,320,252
+W1668,5,Dresses,Website,2599,20,79.1,0,0,0,694,169
+W1669,8,Footwear,Website,1599,10,158.3,0,1,1,623,215
+W1670,5,T-Shirts,Mobile App,1149,0,9.4,0,0,1,677,209
+W1671,11,Dresses,Marketplace,1399,10,91.6,0,0,0,369,204
+W1672,11,Jeans,Mobile App,2499,50,174.7,1,1,0,455,359
+W1673,8,Jeans,Mobile App,3349,0,143.1,0,0,0,294,185
+W1674,11,Accessories,Mobile App,549,30,115.3,0,0,0,402,278
+W1675,6,Jeans,Mobile App,3199,5,19.8,0,0,0,621,129
+W1676,12,Dresses,Marketplace,2099,25,143.6,1,1,1,348,347
+W1677,12,Ethnic Wear,Marketplace,3699,5,44.6,1,0,0,520,189
+W1678,4,Accessories,Website,1099,15,121.2,0,0,1,486,189
+W1679,11,Jeans,Marketplace,2799,40,52.9,1,0,0,451,262
+W1680,11,Accessories,Mobile App,1099,5,59.7,1,0,0,527,221
+W1681,7,Jeans,Marketplace,3249,35,152.7,0,1,1,647,249
+W1682,7,Dresses,Website,2449,20,30.4,0,0,1,305,156
+W1683,2,Footwear,Marketplace,3249,0,144.8,1,1,0,705,196
+W1684,11,Dresses,Website,2399,20,87.5,1,0,0,392,232
+W1685,11,Footwear,Marketplace,1849,0,112.2,1,1,1,380,243
+W1686,4,Dresses,Website,1299,40,153.5,0,0,0,626,283
+W1687,2,T-Shirts,Mobile App,999,40,25,1,0,0,260,260
+W1688,6,Jeans,Website,2849,10,4.9,0,0,0,448,125
+W1689,3,Dresses,Website,1899,15,41.5,0,0,1,278,191
+W1690,11,T-Shirts,Mobile App,1099,15,97.4,1,1,0,716,359
+W1691,12,Accessories,Website,899,40,97.4,1,1,1,235,235
+W1692,9,Dresses,Marketplace,1749,10,75.9,0,0,0,204,204
+W1693,2,Ethnic Wear,Mobile App,4499,20,51.8,0,0,0,482,162
+W1694,3,Accessories,Website,549,20,84,0,1,0,668,264
+W1695,11,Jeans,Website,3199,30,35.5,1,0,0,627,208
+W1696,2,Jeans,Marketplace,2849,0,104.7,0,0,0,766,194
+W1697,11,Accessories,Website,899,20,120.2,1,0,1,644,262
+W1698,4,Jeans,Website,2899,5,77.7,0,0,1,727,144
+W1699,9,Ethnic Wear,Mobile App,2649,15,36.5,0,0,1,218,149
+W1700,11,Jeans,Mobile App,2499,15,153.5,0,1,0,418,236
+W1701,6,Ethnic Wear,Marketplace,5349,35,117.1,0,0,0,812,185
+W1702,11,Dresses,Mobile App,2649,5,151,1,1,0,468,235
+W1703,2,T-Shirts,Website,649,25,54.2,1,0,0,765,353
+W1704,3,Footwear,Mobile App,3299,30,74.2,0,0,1,337,178
+W1705,6,T-Shirts,Website,649,35,37.1,0,0,1,719,295
+W1706,4,Ethnic Wear,Website,2149,20,100.7,1,0,0,273,209
+W1707,12,T-Shirts,Marketplace,1049,0,5.3,1,0,0,391,231
+W1708,6,T-Shirts,Website,949,35,134.4,0,1,0,474,285
+W1709,8,Footwear,Marketplace,1649,20,23,1,0,1,620,231
+W1710,2,Accessories,Mobile App,949,25,105,1,0,1,396,301
+W1711,10,Dresses,Website,1749,25,115,1,0,0,514,253
+W1712,7,Dresses,Marketplace,1799,35,97.4,0,0,0,774,286
+W1713,5,T-Shirts,Marketplace,1149,20,132.5,0,1,0,772,347
+W1714,4,Dresses,Mobile App,1299,25,173.1,0,1,0,486,273
+W1715,11,Jeans,Marketplace,2549,25,150.8,0,0,0,718,270
+W1716,9,Jeans,Marketplace,1899,5,28.4,0,0,0,211,178
+W1717,6,Footwear,Website,1949,15,35.7,0,0,1,779,136
+W1718,2,Footwear,Mobile App,1449,10,165.4,1,0,1,365,231
+W1719,3,Ethnic Wear,Marketplace,5049,30,163.9,0,0,1,608,220
+W1720,4,Dresses,Mobile App,2599,15,131.4,0,0,1,270,215
+W1721,6,Dresses,Mobile App,1949,20,155.8,0,0,0,730,248
+W1722,10,Dresses,Mobile App,1349,50,95.1,1,1,1,592,466
+W1723,1,Ethnic Wear,Website,5349,20,119.9,0,0,1,343,145
+W1724,11,Ethnic Wear,Website,4649,0,71,1,0,0,641,169
+W1725,9,Jeans,Website,1949,30,95.6,0,1,0,477,248
+W1726,9,Jeans,Marketplace,1849,40,49.2,0,0,0,446,268
+W1727,9,T-Shirts,Website,1199,0,53.5,1,0,1,613,233
+W1728,4,Footwear,Website,2599,20,36.3,0,0,1,666,162
+W1729,8,T-Shirts,Marketplace,1099,30,124.2,0,0,0,835,311
+W1730,12,T-Shirts,Website,1099,25,146,0,0,1,468,292
+W1731,2,T-Shirts,Mobile App,699,20,157.6,1,0,0,210,210
+W1732,2,Dresses,Website,1349,0,17.9,0,0,1,226,167
+W1733,7,Jeans,Mobile App,2699,30,67.5,1,0,0,566,258
+W1734,1,Dresses,Marketplace,2949,50,1.9,0,0,1,615,195
+W1735,4,Footwear,Mobile App,1649,15,38.2,0,0,1,275,181
+W1736,2,Dresses,Marketplace,1499,0,56.8,1,0,1,417,278
+W1737,12,Jeans,Marketplace,1549,15,125.7,1,0,0,620,270
+W1738,2,Footwear,Website,2199,30,115.6,1,0,0,607,234
+W1739,11,Accessories,Marketplace,899,0,140.7,1,0,0,722,255
+W1740,7,Dresses,Marketplace,2449,30,29.1,0,0,1,505,231
+W1741,2,Footwear,Marketplace,1549,10,123.7,0,0,0,602,183
+W1742,11,Dresses,Website,2649,10,164.6,0,0,0,678,162
+W1743,1,T-Shirts,Mobile App,799,5,43.7,1,0,0,298,285
+W1744,5,Accessories,Marketplace,649,5,89.7,0,0,0,795,249
+W1745,1,Jeans,Marketplace,3349,35,62.9,0,1,0,464,242
+W1746,12,Jeans,Website,3299,25,23.4,1,0,0,540,176
+W1747,2,Ethnic Wear,Marketplace,1999,15,34.8,0,1,1,296,168
+W1748,3,Jeans,Mobile App,3299,30,3.9,0,0,1,232,167
+W1749,7,T-Shirts,Website,749,10,38.1,0,0,1,657,248
+W1750,12,Accessories,Marketplace,499,40,2.9,1,1,0,618,392
+W1751,10,Jeans,Website,1849,20,164.3,0,1,0,678,245
+W1752,10,Footwear,Marketplace,3049,35,65.5,1,0,0,651,239
+W1753,3,T-Shirts,Marketplace,649,40,97.6,0,1,0,586,416
+W1754,1,Jeans,Mobile App,1949,40,134.6,0,0,1,243,243
+W1755,12,Ethnic Wear,Marketplace,2099,40,43.4,1,0,1,276,276
+W1756,3,T-Shirts,Marketplace,1099,60,142.6,0,0,1,668,442
+W1757,10,Ethnic Wear,Marketplace,1949,10,159.5,1,0,1,610,282
+W1758,12,Ethnic Wear,Marketplace,3099,10,168.1,1,0,1,381,225
+W1759,9,Accessories,Website,749,5,134.3,0,0,0,320,198
+W1760,6,T-Shirts,Website,749,35,21.3,0,1,0,300,300
+W1761,11,Jeans,Website,2499,25,4.4,1,0,1,246,182
+W1762,2,Dresses,Mobile App,1749,35,25.4,0,1,0,700,261
+W1763,5,Accessories,Mobile App,499,50,147,0,0,1,786,400
+W1764,5,Jeans,Website,2849,0,118.5,0,0,1,435,191
+W1765,6,Accessories,Marketplace,949,20,75.8,0,1,1,346,316
+W1766,9,T-Shirts,Marketplace,849,20,109.5,0,0,0,615,293
+W1767,10,Dresses,Mobile App,1299,0,122.4,0,0,0,791,215
+W1768,4,Accessories,Marketplace,449,10,72.2,0,1,0,698,294
+W1769,2,Footwear,Mobile App,2499,50,102.9,1,1,1,623,270
+W1770,11,Footwear,Mobile App,1749,40,129.8,1,0,1,783,287
+W1771,8,Jeans,Website,2899,5,52.4,0,0,1,435,164
+W1772,12,Footwear,Mobile App,1449,20,39,1,0,0,711,172
+W1773,12,Jeans,Marketplace,2899,20,80.1,1,1,0,786,298
+W1774,3,T-Shirts,Website,1199,20,48.7,0,0,0,524,223
+W1775,11,Accessories,Marketplace,849,15,26.8,1,0,1,620,286
+W1776,1,Dresses,Mobile App,2049,30,72.1,1,0,1,659,305
+W1777,12,Jeans,Marketplace,2749,5,120.7,1,1,0,765,270
+W1778,12,Jeans,Marketplace,2599,30,107.4,1,1,0,286,286
+W1779,5,T-Shirts,Marketplace,749,20,74.3,0,0,1,639,299
+W1780,3,Dresses,Marketplace,2449,25,134.4,0,1,0,207,207
+W1781,8,Accessories,Website,549,35,104,0,1,0,778,312
+W1782,11,Ethnic Wear,Mobile App,5299,60,61.1,1,0,0,840,290
+W1783,4,Jeans,Mobile App,3249,15,165.6,0,0,0,618,199
+W1784,8,Footwear,Website,2349,25,28.2,0,0,1,760,148
+W1785,5,Accessories,Marketplace,699,10,53.2,0,0,1,627,268
+W1786,4,Ethnic Wear,Mobile App,4399,15,39.8,0,0,1,660,133
+W1787,2,Dresses,Marketplace,1349,0,52.8,1,0,1,657,219
+W1788,3,T-Shirts,Marketplace,899,30,109.5,0,0,0,850,334
+W1789,5,T-Shirts,Marketplace,899,20,115,1,0,1,210,210
+W1790,12,Footwear,Marketplace,3699,5,50.5,0,0,0,627,148
+W1791,12,Ethnic Wear,Mobile App,3049,60,81.6,1,0,0,359,289
+W1792,11,Ethnic Wear,Mobile App,4149,25,54.5,0,0,0,756,143
+W1793,11,Footwear,Marketplace,2649,50,158.3,1,0,0,357,350
+W1794,10,T-Shirts,Marketplace,849,15,102.6,1,0,1,790,347
+W1795,2,Accessories,Marketplace,449,50,32,1,0,0,469,374
+W1796,3,Ethnic Wear,Website,2849,25,80.8,0,1,1,376,186
+W1797,10,Accessories,Mobile App,799,10,55,1,0,1,658,278
+W1798,9,Footwear,Website,1799,5,106.6,0,1,1,247,201
+W1799,12,Dresses,Marketplace,1249,20,129.5,1,0,1,626,381
+W1800,6,Jeans,Website,3299,40,115.9,0,0,0,830,231
+W1801,9,Footwear,Marketplace,1599,60,8.9,0,0,0,552,239
+W1802,8,Accessories,Marketplace,399,40,75.2,0,1,1,500,397
+W1803,1,T-Shirts,Mobile App,549,10,79,1,0,1,407,294
+W1804,7,Jeans,Marketplace,1699,10,57,0,1,1,815,278
+W1805,3,T-Shirts,Website,549,25,169.6,0,0,0,564,296
+W1806,7,Footwear,Marketplace,3499,30,68.1,0,0,0,245,168
+W1807,7,T-Shirts,Website,699,25,161.9,0,0,1,541,311
+W1808,5,Accessories,Marketplace,649,25,11.7,0,0,0,807,267
+W1809,8,Accessories,Website,799,15,147.1,0,0,1,553,233
+W1810,6,Accessories,Marketplace,549,10,123.4,0,1,0,532,282
+W1811,8,T-Shirts,Website,999,20,14.3,0,1,0,770,245
+W1812,2,Jeans,Marketplace,2349,15,2.4,1,0,0,839,200
+W1813,6,Jeans,Website,1999,0,175,1,1,0,803,253
+W1814,5,T-Shirts,Mobile App,649,5,111.4,1,1,1,828,354
+W1815,10,T-Shirts,Website,899,15,12.9,1,0,1,232,232
+W1816,9,T-Shirts,Website,699,20,43.3,0,1,1,675,279
+W1817,5,Footwear,Marketplace,3549,25,76.1,0,1,0,299,190
+W1818,4,Ethnic Wear,Marketplace,4249,25,147,0,0,0,566,188
+W1819,12,Jeans,Marketplace,3299,5,16.8,1,1,1,275,211
+W1820,10,Jeans,Website,3049,15,150.8,0,0,0,638,167
+W1821,9,Accessories,Marketplace,849,15,90,0,0,0,461,238
+W1822,10,Accessories,Marketplace,349,50,116.2,1,0,0,664,433
+W1823,7,Footwear,Marketplace,2049,15,129.7,0,0,0,259,177
+W1824,1,T-Shirts,Marketplace,799,30,132.4,1,0,1,707,491
+W1825,3,Dresses,Mobile App,2749,10,89.2,0,0,1,233,199
+W1826,10,T-Shirts,Website,649,20,39.9,1,0,0,498,237
+W1827,4,Dresses,Marketplace,2399,0,132.8,0,0,1,370,201
+W1828,2,Dresses,Mobile App,1849,0,63.6,1,0,1,699,249
+W1829,10,Dresses,Marketplace,2449,0,100.3,1,0,1,427,251
+W1830,2,Dresses,Website,2049,35,45.3,1,0,0,559,263
+W1831,10,Accessories,Website,1099,20,139.7,1,1,0,318,287
+W1832,3,Accessories,Marketplace,999,60,87.5,1,0,0,616,418
+W1833,7,Footwear,Mobile App,2799,15,18.2,0,0,0,346,135
+W1834,1,Ethnic Wear,Mobile App,4849,20,68.9,1,0,0,729,226
+W1835,5,Footwear,Mobile App,2449,10,146.9,0,0,0,434,185
+W1836,3,T-Shirts,Mobile App,1049,40,79.9,0,1,0,398,363
+W1837,11,Accessories,Marketplace,849,5,156,1,0,1,752,304
+W1838,1,Ethnic Wear,Website,2149,20,128.8,1,0,0,487,234
+W1839,12,Ethnic Wear,Mobile App,4699,25,14,1,1,0,639,241
+W1840,10,Dresses,Website,2399,5,100.7,1,0,0,809,211
+W1841,5,Jeans,Mobile App,1749,5,40.9,0,0,1,329,192
+W1842,12,T-Shirts,Mobile App,849,5,97.1,0,0,0,681,247
+W1843,11,T-Shirts,Website,599,60,170.3,1,1,0,816,523
+W1844,8,T-Shirts,Mobile App,749,15,4.7,0,0,1,463,239
+W1845,3,T-Shirts,Website,699,30,109.5,1,1,1,391,391
+W1846,6,T-Shirts,Website,1099,30,79.8,0,0,1,259,259
+W1847,2,Dresses,Marketplace,2049,25,151.7,1,1,0,373,350
+W1848,11,Accessories,Marketplace,349,10,46.8,1,0,0,789,293
+W1849,10,Jeans,Marketplace,2049,35,101.3,1,0,0,438,305
+W1850,8,Ethnic Wear,Mobile App,4649,0,99.7,0,1,0,525,153
+W1851,11,Ethnic Wear,Marketplace,3999,25,106.6,1,1,0,450,291
+W1852,3,Dresses,Mobile App,1249,20,127.7,0,0,1,288,252
+W1853,12,Accessories,Website,999,25,60.5,1,0,0,567,241
+W1854,7,Footwear,Mobile App,3199,20,39.9,0,0,1,583,153
+W1855,2,Ethnic Wear,Marketplace,3049,30,37.9,0,0,0,422,170
+W1856,6,Footwear,Website,1999,60,58.4,0,0,0,747,216
+W1857,11,Accessories,Mobile App,399,25,163.9,1,0,0,570,342
+W1858,2,Ethnic Wear,Website,2949,50,110.9,1,0,0,660,303
+W1859,4,Footwear,Marketplace,3699,20,131.5,1,1,1,576,266
+W1860,10,T-Shirts,Website,699,25,98.9,0,0,1,410,286
+W1861,9,Ethnic Wear,Marketplace,5049,5,25.8,0,0,0,778,115
+W1862,2,T-Shirts,Marketplace,899,25,13.4,1,0,1,453,312
+W1863,10,Footwear,Marketplace,1999,5,121.3,1,0,1,290,249
+W1864,12,Footwear,Mobile App,1699,40,128.4,1,0,0,613,281
+W1865,4,Ethnic Wear,Website,3949,10,129.2,0,0,0,444,163
+W1866,6,Dresses,Mobile App,1949,15,38.2,0,1,0,573,242
+W1867,3,T-Shirts,Marketplace,699,5,63.3,0,0,0,592,286
+W1868,1,Dresses,Marketplace,2849,40,93,1,0,1,293,293
+W1869,1,Jeans,Mobile App,2049,15,148.4,1,0,0,600,229
+W1870,4,Ethnic Wear,Mobile App,4699,10,19.9,1,1,1,447,197
+W1871,2,Dresses,Website,2849,5,161,1,0,0,802,201
+W1872,10,Accessories,Website,999,20,62,0,0,0,707,216
+W1873,5,Ethnic Wear,Marketplace,3999,30,20.9,0,0,1,771,176
+W1874,4,T-Shirts,Marketplace,749,5,63.1,0,0,1,798,304
+W1875,7,Jeans,Website,1599,15,77.2,0,1,0,579,223
+W1876,3,Dresses,Marketplace,1549,30,168.2,0,0,0,272,238
+W1877,10,Footwear,Website,3499,15,41.2,0,1,1,736,164
+W1878,2,Jeans,Mobile App,2549,0,109.4,0,0,1,404,216
+W1879,12,Dresses,Marketplace,2799,35,73,1,0,0,357,277
+W1880,3,Dresses,Website,1499,0,5.6,0,0,0,200,119
+W1881,10,Dresses,Website,2949,10,30.2,0,1,0,297,161
+W1882,2,Jeans,Mobile App,1749,0,68,1,1,1,806,266
+W1883,6,Dresses,Marketplace,2949,15,111.1,0,1,0,222,198
+W1884,2,T-Shirts,Website,799,10,137.2,1,0,0,278,274
+W1885,7,Accessories,Marketplace,799,0,175.2,0,0,1,497,283
+W1886,11,Footwear,Mobile App,3499,30,90.6,0,0,1,370,206
+W1887,5,Accessories,Mobile App,549,35,93.6,0,1,0,516,438
+W1888,6,Accessories,Mobile App,399,0,126.2,0,1,1,338,283
+W1889,12,Jeans,Mobile App,1699,20,50.3,1,1,1,827,297
+W1890,2,Jeans,Marketplace,1899,40,138.6,0,0,1,825,318
+W1891,5,Jeans,Mobile App,2699,10,159.1,0,0,1,835,238
+W1892,10,Dresses,Mobile App,1549,15,81.4,0,0,0,758,216
+W1893,3,Dresses,Mobile App,1399,0,27.4,0,0,0,436,158
+W1894,2,Dresses,Website,1699,40,99.4,1,0,1,493,319
+W1895,9,Dresses,Marketplace,2549,0,14.7,0,1,0,469,173
+W1896,3,Dresses,Website,2849,15,78.3,0,0,1,276,176
+W1897,10,Footwear,Marketplace,1649,10,165.6,1,0,0,398,244
+W1898,6,Jeans,Website,2949,10,147.5,0,0,0,361,193
+W1899,6,Dresses,Mobile App,1649,35,4.8,0,0,0,691,197
+W1900,11,Accessories,Mobile App,699,60,139.8,0,0,1,531,380
+W1901,10,Ethnic Wear,Marketplace,4249,60,161,1,0,0,729,379
+W1902,7,Jeans,Mobile App,3299,40,69.4,0,0,0,259,221
+W1903,1,Ethnic Wear,Mobile App,4799,60,171,1,0,1,803,337
+W1904,3,Footwear,Mobile App,2899,20,94.9,0,1,1,784,188
+W1905,6,Dresses,Website,2849,20,80.5,0,1,0,662,205
+W1906,6,Jeans,Website,1699,0,31.4,0,0,0,553,145
+W1907,1,Ethnic Wear,Marketplace,3949,30,90.1,1,1,1,377,303
+W1908,2,Jeans,Website,1749,10,178.9,1,1,1,375,228
+W1909,12,Jeans,Mobile App,2699,5,21.7,1,0,0,244,186
+W1910,8,Footwear,Marketplace,3399,50,167.6,0,0,1,708,256
+W1911,10,Accessories,Marketplace,1049,10,164.4,0,0,0,397,251
+W1912,6,Ethnic Wear,Marketplace,4649,50,22.3,0,0,1,787,200
+W1913,9,Footwear,Mobile App,3749,15,27.1,1,0,0,330,194
+W1914,8,Dresses,Marketplace,2499,20,150.8,0,1,0,806,257
+W1915,10,Dresses,Mobile App,1599,50,138.9,1,0,1,741,438
+W1916,5,Footwear,Marketplace,3449,30,56.8,0,0,0,444,186
+W1917,6,Footwear,Mobile App,2299,10,177.3,0,0,1,260,216
+W1918,12,Dresses,Mobile App,2699,35,14.2,1,0,1,286,249
+W1919,6,Jeans,Mobile App,2649,20,35.9,1,0,0,477,236
+W1920,5,Accessories,Mobile App,1149,40,151.5,0,0,0,399,271
+W1921,7,T-Shirts,Website,1149,5,39.5,0,0,0,203,185
+W1922,12,T-Shirts,Marketplace,549,10,171.3,0,1,0,323,323
+W1923,4,Jeans,Marketplace,3449,10,112.2,1,0,0,778,215
+W1924,3,Dresses,Marketplace,2249,35,29.6,0,0,1,752,241
+W1925,9,Footwear,Mobile App,2049,20,110.6,0,0,1,514,220
+W1926,12,Dresses,Mobile App,2649,35,134.6,0,1,0,539,276
+W1927,1,Dresses,Website,1499,40,45.7,0,0,1,425,257
+W1928,2,Footwear,Website,2899,40,56.4,0,0,0,648,182
+W1929,10,T-Shirts,Mobile App,699,40,34.2,0,0,0,642,334
+W1930,9,T-Shirts,Mobile App,899,30,84.4,1,0,0,343,333
+W1931,12,Ethnic Wear,Mobile App,2449,40,127.3,0,0,0,251,240
+W1932,5,Accessories,Marketplace,799,30,104.5,0,0,1,599,339
+W1933,5,Accessories,Website,699,15,121.5,1,0,1,431,280
+W1934,6,T-Shirts,Mobile App,649,15,13.1,1,0,0,787,314
+W1935,2,Jeans,Mobile App,1599,30,17.4,1,0,0,344,245
+W1936,7,Footwear,Marketplace,2099,0,73.5,0,1,1,250,201
+W1937,6,Dresses,Mobile App,2549,35,106.3,0,1,0,406,260
+W1938,10,Dresses,Website,1499,25,109.4,0,0,0,361,211
+W1939,4,Dresses,Marketplace,1399,10,175.9,0,0,0,321,221
+W1940,4,Dresses,Marketplace,1899,10,173,0,0,0,694,225
+W1941,10,Footwear,Website,3649,15,111.9,0,1,0,542,166
+W1942,12,Accessories,Marketplace,549,5,170.3,1,1,0,600,358
+W1943,10,Dresses,Marketplace,1449,5,83.8,1,0,0,721,304
+W1944,11,Ethnic Wear,Marketplace,5299,25,109.3,1,0,0,467,248
+W1945,5,Dresses,Website,2299,20,19.7,1,0,0,408,203
+W1946,9,Accessories,Mobile App,449,30,128.8,1,0,0,236,236
+W1947,5,Footwear,Marketplace,2699,5,110.6,0,1,0,557,188
+W1948,3,Dresses,Website,1899,25,68.6,0,0,0,742,223
+W1949,7,Accessories,Marketplace,1149,10,175.6,0,0,0,831,233
+W1950,4,Footwear,Mobile App,3799,20,3.7,0,0,0,576,124
+W1951,3,Ethnic Wear,Marketplace,3899,15,178.2,0,0,0,396,184
+W1952,10,Jeans,Marketplace,2299,25,125.5,1,0,0,268,268
+W1953,6,Ethnic Wear,Marketplace,4799,25,177.4,0,0,0,625,172
+W1954,4,T-Shirts,Marketplace,799,20,171.4,0,0,0,563,290
+W1955,5,T-Shirts,Marketplace,599,35,71.2,0,0,0,836,379
+W1956,9,Footwear,Website,1949,10,160.9,0,0,0,818,169
+W1957,9,Footwear,Marketplace,1649,50,43.9,0,0,0,795,228
+W1958,1,T-Shirts,Website,849,40,16.4,1,0,0,841,319
+W1959,12,Ethnic Wear,Marketplace,4049,5,58.5,1,0,1,355,220
+W1960,8,T-Shirts,Marketplace,699,15,45.4,0,0,0,829,303
+W1961,5,Footwear,Mobile App,2199,10,143.8,0,0,0,568,174
+W1962,1,Jeans,Mobile App,3249,35,41.1,0,0,1,596,195
+W1963,1,Ethnic Wear,Marketplace,2799,10,104.9,1,0,1,623,301
+W1964,2,Footwear,Mobile App,2949,50,67.8,1,0,0,476,274
+W1965,3,Footwear,Marketplace,3349,20,107,1,1,0,448,233
+W1966,5,Ethnic Wear,Mobile App,4049,10,9.1,0,0,0,448,104
+W1967,12,Footwear,Mobile App,3799,5,5.9,0,0,1,450,108
+W1968,4,Dresses,Website,1399,50,109.9,0,1,1,750,278
+W1969,8,Dresses,Mobile App,2449,25,163.2,1,0,1,748,303
+W1970,12,T-Shirts,Website,1149,0,20.3,1,0,0,555,180
+W1971,4,Ethnic Wear,Mobile App,2849,25,129.8,0,0,1,315,225
+W1972,12,Dresses,Mobile App,2449,25,44.8,1,1,1,583,306
+W1973,9,Accessories,Website,699,50,168.6,0,0,0,325,302
+W1974,12,Footwear,Marketplace,2899,0,64.2,1,0,0,800,177
+W1975,3,Jeans,Website,1899,20,143.7,1,0,1,296,252
+W1976,1,T-Shirts,Website,1099,60,64.4,0,0,0,269,269
+W1977,5,Dresses,Mobile App,2849,10,47.4,0,1,0,295,189
+W1978,7,Dresses,Website,1899,5,2.9,0,0,1,605,128
+W1979,2,T-Shirts,Mobile App,999,25,133.1,1,0,1,454,388
+W1980,9,Accessories,Mobile App,1049,30,145.2,1,1,0,212,212
+W1981,6,Dresses,Marketplace,1249,0,46.2,0,0,1,829,211
+W1982,12,Dresses,Website,2649,0,157.5,1,0,1,595,223
+W1983,12,Footwear,Website,1449,15,43.3,0,0,0,728,149
+W1984,9,Accessories,Mobile App,999,40,138.9,0,1,0,658,327
+W1985,3,Dresses,Marketplace,2149,40,153.1,1,1,0,743,412
+W1986,10,Footwear,Mobile App,2599,15,7,1,1,0,219,172
+W1987,10,Footwear,Website,3849,5,176.6,1,0,0,402,164
+W1988,7,Dresses,Mobile App,1449,10,12.9,0,0,1,698,206
+W1989,4,Accessories,Marketplace,549,30,26.4,0,0,0,224,224
+W1990,7,Jeans,Marketplace,2299,50,179.5,0,0,1,824,319
+W1991,7,Footwear,Marketplace,3799,30,76.9,0,1,0,728,215
+W1992,5,Ethnic Wear,Website,3399,0,46.7,0,0,1,290,131
+W1993,7,Jeans,Website,2049,35,94.1,0,0,1,517,242
+W1994,3,Ethnic Wear,Website,4349,50,33.2,0,0,0,653,161
+W1995,5,Accessories,Marketplace,849,15,21.7,0,0,0,829,237
+W1996,5,Jeans,Marketplace,1749,15,44.9,0,0,1,321,238
+W1997,7,Ethnic Wear,Mobile App,3849,10,35.1,0,0,0,483,149
+W1998,6,Footwear,Mobile App,2649,15,130.7,0,0,0,474,179
+W1999,8,Jeans,Mobile App,2199,40,166.4,1,1,1,437,375
+W2000,4,Footwear,Mobile App,2299,25,11,1,0,0,786,186
